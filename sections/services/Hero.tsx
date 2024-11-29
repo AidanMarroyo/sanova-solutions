@@ -15,12 +15,7 @@ export function Hero() {
           competitive landscape.
         </p>
         <div className='mb-8 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0 lg:mb-16'>
-          <Button
-            color='info'
-            href='#'
-            size='lg'
-            className='[&>span]:items-center'
-          >
+          <Button color='info' size='lg' className='[&>span]:items-center'>
             Explore Our Services Below
             <svg
               className='-mr-1 ml-2 h-5 w-5'
