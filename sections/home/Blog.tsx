@@ -10,13 +10,7 @@ export function Blog() {
   const isInView = useInView(ref, { once: true });
   return (
     <MaxWidthWrapper>
-      <motion.div
-        className='mx-auto max-w-screen-sm text-center'
-        ref={ref}
-        variants={fadeIn}
-        initial='hidden'
-        animate={isInView ? 'visible' : 'hidden'}
-      >
+      <div className='mx-auto max-w-screen-sm text-center'>
         <h2 className='mb-4 text-3xl font-extrabold tracking-tight  lg:text-4xl'>
           Insights to Inspire Your Journey
         </h2>
@@ -24,13 +18,8 @@ export function Blog() {
           Stay ahead of the curve with expert tips, trends, and guides to grow
           your business.
         </p>
-      </motion.div>
-      <motion.div
-        className='mb-16 grid gap-8 lg:grid-cols-3 lg:divide-x lg:divide-gray-200 dark:lg:divide-gray-700'
-        variants={slideUp}
-        initial='hidden'
-        animate={isInView ? 'visible' : 'hidden'}
-      >
+      </div>
+      <div className='mb-16 grid gap-8 lg:grid-cols-3 lg:divide-x lg:divide-gray-200 dark:lg:divide-gray-700'>
         <article>
           <a href='#'>
             <img
@@ -238,7 +227,7 @@ export function Blog() {
             </a>
           </article>
         </div>
-      </motion.div>
+      </div>
     </MaxWidthWrapper>
   );
 }

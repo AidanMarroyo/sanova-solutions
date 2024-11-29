@@ -21,13 +21,7 @@ export function Portfolio() {
   const isInView = useInView(ref, { once: true });
   return (
     <MaxWidthWrapper>
-      <motion.div
-        className='mx-auto max-w-2xl text-center'
-        ref={ref}
-        variants={fadeIn}
-        initial='hidden'
-        animate={isInView ? 'visible' : 'hidden'}
-      >
+      <div className='mx-auto max-w-2xl text-center'>
         <h2 className='text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl'>
           Some of Our Success Stories
         </h2>
@@ -35,20 +29,11 @@ export function Portfolio() {
           From custom software to thriving e-commerce stores, explore how we’ve
           helped businesses like yours.
         </p>
-      </motion.div>
+      </div>
       <div className='mt-12 space-y-16 sm:mt-16'>
-        <motion.div
-          className='flex flex-col gap-y-8 sm:gap-y-12 lg:flex-row lg:items-center lg:gap-x-16 xl:gap-x-24'
-          variants={slideInFromRight}
-          initial='hidden'
-          animate={isInView ? 'visible' : 'hidden'}
-        >
+        <div className='flex flex-col gap-y-8 sm:gap-y-12 lg:flex-row lg:items-center lg:gap-x-16 xl:gap-x-24'>
           <div>
-            <img
-              className='w-full rounded-lg object-cover shadow-lg dark:hidden'
-              src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/flowbite-dashboard.jpg'
-              alt=''
-            />
+            <img alt='' />
             <img
               className='hidden w-full rounded-lg object-cover shadow-lg dark:block'
               src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/flowbite-dashboard-dark.jpg'
@@ -177,13 +162,8 @@ export function Portfolio() {
               </svg>
             </Button>
           </div>
-        </motion.div>
-        <motion.div
-          className='flex flex-col gap-y-8 sm:gap-y-12 lg:flex-row lg:items-center lg:gap-x-16 xl:gap-x-24'
-          variants={slideInFromLeft}
-          initial='hidden'
-          animate={isInView ? 'visible' : 'hidden'}
-        >
+        </div>
+        <div className='flex flex-col gap-y-8 sm:gap-y-12 lg:flex-row lg:items-center lg:gap-x-16 xl:gap-x-24'>
           <div className='lg:order-2'>
             <img
               className='w-full rounded-lg object-cover shadow-lg dark:hidden'
@@ -303,13 +283,8 @@ export function Portfolio() {
               </svg>
             </Button>
           </div>
-        </motion.div>
-        <motion.div
-          className='flex flex-col gap-y-8 sm:gap-y-12 lg:flex-row lg:items-center lg:gap-x-16 xl:gap-x-24'
-          variants={slideInFromRight}
-          initial='hidden'
-          animate={isInView ? 'visible' : 'hidden'}
-        >
+        </div>
+        <div className='flex flex-col gap-y-8 sm:gap-y-12 lg:flex-row lg:items-center lg:gap-x-16 xl:gap-x-24'>
           <div>
             <img
               className='w-full rounded-lg object-cover shadow-lg dark:hidden'
@@ -459,7 +434,7 @@ export function Portfolio() {
               </svg>
             </Button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </MaxWidthWrapper>
   );

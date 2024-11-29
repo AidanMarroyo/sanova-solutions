@@ -18,13 +18,7 @@ export function CTA({
   const isInView = useInView(ref, { once: true });
   return (
     <MaxWidthWrapper>
-      <motion.div
-        className='mx-auto flex max-w-screen-sm flex-col items-center text-center mb-20 lg:mb-16'
-        ref={ref}
-        variants={fadeIn}
-        initial='hidden'
-        animate={isInView ? 'visible' : 'hidden'}
-      >
+      <div className='mx-auto flex max-w-screen-sm flex-col items-center text-center mb-20 lg:mb-16'>
         <h2 className='mb-4 text-4xl font-extrabold leading-tight tracking-tight'>
           {title}
         </h2>
@@ -32,7 +26,7 @@ export function CTA({
         <Button type='button' color='info' className='w-fit'>
           {cta}
         </Button>
-      </motion.div>
+      </div>
     </MaxWidthWrapper>
   );
 }

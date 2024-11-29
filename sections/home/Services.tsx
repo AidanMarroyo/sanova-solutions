@@ -15,24 +15,14 @@ export function Services() {
   return (
     <MaxWidthWrapper>
       <div className='mx-auto max-w-screen-xl items-center gap-8 px-4 py-8 sm:py-16 lg:grid lg:grid-cols-2 lg:px-6 xl:gap-16'>
-        <motion.div
-          ref={ref}
-          variants={slideInFromLeft}
-          initial='hidden'
-          animate={isInView ? 'visible' : 'hidden'}
-        >
+        <div>
           <img
             alt=''
             src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-long.png'
             className='mb-4 w-full rounded-lg lg:mb-0'
           />
-        </motion.div>
-        <motion.div
-          className='sm:text-lg'
-          variants={slideInFromRight}
-          initial='hidden'
-          animate={isInView ? 'visible' : 'hidden'}
-        >
+        </div>
+        <div className='sm:text-lg'>
           <h2 className='mb-4 text-4xl font-extrabold tracking-tight'>
             Our Services: Built for Growth
           </h2>
@@ -250,7 +240,7 @@ export function Services() {
             website development, and SEO strategies, eliminating roadblocks and
             streamlining success.
           </p>
-        </motion.div>
+        </div>
       </div>
     </MaxWidthWrapper>
   );
