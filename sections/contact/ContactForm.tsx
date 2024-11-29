@@ -172,10 +172,7 @@ export function ContactForm() {
               opportunities.
             </p>
             <div className='flex items-center justify-center'>
-              <Button
-                outline
-                className='[&>span]:border-primary-500 [&>span]:text-primary-600 dark:[&>span]:text-primary-500'
-              >
+              <Button className='[&>span]:border-primary-500 [&>span]:text-primary-600 dark:[&>span]:text-primary-500'>
                 Support center
               </Button>
             </div>
