@@ -6,9 +6,7 @@ import WordRotater from './WordRotater';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
-type Props = {};
-
-function Hero({}: Props) {
+function Hero() {
   return (
     <section className='container mx-auto flex flex-col sm:flex-row justify-center items-center my-48'>
       <motion.div

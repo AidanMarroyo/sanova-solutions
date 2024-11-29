@@ -12,9 +12,13 @@ import {
 } from 'react-icons/md';
 import { Ri24HoursLine } from 'react-icons/ri';
 
-type Props = {};
-
-const About = (props: Props) => {
+const About = ({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
@@ -27,10 +31,10 @@ const About = (props: Props) => {
       >
         <div className='mx-auto max-w-3xl text-center'>
           <h2 className='text-3xl font-extrabold leading-tight tracking-tight  sm:text-4xl'>
-            Why Choose Sanova Solutions?
+            {title}
           </h2>
           <p className='mt-4 text-base font-normal sm:text-xl'>
-            Our clients choose Sanova Solutions for innovative, reliable, and
+            {description ? description : null}
           </p>
         </div>
         <div className='mt-8 rounded-lg  p-4  sm:p-12 lg:mt-16'>

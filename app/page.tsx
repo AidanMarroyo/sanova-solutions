@@ -1,5 +1,5 @@
 import { CTA } from '@/components/CTA';
-import About from '@/sections/home/About';
+import About from '@/components/About';
 import { Blog } from '@/sections/home/Blog';
 import Hero from '@/sections/home/Hero';
 import { Portfolio } from '@/sections/home/Portfolio';
@@ -9,7 +9,10 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <About />
+      <About
+        title='Why Choose Sanova Solutions?'
+        description='Our clients choose Sanova Solutions for innovative, reliable, and'
+      />
       <Services />
       <Portfolio />
       <Blog />
