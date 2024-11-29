@@ -8,8 +8,10 @@ import { cn } from '@/lib/utils';
 const GLOBE_CONFIG: COBEOptions = {
   width: 800,
   height: 800,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onRender: (state: Record<string, any>) => {
     // Access properties safely
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { phi, width, height } = state as {
       phi: number;
       width: number;
@@ -62,6 +64,7 @@ const Globe = ({ className }: { className?: string }) => {
   };
 
   const onRender = useCallback(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (state: Record<string, any>) => {
       if (!pointerInteracting.current) phiRef.current += 0.005;
       state.phi = phiRef.current + r;
