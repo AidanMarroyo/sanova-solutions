@@ -1,4 +1,3 @@
-'use client';
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 import { MdOutlineSettingsApplications } from 'react-icons/md';
 import { CgShoppingCart } from 'react-icons/cg';

@@ -1,3 +1,4 @@
+import { Portfolio } from '@/sections/portfolio/Portfolio';
 import { Metadata } from 'next';
 import React from 'react';
 
@@ -8,7 +9,11 @@ export const metadata: Metadata = {
 };
 
 const page = () => {
-  return <div>page</div>;
+  return (
+    <div>
+      <Portfolio />
+    </div>
+  );
 };
 
 export default page;

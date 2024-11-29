@@ -1,4 +1,3 @@
-'use client';
 import { GlobeDemo } from '@/sections/home/GlobeDemo';
 import WordRotater from './WordRotater';
 import { Button } from '@/components/ui/button';
