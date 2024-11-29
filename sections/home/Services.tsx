@@ -1,8 +1,4 @@
 'use client';
-
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { slideInFromLeft, slideInFromRight } from '@/lib/motionAnimations';
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 import { MdOutlineSettingsApplications } from 'react-icons/md';
 import { CgShoppingCart } from 'react-icons/cg';
@@ -10,8 +6,6 @@ import { IoShareSocialOutline } from 'react-icons/io5';
 import { MdOutlineTrendingUp } from 'react-icons/md';
 
 export function Services() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
   return (
     <MaxWidthWrapper>
       <div className='mx-auto max-w-screen-xl items-center gap-8 px-4 py-8 sm:py-16 lg:grid lg:grid-cols-2 lg:px-6 xl:gap-16'>

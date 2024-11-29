@@ -1,8 +1,4 @@
 'use client';
-
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { fadeIn } from '@/lib/motionAnimations';
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 import {
   MdOutlineDashboardCustomize,
@@ -18,8 +14,6 @@ const About = ({
   title: string;
   description: string;
 }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
   return (
     <MaxWidthWrapper>
       <div className='mx-auto max-w-3xl text-center'>

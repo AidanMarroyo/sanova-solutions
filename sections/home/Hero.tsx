@@ -1,10 +1,7 @@
 'use client';
-
 import { GlobeDemo } from '@/sections/home/GlobeDemo';
-import React from 'react';
 import WordRotater from './WordRotater';
 import { Button } from '@/components/ui/button';
-import { motion } from 'framer-motion';
 
 function Hero() {
   return (

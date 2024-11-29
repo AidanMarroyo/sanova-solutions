@@ -1,9 +1,6 @@
 'use client';
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
 import { MaxWidthWrapper } from './ MaxWidthWrapper';
 import { Button } from './ui/button';
-import { fadeIn } from '@/lib/motionAnimations';
 
 export function CTA({
   title,
@@ -14,8 +11,6 @@ export function CTA({
   description: string;
   cta: string;
 }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
   return (
     <MaxWidthWrapper>
       <div className='mx-auto flex max-w-screen-sm flex-col items-center text-center mb-20 lg:mb-16'>

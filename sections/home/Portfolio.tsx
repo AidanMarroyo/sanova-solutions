@@ -1,7 +1,4 @@
 'use client';
-
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import {
   Tooltip,
@@ -9,16 +6,9 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
-import {
-  fadeIn,
-  slideInFromLeft,
-  slideInFromRight,
-} from '@/lib/motionAnimations';
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 
 export function Portfolio() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
   return (
     <MaxWidthWrapper>
       <div className='mx-auto max-w-2xl text-center'>

@@ -1,13 +1,7 @@
 'use client';
-
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { fadeIn, slideUp } from '@/lib/motionAnimations';
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 
 export function Blog() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
   return (
     <MaxWidthWrapper>
       <div className='mx-auto max-w-screen-sm text-center'>
