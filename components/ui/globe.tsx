@@ -1,11 +1,22 @@
 'use client';
+
 import createGlobe, { COBEOptions } from 'cobe';
 import { useCallback, useEffect, useRef, useState } from 'react';
+
 import { cn } from '@/lib/utils';
+
 const GLOBE_CONFIG: COBEOptions = {
   width: 800,
   height: 800,
-  onRender: () => {},
+  onRender: (state: Record<string, any>) => {
+    // Access properties safely
+    const { phi, width, height } = state as {
+      phi: number;
+      width: number;
+      height: number;
+    };
+    // Your rendering logic here
+  },
   devicePixelRatio: 2,
   phi: 0,
   theta: 0.3,
@@ -20,67 +31,78 @@ const GLOBE_CONFIG: COBEOptions = {
     { location: [14.5995, 120.9842], size: 0.03 },
     { location: [19.076, 72.8777], size: 0.1 },
     { location: [23.8103, 90.4125], size: 0.05 },
-    { location: [30.0444, 31.2357], size: 0.07 },
-    { location: [39.9042, 116.4074], size: 0.08 },
-    { location: [-23.5505, -46.6333], size: 0.1 },
-    { location: [19.4326, -99.1332], size: 0.1 },
-    { location: [40.7128, -74.006], size: 0.1 },
-    { location: [34.6937, 135.5022], size: 0.05 },
-    { location: [41.0082, 28.9784], size: 0.06 },
   ],
 };
-export default function Globe({
-  className,
-  config = GLOBE_CONFIG,
-}: {
-  className?: string;
-  config?: COBEOptions;
-}) {
-  let phi = 0;
-  let width = 0;
+
+const Globe = ({ className }: { className?: string }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const pointerInteracting = useRef(null);
-  const pointerInteractionMovement = useRef(0);
+  const phiRef = useRef(0);
   const [r, setR] = useState(0);
-  const updatePointerInteraction = (value: any) => {
-    pointerInteracting.current = value;
+
+  const pointerInteracting = useRef<number | null>(null);
+  const pointerInteractionMovement = useRef(0);
+
+  const updatePointerInteraction = (clientX: number) => {
+    pointerInteracting.current = clientX;
+    updateCursor(true);
+  };
+
+  const updateCursor = (value: boolean) => {
     if (canvasRef.current) {
       canvasRef.current.style.cursor = value ? 'grabbing' : 'grab';
     }
   };
-  const updateMovement = (clientX: any) => {
+
+  const updateMovement = (clientX: number) => {
     if (pointerInteracting.current !== null) {
       const delta = clientX - pointerInteracting.current;
       pointerInteractionMovement.current = delta;
       setR(delta / 200);
     }
   };
+
   const onRender = useCallback(
     (state: Record<string, any>) => {
-      if (!pointerInteracting.current) phi += 0.005;
-      state.phi = phi + r;
-      state.width = width * 2;
-      state.height = width * 2;
+      if (!pointerInteracting.current) phiRef.current += 0.005;
+      state.phi = phiRef.current + r;
+      state.width = state.width * 2;
+      state.height = state.height * 2;
     },
     [r]
   );
-  const onResize = () => {
+
+  const onResize = useCallback(() => {
     if (canvasRef.current) {
-      width = canvasRef.current.offsetWidth;
+      const { width } = canvasRef.current.getBoundingClientRect();
+      createGlobe(canvasRef.current, {
+        ...GLOBE_CONFIG,
+        width: width * 2,
+        height: width * 2,
+        onRender,
+      });
     }
-  };
+  }, [onRender]);
+
   useEffect(() => {
-    window.addEventListener('resize', onResize);
-    onResize();
-    const globe = createGlobe(canvasRef.current!, {
-      ...config,
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const { width } = canvas.getBoundingClientRect();
+    createGlobe(canvas, {
+      ...GLOBE_CONFIG,
       width: width * 2,
       height: width * 2,
       onRender,
     });
+
     setTimeout(() => (canvasRef.current!.style.opacity = '1'));
-    return () => globe.destroy();
-  }, []);
+
+    window.addEventListener('resize', onResize);
+    return () => {
+      window.removeEventListener('resize', onResize);
+    };
+  }, [onRender, onResize]);
+
   return (
     <div
       className={cn(
@@ -98,13 +120,11 @@ export default function Globe({
             e.clientX - pointerInteractionMovement.current
           )
         }
-        onPointerUp={() => updatePointerInteraction(null)}
-        onPointerOut={() => updatePointerInteraction(null)}
-        onMouseMove={(e) => updateMovement(e.clientX)}
-        onTouchMove={(e) =>
-          e.touches[0] && updateMovement(e.touches[0].clientX)
-        }
+        onPointerUp={() => updatePointerInteraction(0)}
+        onPointerMove={(e) => updateMovement(e.clientX)}
       />
     </div>
   );
-}
+};
+
+export default Globe;
