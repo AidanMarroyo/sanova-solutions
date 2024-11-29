@@ -1,3 +1,5 @@
+import { Intro } from '@/sections/about/Intro';
+import { Team } from '@/sections/about/Team';
 import { Metadata } from 'next';
 import React from 'react';
 
@@ -10,7 +12,12 @@ export const metadata: Metadata = {
 };
 
 function page({}: Props) {
-  return <div>page</div>;
+  return (
+    <div>
+      <Intro />
+      <Team />
+    </div>
+  );
 }
 
 export default page;
