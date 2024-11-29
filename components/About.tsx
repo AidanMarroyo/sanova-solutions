@@ -3,7 +3,6 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { fadeIn } from '@/lib/motionAnimations';
-import { Button } from '@/components/ui/button';
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 import {
   MdOutlineDashboardCustomize,
