@@ -1,144 +1,87 @@
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer className='rounded-none '>
       <div className='mx-auto max-w-screen-xl p-4 py-6 md:p-8 lg:p-10'>
-        <div className='grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5'>
+        <div className='grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-3 justify-items-center'>
           <div>
-            <h2 className='mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white'>
+            <h2 className='mb-6 text-sm font-semibold uppercase  text-white'>
               Company
             </h2>
-            <ul className='text-gray-500 dark:text-gray-400'>
+            <ul className=' text-gray-400'>
               <li className='mb-4'>
-                <a href='#' className=' hover:underline'>
+                <Link href='/about-us' className='hover:underline'>
                   About
-                </a>
+                </Link>
               </li>
               <li className='mb-4'>
-                <a href='#' className='hover:underline'>
-                  Careers
-                </a>
-              </li>
-              <li className='mb-4'>
-                <a href='#' className='hover:underline'>
-                  Brand Center
-                </a>
-              </li>
-              <li className='mb-4'>
-                <a href='#' className='hover:underline'>
+                <Link href='/blog' className='hover:underline'>
                   Blog
-                </a>
+                </Link>
+              </li>
+              <li className='mb-4'>
+                <Link href='/pricing' className='hover:underline'>
+                  Pricing
+                </Link>
+              </li>
+              <li className='mb-4'>
+                <Link href='/careers' className='hover:underline'>
+                  Careers
+                </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h2 className='mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white'>
+            <h2 className='mb-6 text-sm font-semibold uppercase  text-white'>
               Help center
             </h2>
-            <ul className='text-gray-500 dark:text-gray-400'>
+            <ul className=' text-gray-400'>
               <li className='mb-4'>
-                <a href='#' className='hover:underline'>
-                  Discord Server
-                </a>
-              </li>
-              <li className='mb-4'>
-                <a href='#' className='hover:underline'>
+                <a href='#' className='hover:underline hover:cursor-pointer'>
                   Twitter
                 </a>
               </li>
               <li className='mb-4'>
-                <a href='#' className='hover:underline'>
+                <a href='#' className='hover:underline hover:cursor-pointer'>
                   Facebook
                 </a>
               </li>
               <li className='mb-4'>
-                <a href='#' className='hover:underline'>
+                <Link href='/contact-us' className='hover:underline'>
                   Contact Us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h2 className='mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white'>
+            <h2 className='mb-6 text-sm font-semibold uppercase  text-white'>
               Legal
             </h2>
-            <ul className='text-gray-500 dark:text-gray-400'>
+            <ul className=' text-gray-400'>
               <li className='mb-4'>
-                <a href='#' className='hover:underline'>
+                <Link href='/privacy-policy' className='hover:underline'>
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li className='mb-4'>
-                <a href='#' className='hover:underline'>
+                <Link href='/licensing' className='hover:underline'>
                   Licensing
-                </a>
+                </Link>
               </li>
               <li className='mb-4'>
-                <a href='#' className='hover:underline'>
+                <Link href='/terms' className='hover:underline'>
                   Terms
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2 className='mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white'>
-              Company
-            </h2>
-            <ul className='text-gray-500 dark:text-gray-400'>
-              <li className='mb-4'>
-                <a href='#' className=' hover:underline'>
-                  About
-                </a>
-              </li>
-              <li className='mb-4'>
-                <a href='#' className='hover:underline'>
-                  Careers
-                </a>
-              </li>
-              <li className='mb-4'>
-                <a href='#' className='hover:underline'>
-                  Brand Center
-                </a>
-              </li>
-              <li className='mb-4'>
-                <a href='#' className='hover:underline'>
-                  Blog
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2 className='mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white'>
-              Download
-            </h2>
-            <ul className='text-gray-500 dark:text-gray-400'>
-              <li className='mb-4'>
-                <a href='#' className='hover:underline'>
-                  iOS
-                </a>
-              </li>
-              <li className='mb-4'>
-                <a href='#' className='hover:underline'>
-                  Android
-                </a>
-              </li>
-              <li className='mb-4'>
-                <a href='#' className='hover:underline'>
-                  Windows
-                </a>
-              </li>
-              <li className='mb-4'>
-                <a href='#' className='hover:underline'>
-                  MacOS
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
         </div>
-        <hr className='my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8' />
+        <hr className='my-6 border-gray-200 border-gray-700 sm:mx-auto lg:my-8' />
         <div className='text-center'>
-          <a
+          <Link
             href='#'
-            className='mb-5 flex items-center justify-center text-2xl font-semibold -space-x-32'
+            className='mb-5 flex items-center justify-center text-2xl font-semibold lg:-space-x-32 md:-space-x-20'
           >
             <img
               src='/images/logo.png'
@@ -150,20 +93,17 @@ export default function Footer() {
               alt='Sanova Solutions Logo'
               className='w-1/4 -ml-2'
             />
-          </a>
-          <span className='block text-center text-sm text-gray-500 dark:text-gray-400'>
+          </Link>
+          <span className='block text-center text-sm  text-gray-400'>
             © 2024&nbsp;
-            <a href='#' className='hover:underline'>
+            <Link href='#' className='hover:underline'>
               Sanova Solutions
-            </a>
+            </Link>
             . All Rights Reserved.
           </span>
           <ul className='mt-5 flex justify-center space-x-5'>
             <li>
-              <a
-                href='#'
-                className='text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'
-              >
+              <Link href='#' className='  text-gray-400 hover:text-white'>
                 <svg
                   className='h-5 w-5'
                   fill='currentColor'
@@ -176,13 +116,10 @@ export default function Footer() {
                     clipRule='evenodd'
                   />
                 </svg>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href='#'
-                className='text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'
-              >
+              <Link href='#' className='  text-gray-400 hover:text-white'>
                 <svg
                   className='h-5 w-5'
                   fill='currentColor'
@@ -195,13 +132,10 @@ export default function Footer() {
                     clipRule='evenodd'
                   />
                 </svg>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href='#'
-                className='text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'
-              >
+              <Link href='#' className='  text-gray-400 hover:text-white'>
                 <svg
                   className='h-5 w-5'
                   fill='currentColor'
@@ -210,13 +144,10 @@ export default function Footer() {
                 >
                   <path d='M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84' />
                 </svg>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href='#'
-                className='text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'
-              >
+              <Link href='#' className='  text-gray-400 hover:text-white'>
                 <svg
                   className='h-5 w-5'
                   fill='currentColor'
@@ -229,7 +160,7 @@ export default function Footer() {
                     clipRule='evenodd'
                   />
                 </svg>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

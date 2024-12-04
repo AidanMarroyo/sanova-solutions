@@ -1,114 +1,291 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+import { useToast } from '@/hooks/use-toast';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
+import { ContactFormSchema, ContactFormValues } from '@/lib/validation';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { submitContactForm } from './action';
 
 export function ContactForm() {
+  const { toast } = useToast();
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(ContactFormSchema),
+    defaultValues: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      message: '',
+      answer: '',
+      budget: '',
+    },
+  });
+  const {
+    handleSubmit,
+    watch,
+    trigger,
+    control,
+    setValue,
+    setFocus,
+    formState: { isSubmitting },
+  } = form;
+
+  const formatPhoneNumber = (value: string) => {
+    const phoneNumber = value.replace(/[^\d]/g, '');
+    const phoneNumberLength = phoneNumber.length;
+    if (phoneNumberLength < 4) return phoneNumber;
+    if (phoneNumberLength < 7) {
+      return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
+    }
+    return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(
+      3,
+      6
+    )}-${phoneNumber.slice(6, 10)}`;
+  };
+
+  async function onSubmit(data: z.infer<typeof ContactFormSchema>) {
+    const formData = new FormData();
+    Object.entries(data).forEach(([key, value]) => formData.append(key, value));
+
+    const result = await submitContactForm(formData);
+
+    if (result.success) {
+      toast({
+        title: 'Success',
+        description: result.message,
+      });
+      form.reset();
+    } else {
+      toast({
+        title: 'Error',
+        description:
+          'There was a problem submitting your form. Please check your answers and try again.',
+        variant: 'destructive',
+      });
+      if (result.errors) {
+        Object.entries(result.errors).forEach(([key, value]) => {
+          form.setError(key as keyof z.infer<typeof ContactFormSchema>, {
+            type: 'manual',
+            message: (value as string[])[0],
+          });
+        });
+      }
+    }
+  }
+
   return (
     <section>
       <div className="bg-gray-700 bg-[url('https://flowbite.s3.amazonaws.com/blocks/marketing-ui/contact/laptop-human.jpg')] bg-cover bg-center bg-no-repeat bg-blend-multiply">
         <div className='mx-auto max-w-screen-sm px-4 pb-72 pt-8 text-center lg:px-6 lg:pb-80 lg:pt-24 '>
           <h2 className='mb-4 text-4xl font-extrabold tracking-tight text-white'>
-            Contact Us
+            Let’s Build Your Business Together
           </h2>
           <p className='mb-16 text-gray-400 sm:text-xl'>
-            We use an agile approach to test assumptions and connect with the
-            needs of your audience early and often.
+            Have questions or ready to start your next project? We're here to
+            help! Contact Sanova Solutions today to discuss your business goals
+            and discover how we can help you achieve them.
           </p>
         </div>
       </div>
       <div className='mx-auto -mt-96 max-w-screen-xl px-4 py-16 sm:py-24 lg:px-6 '>
-        <form
-          action='#'
-          className='mx-auto mb-16 grid max-w-screen-md grid-cols-1 gap-8 rounded-lg border   p-6 shadow-sm border-gray-700 bg-gray-800 sm:grid-cols-2 lg:mb-28'
-        >
-          <div className='grid grid-cols-1 gap-2'>
-            <Label htmlFor='first-name' className='dark:text-white'>
-              First Name
-            </Label>
-            <Input
-              id='first-name'
-              placeholder='Bonnie'
-              required
-              className='[&_input]:p-3'
-            />
-          </div>
-          <div className='grid grid-cols-1 gap-2'>
-            <Label htmlFor='last-name' className='dark:text-white'>
-              Last Name
-            </Label>
-            <Input
-              id='last-name'
-              placeholder='Green'
-              required
-              className='[&_input]:p-3'
-            />
-          </div>
-          <div className='grid grid-cols-1 gap-2'>
-            <Label htmlFor='email' className='dark:text-white'>
-              Your Email
-            </Label>
-            <Input
-              id='email'
-              placeholder='name@flowbite.com'
-              required
-              type='email'
-              className='[&_input]:p-3'
-            />
-          </div>
-          <div className='grid grid-cols-1 gap-2'>
-            <Label htmlFor='phone-number' className='dark:text-white'>
-              Phone Number
-            </Label>
-            <Input
-              id='phone-number'
-              placeholder='+12 345 6789'
-              required
-              type='number'
-              className='[&_input]:p-3'
-            />
-          </div>
-          <div className='grid grid-cols-1 gap-2 sm:col-span-2'>
-            <Label htmlFor='message' className='dark:text-white'>
-              Your message
-            </Label>
-            <Textarea
-              id='message'
-              placeholder='Leave a comment...'
-              rows={6}
-              className='text-sm'
-            />
-            <p className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
-              By submitting this form you agree to our&nbsp;
-              <a
-                href='#'
-                className='text-primary-600 hover:underline dark:text-primary-500'
+        <Form {...form}>
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className='mx-auto mb-16 grid max-w-screen-md grid-cols-1 gap-8 rounded-lg border   p-6 shadow-sm border-gray-700 backdrop-blur-[16px] backdrop-saturate-180 bg-[rgba(17,25,40,0.75)] sm:grid-cols-2 lg:mb-28'
+          >
+            <div className='grid grid-cols-1 gap-2'>
+              <FormField
+                control={control}
+                name='firstName'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>First Name</FormLabel>
+                    <FormControl>
+                      <Input placeholder='John' {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <div className='grid grid-cols-1 gap-2'>
+              <FormField
+                control={control}
+                name='lastName'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Last Name</FormLabel>
+                    <FormControl>
+                      <Input placeholder='Doe' {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <div className='grid grid-cols-1 gap-2'>
+              <FormField
+                control={control}
+                name='email'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Email</FormLabel>
+                    <FormControl>
+                      <Input
+                        type='email'
+                        placeholder='john@example.com'
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <div className='grid grid-cols-1 gap-2'>
+              <FormField
+                control={control}
+                name='phone'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Phone</FormLabel>
+                    <FormControl>
+                      <Input
+                        {...field}
+                        placeholder='(___) ___-____'
+                        onChange={(e) => {
+                          const formatted = formatPhoneNumber(e.target.value);
+                          field.onChange(formatted);
+                        }}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <div className='grid grid-cols-1 gap-2'>
+              <FormField
+                control={control}
+                name='answer'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Security Question: What is 7 x 19?</FormLabel>
+                    <FormControl>
+                      <Input placeholder='Your answer' {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <div className='grid grid-cols-1 gap-2'>
+              <FormField
+                control={control}
+                name='budget'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Budget</FormLabel>
+                    <Select
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder='Select your budget range' />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value='Less than $5,000'>
+                          Less than $5,000
+                        </SelectItem>
+                        <SelectItem value='$5,000 - $10,000'>
+                          $5,000 - $10,000
+                        </SelectItem>
+                        <SelectItem value='$10,000 - $20,000'>
+                          $10,000 - $20,000
+                        </SelectItem>
+                        <SelectItem value='$20,000 - $50,000'>
+                          $20,000 - $50,000
+                        </SelectItem>
+                        <SelectItem value='$50,000 - $100,000'>
+                          $50,000 - $100,000
+                        </SelectItem>
+                        <SelectItem value='$100,000+'>$100,000+</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <div className='grid grid-cols-1 gap-2 sm:col-span-2'>
+              <FormField
+                control={control}
+                name='message'
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Message</FormLabel>
+                    <FormControl>
+                      <Textarea placeholder='Your message here...' {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <p className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
+                By submitting this form you agree to our&nbsp;
+                <a
+                  href='#'
+                  className='text-primary-600 hover:underline dark:text-primary-500'
+                >
+                  terms and conditions
+                </a>
+                &nbsp;and our&nbsp;
+                <a
+                  href='#'
+                  className='text-primary-600 hover:underline dark:text-primary-500'
+                >
+                  privacy policy
+                </a>
+                &nbsp;which explains how we may collect, use and disclose your
+                personal information including to third parties.
+              </p>
+            </div>
+            <div>
+              <Button
+                type='submit'
+                disabled={isSubmitting}
+                className='inline-flex w-full sm:w-fit [&>span]:px-5 [&>span]:py-3'
               >
-                terms and conditions
-              </a>
-              &nbsp;and our&nbsp;
-              <a
-                href='#'
-                className='text-primary-600 hover:underline dark:text-primary-500'
-              >
-                privacy policy
-              </a>
-              &nbsp;which explains how we may collect, use and disclose your
-              personal information including to third parties.
-            </p>
-          </div>
-          <div>
-            <Button
-              type='submit'
-              className='inline-flex w-full sm:w-fit [&>span]:px-5 [&>span]:py-3'
-            >
-              Send message
-            </Button>
-          </div>
-        </form>
+                {isSubmitting ? 'Submitting...' : 'Submit'}
+              </Button>
+            </div>
+          </form>
+        </Form>
         <div className='space-y-8 text-center md:grid md:grid-cols-2 md:gap-12 md:space-y-0 lg:grid-cols-3'>
           <div>
-            <div className='mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800 lg:h-16 lg:w-16'>
+            <div className='mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-lg backdrop-blur-[16px] backdrop-saturate-180 bg-[rgba(17,25,40,0.75)] lg:h-16 lg:w-16'>
               <svg
                 className='h-5 w-5 text-gray-600 dark:text-gray-500 lg:h-8 lg:w-8'
                 fill='currentColor'
@@ -121,18 +298,18 @@ export function ContactForm() {
             </div>
             <p className='mb-2 text-xl font-bold dark:text-white'>Email us:</p>
             <p className='mb-3 text-gray-500 dark:text-gray-400'>
-              Email us for general queries, including marketing and partnership
-              opportunities.
+              Got questions or need more details? Send us an email, and we’ll
+              get back to you promptly.
             </p>
             <a
               href='mailto:abc@example.com'
               className='font-semibold text-primary-600 hover:underline dark:text-primary-500'
             >
-              hello@flowbite.com
+              sanovasolutionsinc@gmail.com
             </a>
           </div>
           <div>
-            <div className='mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800 lg:h-16 lg:w-16'>
+            <div className='mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-lg backdrop-blur-[16px] backdrop-saturate-180 bg-[rgba(17,25,40,0.75)] lg:h-16 lg:w-16'>
               <svg
                 className='h-5 w-5 text-gray-600 dark:text-gray-500 lg:h-8 lg:w-8'
                 fill='currentColor'
@@ -144,15 +321,15 @@ export function ContactForm() {
             </div>
             <p className='mb-2 text-xl font-bold dark:text-white'>Call us:</p>
             <p className='mb-3 text-gray-500 dark:text-gray-400'>
-              Call us to speak to a member of our team. We are always happy to
-              help.
+              Ready to take the next step? Reach out by phone or through our
+              contact form to discuss your project.
             </p>
             <span className='font-semibold text-primary-600 dark:text-primary-500'>
               +1 (646) 786-5060
             </span>
           </div>
           <div>
-            <div className='mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800 lg:h-16 lg:w-16'>
+            <div className='mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-lg backdrop-blur-[16px] backdrop-saturate-180 bg-[rgba(17,25,40,0.75)] lg:h-16 lg:w-16'>
               <svg
                 className='h-5 w-5 text-gray-600 dark:text-gray-500 lg:h-8 lg:w-8'
                 fill='currentColor'
@@ -168,8 +345,8 @@ export function ContactForm() {
             </div>
             <p className='mb-2 text-xl font-bold dark:text-white'>Support</p>
             <p className='mb-3 text-gray-500 dark:text-gray-400'>
-              Email us for general queries, including marketing and partnership
-              opportunities.
+              Need assistance? Our dedicated team is available 24 hours a day, 5
+              days a week, to provide reliable support.
             </p>
             <div className='flex items-center justify-center'>
               <Button className='[&>span]:border-primary-500 [&>span]:text-primary-600 dark:[&>span]:text-primary-500'>

@@ -13,6 +13,14 @@ import { cn } from '@/lib/utils';
 import { ModeToggle } from './ModeToggle';
 import { NavLink } from './NavLink';
 import Logo from './Logo';
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignOutButton,
+} from '@clerk/nextjs';
+
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
@@ -21,11 +29,7 @@ const Navbar = () => {
         <nav className='hidden justify-between items-center xl:flex '>
           <div className='flex items-center gap-6'>
             <div className='flex items-center gap-2'>
-              <img
-                src='/images/sanova-dark.png'
-                className='w-48'
-                alt='Sanova Solutions'
-              />
+              <Logo />
             </div>
             <div className='flex items-center gap-6'>
               <NavLink href='/'>Home</NavLink>
@@ -36,10 +40,17 @@ const Navbar = () => {
               <NavLink href='/contact-us'>Contact Us</NavLink>
             </div>
           </div>
-          <div className='flex gap-2'>
+          <div className='flex gap-4'>
             <ModeToggle />
-            <Button variant={'outline'}>Log in</Button>
-            <Button className='text-text-dark'>Sign up</Button>
+            <SignedOut>
+              <SignInButton />
+            </SignedOut>
+            <SignedIn>
+              <SignOutButton />
+              <Link href={'/admin/post/new'}>
+                <Button>Post Blog</Button>
+              </Link>
+            </SignedIn>
           </div>
         </nav>
         <div className='block xl:hidden'>
@@ -147,8 +158,13 @@ const Navbar = () => {
                     </a>
                   </div>
                   <div className='mt-2 flex flex-col gap-3'>
-                    <Button variant={'outline'}>Log in</Button>
-                    <Button>Sign up</Button>
+                    <SignedOut>
+                      <SignInButton />
+                    </SignedOut>
+                    <SignedIn>
+                      <SignOutButton />
+                      <Button>Post Blog</Button>
+                    </SignedIn>
                   </div>
                 </div>
               </SheetContent>

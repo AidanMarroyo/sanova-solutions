@@ -1,0 +1,72 @@
+'use client';
+
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+
+export function NewsletterSignup() {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  return (
+    <section className='bg-gray-50 dark:bg-gray-800'>
+      <div className='mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16'>
+        <div className='mx-auto max-w-screen-md sm:text-center'>
+          <h2 className='mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl'>
+            Sign up for our newsletter
+          </h2>
+          <p className='mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400 sm:text-xl md:mb-12'>
+            Stay up to date with the roadmap progress, announcements and
+            exclusive discounts feel free to sign up with your email.
+          </p>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              setModalOpen(true);
+            }}
+          >
+            <div className='mx-auto mb-3 max-w-screen-sm items-center space-y-4 sm:flex sm:space-y-0'>
+              <div className='relative w-full'>
+                <Input type='email' placeholder='Enter your email' required />
+              </div>
+              <Button type='submit' className='w-full sm:w-auto'>
+                Subscribe
+              </Button>
+            </div>
+            <div className='mx-auto max-w-screen-sm text-left text-sm text-gray-500 dark:text-gray-300'>
+              We care about the protection of your data.{' '}
+              <a
+                href='#'
+                className='font-medium text-primary-600 hover:underline dark:text-primary-500'
+              >
+                Read our Privacy Policy
+              </a>
+              .
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <Dialog open={isModalOpen} onOpenChange={setModalOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Join our Newsletter</DialogTitle>
+          </DialogHeader>
+          <div className='space-y-4'>
+            <p>Thank you for subscribing to our newsletter!</p>
+            <p>
+              You'll receive our latest updates and exclusive offers directly to
+              your inbox.
+            </p>
+          </div>
+          <Button onClick={() => setModalOpen(false)}>Close</Button>
+        </DialogContent>
+      </Dialog>
+    </section>
+  );
+}

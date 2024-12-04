@@ -1,4 +1,5 @@
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
+import Link from 'next/link';
 
 export function Services() {
   return (
@@ -12,8 +13,8 @@ export function Services() {
             Transform your business with bespoke software designed to optimize
             operations, enhance efficiency, and solve unique challenges.
           </p>
-          <a
-            href='#'
+          <Link
+            href='/services/custom-applications'
             className='inline-flex items-center text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-600'
           >
             Learn More About Custom Applications
@@ -29,7 +30,7 @@ export function Services() {
                 clipRule='evenodd'
               />
             </svg>
-          </a>
+          </Link>
           <div className='my-7 space-y-5 border-t border-gray-200 pt-8 dark:border-gray-700'></div>
         </div>
         <img
@@ -54,8 +55,8 @@ export function Services() {
             creates responsive, visually stunning, and user-friendly websites
             that leave lasting impressions.
           </p>
-          <a
-            href='#'
+          <Link
+            href='/services/website-services'
             className='inline-flex items-center text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-600'
           >
             Learn More About Our Website Services
@@ -71,7 +72,7 @@ export function Services() {
                 clipRule='evenodd'
               />
             </svg>
-          </a>
+          </Link>
 
           <div className='my-7 space-y-5 border-t border-gray-200 pt-8 dark:border-gray-700'></div>
         </div>
@@ -83,8 +84,8 @@ export function Services() {
             Create a seamless online shopping experience with scalable
             e-commerce platforms built to grow with your business.
           </p>
-          <a
-            href='#'
+          <Link
+            href='/services/ecommerce'
             className='inline-flex items-center text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-600'
           >
             Explore E-Commerce Solutions
@@ -100,7 +101,7 @@ export function Services() {
                 clipRule='evenodd'
               />
             </svg>
-          </a>
+          </Link>
           <div className='my-7 space-y-5 border-t border-gray-200 pt-8 dark:border-gray-700'></div>
         </div>
         <img
@@ -108,7 +109,7 @@ export function Services() {
           src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-1.png'
           className='mb-4 hidden w-full rounded-lg lg:mb-0 lg:flex'
         />
-        <img
+        {/* <img
           alt=''
           src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-2.png'
           className='mb-4 hidden w-full rounded-lg lg:mb-0 lg:flex'
@@ -174,7 +175,7 @@ export function Services() {
           alt=''
           src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-1.png'
           className='mb-4 hidden w-full rounded-lg lg:mb-0 lg:flex'
-        />
+        /> */}
       </div>
     </MaxWidthWrapper>
   );

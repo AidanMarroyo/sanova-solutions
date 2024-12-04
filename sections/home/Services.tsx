@@ -3,6 +3,7 @@ import { MdOutlineSettingsApplications } from 'react-icons/md';
 import { CgShoppingCart } from 'react-icons/cg';
 import { IoShareSocialOutline } from 'react-icons/io5';
 import { MdOutlineTrendingUp } from 'react-icons/md';
+import Link from 'next/link';
 
 export function Services() {
   return (
@@ -30,8 +31,8 @@ export function Services() {
                 <p className='mb-2 text-gray-400'>
                   Develop software solutions tailored to your business needs.
                 </p>
-                <a
-                  href='#'
+                <Link
+                  href='/services/custom-applications'
                   className='inline-flex items-center text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-600'
                 >
                   Learn more
@@ -47,7 +48,7 @@ export function Services() {
                       clipRule='evenodd'
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
             <div className='flex pt-8'>
@@ -71,8 +72,8 @@ export function Services() {
                   Build professional, responsive, and SEO-optimized websites to
                   make a lasting impact.
                 </p>
-                <a
-                  href='#'
+                <Link
+                  href='/services/website-services'
                   className='inline-flex items-center text-[#D4AF37] hover:text-[#B58E2B]'
                 >
                   Learn more
@@ -88,7 +89,7 @@ export function Services() {
                       clipRule='evenodd'
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
             <div className='flex pt-8'>
@@ -102,8 +103,8 @@ export function Services() {
                 <p className='mb-2 text-gray-400'>
                   Launch or optimize your online store for seamless sales.
                 </p>
-                <a
-                  href='#'
+                <Link
+                  href='/services/ecommerce'
                   className='inline-flex items-center text-[#1E3A5F] hover:text-[#172A45]'
                 >
                   Learn more
@@ -119,10 +120,10 @@ export function Services() {
                       clipRule='evenodd'
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
-            <div className='flex pt-8'>
+            {/* <div className='flex pt-8'>
               <div className='mr-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-100 dark:bg-primary-900'>
                 <IoShareSocialOutline />
               </div>
@@ -226,7 +227,7 @@ export function Services() {
                   </svg>
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
           <p className='text-sm'>
             Sanova Solutions accelerates your growth with custom apps, seamless
