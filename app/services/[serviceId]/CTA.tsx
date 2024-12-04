@@ -1,26 +1,14 @@
+'use client';
+
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 import { Button } from '@/components/ui/button';
+import React from 'react';
+import { ServiceName, services } from '@/lib/constants';
+import { useParams } from 'next/navigation';
 
-interface CTAProps {
-  service: {
-    name: string;
-
-    title: string;
-
-    description: string;
-
-    title2: string;
-
-    list: string[];
-
-    ctaTitle: string;
-
-    ctaDescription: string;
-
-    ctaButton: string;
-  };
-}
-export function CTA({ service }: CTAProps) {
+export function CTA() {
+  const params = useParams();
+  const service = services[params.serviceId as ServiceName];
   return (
     <MaxWidthWrapper>
       <div className='mx-auto flex max-w-screen-sm flex-col items-center text-center mb-20 lg:mb-16'>
