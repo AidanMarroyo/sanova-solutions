@@ -38,33 +38,15 @@ export function NewsletterSignup() {
                 Subscribe
               </Button>
             </div>
-            <div className='mx-auto max-w-screen-sm text-left text-sm text-gray-500 dark:text-gray-300'>
-              We care about the protection of your data.{' '}
-              <a
-                href='#'
-                className='font-medium text-primary-600 hover:underline dark:text-primary-500'
-              >
-                Read our Privacy Policy
-              </a>
-              .
-            </div>
           </form>
         </div>
       </div>
-
       <Dialog open={isModalOpen} onOpenChange={setModalOpen}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Join our Newsletter</DialogTitle>
+            <DialogTitle>Thank you for subscribing!</DialogTitle>
           </DialogHeader>
-          <div className='space-y-4'>
-            <p>Thank you for subscribing to our newsletter!</p>
-            <p>
-              You'll receive our latest updates and exclusive offers directly to
-              your inbox.
-            </p>
-          </div>
-          <Button onClick={() => setModalOpen(false)}>Close</Button>
+          <p>We&apos;ll keep you updated with the latest news and updates.</p>
         </DialogContent>
       </Dialog>
     </section>
