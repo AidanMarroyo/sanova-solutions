@@ -1,41 +1,20 @@
-import React from 'react';
+// app/services/[serviceId]/page.tsx
 import Hero from './Hero';
 import { CTA } from './CTA';
 import { ServiceName, services } from '@/lib/constants';
-import { Metadata } from 'next';
 
-interface PageProps {
-  params: { serviceId: string };
+// Static params generation (synchronous)
+export function generateStaticParams() {
+  // Returning serviceIds as static parameters
+  return Object.keys(services).map((serviceId) => ({
+    serviceId: serviceId as ServiceName, // Explicitly asserting the type here
+  }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: PageProps['params'];
-}): Promise<Metadata> {
-  const { serviceId } = await params; // Await params before accessing serviceId
-  const service = services[serviceId as ServiceName];
-
-  // Fallback for non-matching keys
-  if (!service) {
-    console.warn(`Service key not found: ${serviceId}`);
-    return {
-      title: 'Service Not Found | Sanova Solutions',
-    };
-  }
-
-  return {
-    title: `${service.name} | Sanova Solutions`,
-  };
-}
-
-const Page: React.FC<PageProps> = async ({ params }) => {
-  const { serviceId } = await params; // Awaiting params
-  const service = services[serviceId as ServiceName];
-
-  if (!service) {
-    return <div>Service not found</div>;
-  }
+// Page Component
+const Page = ({ params }: { params: { serviceId: ServiceName } }) => {
+  // Fetch the service based on the serviceId from the params
+  const service = services[params.serviceId];
 
   return (
     <div>
