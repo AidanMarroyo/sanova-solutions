@@ -1,13 +1,26 @@
-'use client';
-
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
-import { ServiceName, services } from '@/lib/constants';
-import React from 'react';
-import { useParams } from 'next/navigation';
 
-function Hero() {
-  const params = useParams<{ serviceId: ServiceName }>();
-  const service = services[params.serviceId];
+interface HeroProps {
+  service: {
+    name: string;
+
+    title: string;
+
+    description: string;
+
+    title2: string;
+
+    list: string[];
+
+    ctaTitle: string;
+
+    ctaDescription: string;
+
+    ctaButton: string;
+  };
+}
+
+function Hero({ service }: HeroProps) {
   return (
     <MaxWidthWrapper>
       <div className='items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16'>

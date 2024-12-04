@@ -9,13 +9,16 @@ interface PageProps {
 }
 
 export async function generateMetadata({
-  params: { serviceId },
-}: PageProps): Promise<Metadata> {
+  params,
+}: {
+  params: PageProps['params'];
+}): Promise<Metadata> {
+  const { serviceId } = await params; // Await params before accessing serviceId
   const service = services[serviceId as ServiceName];
 
   // Fallback for non-matching keys
   if (!service) {
-    console.warn(`Service key not found: }`);
+    console.warn(`Service key not found: ${serviceId}`);
     return {
       title: 'Service Not Found | Sanova Solutions',
     };
@@ -26,13 +29,20 @@ export async function generateMetadata({
   };
 }
 
-function page() {
+const Page: React.FC<PageProps> = async ({ params }) => {
+  const { serviceId } = await params; // Awaiting params
+  const service = services[serviceId as ServiceName];
+
+  if (!service) {
+    return <div>Service not found</div>;
+  }
+
   return (
     <div>
-      <Hero />
-      <CTA />
+      <Hero service={service} />
+      <CTA service={service} />
     </div>
   );
-}
+};
 
-export default page;
+export default Page;
