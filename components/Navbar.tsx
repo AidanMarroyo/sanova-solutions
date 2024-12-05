@@ -13,14 +13,6 @@ import { cn } from '@/lib/utils';
 import { ModeToggle } from './ModeToggle';
 import { NavLink } from './NavLink';
 import Logo from './Logo';
-import {
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  SignOutButton,
-} from '@clerk/nextjs';
-
-import Link from 'next/link';
 
 const Navbar = () => {
   return (
@@ -42,15 +34,6 @@ const Navbar = () => {
           </div>
           <div className='flex gap-4'>
             <ModeToggle />
-            <SignedOut>
-              <SignInButton />
-            </SignedOut>
-            <SignedIn>
-              <SignOutButton />
-              <Link href={'/admin/post/new'}>
-                <Button>Post Blog</Button>
-              </Link>
-            </SignedIn>
           </div>
         </nav>
         <div className='block xl:hidden'>
@@ -157,15 +140,7 @@ const Navbar = () => {
                       Cookie Settings
                     </a>
                   </div>
-                  <div className='mt-2 flex flex-col gap-3'>
-                    <SignedOut>
-                      <SignInButton />
-                    </SignedOut>
-                    <SignedIn>
-                      <SignOutButton />
-                      <Button>Post Blog</Button>
-                    </SignedIn>
-                  </div>
+                  <div className='mt-2 flex flex-col gap-3'></div>
                 </div>
               </SheetContent>
             </Sheet>

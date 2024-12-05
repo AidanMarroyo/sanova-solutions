@@ -21,7 +21,7 @@ function Hero() {
               {service.title2}
             </h2>
             {service.list.map((item) => (
-              <li className='flex space-x-3'>
+              <li key={item} className='flex space-x-3'>
                 <svg
                   className='h-5 w-5 shrink-0 text-primary-500'
                   fill='currentColor'

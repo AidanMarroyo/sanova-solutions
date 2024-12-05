@@ -4,7 +4,6 @@ import './globals.css';
 import { ThemeProvider } from '../components/theme-provider';
 import Navbar from '../components/Navbar';
 import Footer from '@/components/Footer';
-import { ClerkProvider } from '@clerk/nextjs';
 import { Toaster } from '@/components/ui/toaster';
 
 const geistSans = localFont({
@@ -31,25 +30,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang='en'>
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+    <html lang='en'>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <div className='fixed top-0 left-0 -z-10 w-full h-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]' />
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='dark'
+          disableTransitionOnChange
         >
-          <div className='fixed top-0 left-0 -z-10 w-full h-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]' />
-          <ThemeProvider
-            attribute='class'
-            defaultTheme='dark'
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Navbar />
-            <main className='relative z-0 mt-60 mx-auto'>{children}</main>
-            <Toaster />
-            <Footer />
-          </ThemeProvider>
-        </body>
-      </html>
-    </ClerkProvider>
+          <Navbar />
+          <main className='relative z-0 mt-60 mx-auto'>{children}</main>
+          <Toaster />
+          <Footer />
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }

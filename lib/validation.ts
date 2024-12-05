@@ -21,3 +21,18 @@ export const ContactFormSchema = z.object({
 });
 
 export type ContactFormValues = z.infer<typeof ContactFormSchema>;
+
+export const BlogPostSchema = z.object({
+  title: requiredString,
+  title2: z.string().optional(),
+  description: requiredString.max(
+    160,
+    'Description must be less than 160 characters'
+  ),
+  content: requiredString.max(
+    10000,
+    'Content must be less than 10,000 characters'
+  ),
+});
+
+export type BlogPostValues = z.infer<typeof BlogPostSchema>;

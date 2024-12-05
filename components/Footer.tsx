@@ -30,6 +30,11 @@ export default function Footer() {
                   Careers
                 </Link>
               </li>
+              <li className='mb-4'>
+                <Link href='/sign-in' className='hover:underline'>
+                  Sign-in
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
