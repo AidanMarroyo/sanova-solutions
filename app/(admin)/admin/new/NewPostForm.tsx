@@ -27,7 +27,7 @@ export default function NewPostForm() {
     resolver: zodResolver(BlogPostSchema),
   });
 
-  const { handleSubmit, setFocus } = form;
+  const { handleSubmit, setFocus, control } = form;
 
   async function onSubmit(values: BlogPostValues) {
     const formData = new FormData();

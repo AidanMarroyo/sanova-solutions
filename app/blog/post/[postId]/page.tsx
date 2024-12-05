@@ -7,7 +7,7 @@ import { Metadata } from 'next';
 import { formatDate } from '@/lib/utils';
 
 interface PageProps {
-  params: { postId: string };
+  params: Promise<{ postId: string }>;
 }
 
 const getPost = cache(async (postId: string) => {
@@ -28,9 +28,9 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({
-  params: { postId },
+  params,
 }: PageProps): Promise<Metadata> {
-  const post = await getPost(postId);
+  const post = await getPost((await params).postId);
 
   return {
     title: `${post.title} | Sanova Solutions`,
@@ -38,8 +38,8 @@ export async function generateMetadata({
   };
 }
 
-export default async function BlogPost({ params: { postId } }: PageProps) {
-  const post = await getPost(postId);
+export default async function BlogPost({ params }: PageProps) {
+  const post = await getPost((await params).postId);
   return (
     <main className='lg:pb-24'>
       <header className="relative h-[460px] w-full bg-[url('https://flowbite.s3.amazonaws.com/blocks/marketing-ui/articles/background.png')] bg-cover bg-center bg-no-repeat bg-blend-darken xl:h-[537px]">
