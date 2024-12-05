@@ -12,7 +12,7 @@ export function Blog() {
           your business.
         </p>
       </div>
-      <div className='mb-16 grid gap-8 lg:grid-cols-3 lg:divide-x lg:divide-gray-200 dark:lg:divide-gray-700'>
+      <div className='mb-16 grid gap-8 lg:grid-cols-3 lg:divide-x lg:divide-gray-700'>
         <article>
           <a href='#'>
             <img
@@ -174,7 +174,7 @@ export function Blog() {
             </p>
             <a
               href='#'
-              className='inline-flex items-center font-medium  hover:underline dark:text-primary-500'
+              className='inline-flex items-center font-medium  hover:underline text-primary-500'
             >
               Read more
               <svg

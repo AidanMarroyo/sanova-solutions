@@ -1,5 +1,6 @@
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 interface CTAProps {
   service: {
@@ -21,9 +22,11 @@ export function CTA({ service }: CTAProps) {
           {service.ctaTitle}
         </h2>
         <p className='mb-6 md:text-lg'>{service.ctaDescription}</p>
-        <Button type='button' color='info' className='w-fit'>
-          {service.ctaButton}
-        </Button>
+        <Link href='/contact-us'>
+          <Button type='button' color='info' className='w-fit'>
+            {service.ctaButton}
+          </Button>
+        </Link>
       </div>
     </MaxWidthWrapper>
   );

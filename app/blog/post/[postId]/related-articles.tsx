@@ -16,7 +16,7 @@ export function RelatedArticles() {
   return (
     <aside aria-label='Related articles' className=' lg:py-24'>
       <div className='mx-auto max-w-screen-xl px-4'>
-        <h2 className='mb-6 text-2xl font-bold text-gray-900 dark:text-white lg:mb-8'>
+        <h2 className='mb-6 text-2xl font-bold text-white lg:mb-8'>
           Related articles
         </h2>
         <div className='grid gap-6 md:grid-cols-2 lg:gap-12'>
@@ -32,15 +32,13 @@ export function RelatedArticles() {
                 />
               </a>
               <div className='flex flex-col justify-center'>
-                <h2 className='mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white'>
+                <h2 className='mb-2 text-xl font-bold leading-tight text-white'>
                   <a href='#'>{article.title}</a>
                 </h2>
-                <p className='mb-4 max-w-sm text-gray-500 dark:text-gray-400'>
-                  {article.excerpt}
-                </p>
+                <p className='mb-4 max-w-sm text-gray-400'>{article.excerpt}</p>
                 <a
                   href='#'
-                  className='inline-flex items-center font-medium text-primary-600 hover:underline dark:text-primary-500'
+                  className='inline-flex items-center font-medium  hover:underline text-primary-500'
                 >
                   Read in {article.readTime}
                 </a>

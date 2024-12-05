@@ -36,10 +36,7 @@ export function Hero() {
             FEATURED IN
           </span>
           <div className='mt-8 flex flex-wrap items-center justify-center text-gray-500 sm:justify-between'>
-            <a
-              href='#'
-              className='mb-5 mr-5 hover:text-gray-800 dark:hover:text-gray-400 lg:mb-0'
-            >
+            <a href='#' className='mb-5 mr-5 hover:text-gray-400 lg:mb-0'>
               <svg
                 className='h-8'
                 viewBox='0 0 132 29'
@@ -84,10 +81,7 @@ export function Hero() {
                 />
               </svg>
             </a>
-            <a
-              href='#'
-              className='mb-5 mr-5 hover:text-gray-800 dark:hover:text-gray-400 lg:mb-0'
-            >
+            <a href='#' className='mb-5 mr-5 hover:text-gray-400 lg:mb-0'>
               <svg
                 className='h-11'
                 viewBox='0 0 208 42'
@@ -108,10 +102,7 @@ export function Hero() {
                 />
               </svg>
             </a>
-            <a
-              href='#'
-              className='mb-5 mr-5 hover:text-gray-800 dark:hover:text-gray-400 lg:mb-0'
-            >
+            <a href='#' className='mb-5 mr-5 hover:text-gray-400 lg:mb-0'>
               <svg
                 className='h-11'
                 viewBox='0 0 120 41'

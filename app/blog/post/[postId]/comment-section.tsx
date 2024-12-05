@@ -30,7 +30,7 @@ export function CommentSection() {
   return (
     <section className='not-format'>
       <div className='mb-6 flex items-center justify-between'>
-        <h2 className='text-lg font-bold text-gray-900 dark:text-white lg:text-2xl'>
+        <h2 className='text-lg font-bold text-white lg:text-2xl'>
           Discussion ({comments.length})
         </h2>
         <Button variant='outline'>Subscribe</Button>
@@ -54,9 +54,9 @@ export function CommentSection() {
                 <AvatarImage src={comment.avatar} alt={comment.author} />
                 <AvatarFallback>{comment.author[0]}</AvatarFallback>
               </Avatar>
-              <p className='mr-3 text-sm text-gray-900 dark:text-white'>
+              <p className='mr-3 text-sm text-white'>
                 {comment.author}
-                <time className='mx-3 text-sm font-normal text-gray-500 dark:text-gray-400'>
+                <time className='mx-3 text-sm font-normal text-gray-400'>
                   {comment.date}
                 </time>
               </p>
@@ -83,7 +83,7 @@ export function CommentSection() {
               </DropdownMenuContent>
             </DropdownMenu>
           </footer>
-          <p className='text-gray-500 dark:text-gray-400'>{comment.content}</p>
+          <p className='text-gray-400'>{comment.content}</p>
           <div className='mt-4 flex items-center space-x-4'>
             <Button variant='ghost' size='sm'>
               <svg

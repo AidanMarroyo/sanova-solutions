@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { MaxWidthWrapper } from './ MaxWidthWrapper';
 import { Button } from './ui/button';
 
@@ -17,9 +18,11 @@ export function CTA({
           {title}
         </h2>
         <p className='mb-6 md:text-lg'>{description ? description : null}</p>
-        <Button type='button' color='info' className='w-fit'>
-          {cta}
-        </Button>
+        <Link href='/contact-us'>
+          <Button type='button' color='info' className='w-fit'>
+            {cta}
+          </Button>
+        </Link>
       </div>
     </MaxWidthWrapper>
   );

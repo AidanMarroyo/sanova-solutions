@@ -10,7 +10,6 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
-import { ModeToggle } from './ModeToggle';
 import { NavLink } from './NavLink';
 import Logo from './Logo';
 
@@ -31,9 +30,6 @@ const Navbar = () => {
               <NavLink href='/blog'>Blog</NavLink>
               <NavLink href='/contact-us'>Contact Us</NavLink>
             </div>
-          </div>
-          <div className='flex gap-4'>
-            <ModeToggle />
           </div>
         </nav>
         <div className='block xl:hidden'>

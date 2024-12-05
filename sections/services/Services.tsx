@@ -15,7 +15,7 @@ export function Services() {
           </p>
           <Link
             href='/services/custom-applications'
-            className='inline-flex items-center text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-600'
+            className='inline-flex items-center hover:text-primary-600'
           >
             Learn More About Custom Applications
             <svg
@@ -31,7 +31,7 @@ export function Services() {
               />
             </svg>
           </Link>
-          <div className='my-7 space-y-5 border-t border-gray-200 pt-8 dark:border-gray-700'></div>
+          <div className='my-7 space-y-5 border-t border-gray-700'></div>
         </div>
         <img
           alt=''
@@ -57,7 +57,7 @@ export function Services() {
           </p>
           <Link
             href='/services/website-services'
-            className='inline-flex items-center text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-600'
+            className='inline-flex items-center hover:text-primary-600'
           >
             Learn More About Our Website Services
             <svg
@@ -74,7 +74,7 @@ export function Services() {
             </svg>
           </Link>
 
-          <div className='my-7 space-y-5 border-t border-gray-200 pt-8 dark:border-gray-700'></div>
+          <div className='my-7 space-y-5 border-t border-gray-700'></div>
         </div>
         <div className='text-gray-400 sm:text-lg'>
           <h2 className='mb-4 text-4xl font-extrabold tracking-tight '>
@@ -86,7 +86,7 @@ export function Services() {
           </p>
           <Link
             href='/services/ecommerce'
-            className='inline-flex items-center text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-600'
+            className='inline-flex items-center hover:text-primary-600'
           >
             Explore E-Commerce Solutions
             <svg
@@ -102,7 +102,7 @@ export function Services() {
               />
             </svg>
           </Link>
-          <div className='my-7 space-y-5 border-t border-gray-200 pt-8 dark:border-gray-700'></div>
+          <div className='my-7 space-y-5 border-t border-gray-700'></div>
         </div>
         <img
           alt=''
@@ -124,7 +124,7 @@ export function Services() {
           </p>
           <a
             href='#'
-            className='inline-flex items-center text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-600'
+            className='inline-flex items-center hover:text-primary-600'
           >
             Discover Social Media Marketing Services
             <svg
@@ -141,7 +141,7 @@ export function Services() {
             </svg>
           </a>
 
-          <div className='my-7 space-y-5 border-t border-gray-200 pt-8 dark:border-gray-700'></div>
+          <div className='my-7 space-y-5 border-t border-gray-700'></div>
         </div>
         <div className='text-gray-400 sm:text-lg'>
           <h2 className='mb-4 text-4xl font-extrabold tracking-tight '>
@@ -153,7 +153,7 @@ export function Services() {
           </p>
           <a
             href='#'
-            className='inline-flex items-center text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-600'
+            className='inline-flex items-center hover:text-primary-600'
           >
             Learn More About Growth Services
             <svg
@@ -169,7 +169,7 @@ export function Services() {
               />
             </svg>
           </a>
-          <div className='my-7 space-y-5 border-t border-gray-200 pt-8 dark:border-gray-700'></div>
+          <div className='my-7 space-y-5 border-t border-gray-700'></div>
         </div>
         <img
           alt=''

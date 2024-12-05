@@ -21,9 +21,9 @@ export function Services() {
             Our Services: Built for Growth
           </h2>
 
-          <div className='mb-6 border-y border-gray-200 py-8 dark:border-gray-700'>
+          <div className='mb-6 border-y  py-8 border-gray-700'>
             <div className='flex'>
-              <div className='mr-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-100 dark:bg-primary-900'>
+              <div className='mr-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-100 bg-primary-900'>
                 <MdOutlineSettingsApplications />
               </div>
               <div>
@@ -33,7 +33,7 @@ export function Services() {
                 </p>
                 <Link
                   href='/services/custom-applications'
-                  className='inline-flex items-center text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-600'
+                  className='inline-flex items-center text-primary-500 hover:text-primary-600'
                 >
                   Learn more
                   <svg
@@ -97,7 +97,7 @@ export function Services() {
                 <CgShoppingCart className='text-[#1E3A5F]' />
               </div>
               <div>
-                <h3 className='mb-2 text-xl font-bold text-gray-900 dark:text-white'>
+                <h3 className='mb-2 text-xl font-bold text-white'>
                   Ecommerce Solutions
                 </h3>
                 <p className='mb-2 text-gray-400'>
@@ -124,7 +124,7 @@ export function Services() {
               </div>
             </div>
             {/* <div className='flex pt-8'>
-              <div className='mr-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-100 dark:bg-primary-900'>
+              <div className='mr-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full  bg-primary-900'>
                 <IoShareSocialOutline />
               </div>
               <div>
@@ -136,7 +136,7 @@ export function Services() {
                 </p>
                 <a
                   href='#'
-                  className='inline-flex items-center text-primary-600 hover:text-primary-800 dark:text-primary-500 dark:hover:text-primary-600'
+                  className='inline-flex items-center text-primary-500 hover:text-primary-600'
                 >
                   Learn more
                   <svg
@@ -202,7 +202,7 @@ export function Services() {
                 <MdOutlineTrendingUp />
               </div>
               <div>
-                <h3 className='mb-2 text-xl font-bold text-gray-900 dark:text-white'>
+                <h3 className='mb-2 text-xl font-bold text-white'>
                   Business Growth Services
                 </h3>
                 <p className='mb-2 text-gray-400'>

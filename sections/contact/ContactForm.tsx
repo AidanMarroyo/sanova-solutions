@@ -253,19 +253,13 @@ export function ContactForm() {
                 )}
               />
 
-              <p className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
+              <p className='mt-4 text-sm text-gray-400'>
                 By submitting this form you agree to our&nbsp;
-                <a
-                  href='#'
-                  className='text-primary-600 hover:underline dark:text-primary-500'
-                >
+                <a href='#' className='hover:underline text-primary-500'>
                   terms and conditions
                 </a>
                 &nbsp;and our&nbsp;
-                <a
-                  href='#'
-                  className='text-primary-600 hover:underline dark:text-primary-500'
-                >
+                <a href='#' className='hover:underline text-primary-500'>
                   privacy policy
                 </a>
                 &nbsp;which explains how we may collect, use and disclose your
@@ -287,7 +281,7 @@ export function ContactForm() {
           <div>
             <div className='mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-lg backdrop-blur-[16px] backdrop-saturate-180 bg-[rgba(17,25,40,0.75)] lg:h-16 lg:w-16'>
               <svg
-                className='h-5 w-5 text-gray-600 dark:text-gray-500 lg:h-8 lg:w-8'
+                className='h-5 w-5 text-gray-500 lg:h-8 lg:w-8'
                 fill='currentColor'
                 viewBox='0 0 20 20'
                 xmlns='http://www.w3.org/2000/svg'
@@ -296,14 +290,14 @@ export function ContactForm() {
                 <path d='M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z' />
               </svg>
             </div>
-            <p className='mb-2 text-xl font-bold dark:text-white'>Email us:</p>
-            <p className='mb-3 text-gray-500 dark:text-gray-400'>
+            <p className='mb-2 text-xl font-bold text-white'>Email us:</p>
+            <p className='mb-3 text-gray-400'>
               Got questions or need more details? Send us an email, and we’ll
               get back to you promptly.
             </p>
             <a
               href='mailto:abc@example.com'
-              className='font-semibold text-primary-600 hover:underline dark:text-primary-500'
+              className='font-semibold hover:underline text-primary-500'
             >
               sanovasolutionsinc@gmail.com
             </a>
@@ -311,7 +305,7 @@ export function ContactForm() {
           <div>
             <div className='mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-lg backdrop-blur-[16px] backdrop-saturate-180 bg-[rgba(17,25,40,0.75)] lg:h-16 lg:w-16'>
               <svg
-                className='h-5 w-5 text-gray-600 dark:text-gray-500 lg:h-8 lg:w-8'
+                className='h-5 w-5 text-gray-500 lg:h-8 lg:w-8'
                 fill='currentColor'
                 viewBox='0 0 20 20'
                 xmlns='http://www.w3.org/2000/svg'
@@ -319,19 +313,19 @@ export function ContactForm() {
                 <path d='M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z' />
               </svg>
             </div>
-            <p className='mb-2 text-xl font-bold dark:text-white'>Call us:</p>
-            <p className='mb-3 text-gray-500 dark:text-gray-400'>
+            <p className='mb-2 text-xl font-bold text-white'>Call us:</p>
+            <p className='mb-3 text-gray-400'>
               Ready to take the next step? Reach out by phone or through our
               contact form to discuss your project.
             </p>
-            <span className='font-semibold text-primary-600 dark:text-primary-500'>
+            <span className='font-semibold text-primary-500'>
               +1 (646) 786-5060
             </span>
           </div>
           <div>
             <div className='mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-lg backdrop-blur-[16px] backdrop-saturate-180 bg-[rgba(17,25,40,0.75)] lg:h-16 lg:w-16'>
               <svg
-                className='h-5 w-5 text-gray-600 dark:text-gray-500 lg:h-8 lg:w-8'
+                className='h-5 w-5 text-gray-500 lg:h-8 lg:w-8'
                 fill='currentColor'
                 viewBox='0 0 20 20'
                 xmlns='http://www.w3.org/2000/svg'
@@ -343,13 +337,13 @@ export function ContactForm() {
                 />
               </svg>
             </div>
-            <p className='mb-2 text-xl font-bold dark:text-white'>Support</p>
-            <p className='mb-3 text-gray-500 dark:text-gray-400'>
+            <p className='mb-2 text-xl font-bold text-white'>Support</p>
+            <p className='mb-3 text-gray-400'>
               Need assistance? Our dedicated team is available 24 hours a day, 5
               days a week, to provide reliable support.
             </p>
             <div className='flex items-center justify-center'>
-              <Button className='[&>span]:border-primary-500 [&>span]:text-primary-600 dark:[&>span]:text-primary-500'>
+              <Button className='[&>span]:border-primary-500 [&>span]:[&>span]:text-primary-500'>
                 Support center
               </Button>
             </div>

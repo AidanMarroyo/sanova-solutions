@@ -14,13 +14,13 @@ export function NewsletterSignup() {
   const [isModalOpen, setModalOpen] = useState(false);
 
   return (
-    <section className='bg-gray-50 dark:bg-gray-800'>
+    <section className='bg-gray-800'>
       <div className='mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16'>
         <div className='mx-auto max-w-screen-md sm:text-center'>
-          <h2 className='mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl'>
+          <h2 className='mb-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl'>
             Sign up for our newsletter
           </h2>
-          <p className='mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400 sm:text-xl md:mb-12'>
+          <p className='mx-auto mb-8 max-w-2xl text-gray-400 sm:text-xl md:mb-12'>
             Stay up to date with the roadmap progress, announcements and
             exclusive discounts feel free to sign up with your email.
           </p>

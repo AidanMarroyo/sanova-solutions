@@ -6,21 +6,16 @@ export function Portfolio() {
   return (
     <MaxWidthWrapper>
       <div className='mx-auto max-w-2xl text-center'>
-        <h2 className='text-3xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl'>
+        <h2 className='text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl'>
           Custom works
         </h2>
-        <p className='mt-4 text-base font-normal text-gray-500 dark:text-gray-400 sm:text-xl'>
+        <p className='mt-4 text-base font-normal text-gray-400 sm:text-xl'>
           Flowbite helps you connect with friends, family and communities of
           people who share your interests.
         </p>
       </div>
       <div className='mt-12 grid grid-cols-1 gap-12 sm:mt-16 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 lg:gap-16'>
         <div>
-          <img
-            className='mb-6 w-full rounded-lg object-cover shadow-lg dark:hidden'
-            src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/agency-landing-page.jpg'
-            alt=''
-          />
           <img
             className='mb-6 hidden w-full rounded-lg object-cover shadow-lg dark:block'
             src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/agency-landing-page-dark.jpg'
@@ -43,10 +38,10 @@ export function Portfolio() {
               </svg>
               Figma design
             </Badge>
-            <h3 className='text-2xl font-bold leading-tight text-gray-900 dark:text-white'>
+            <h3 className='text-2xl font-bold leading-tight text-white'>
               <a className='hover:underline'>Agency Landing Page</a>
             </h3>
-            <p className='text-lg font-normal text-gray-500 dark:text-gray-400'>
+            <p className='text-lg font-normal text-gray-400'>
               Flowbite helps you connect with friends, family and communities of
               people who share your interests.
             </p>
@@ -68,11 +63,6 @@ export function Portfolio() {
           </div>
         </div>
         <div>
-          <img
-            className='mb-6 w-full rounded-lg object-cover shadow-lg dark:hidden'
-            src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/analytics-tool.jpg'
-            alt=''
-          />
           <img
             className='mb-6 hidden w-full rounded-lg object-cover shadow-lg dark:block'
             src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/analytics-tool-dark.jpg'
@@ -95,10 +85,10 @@ export function Portfolio() {
               </svg>
               Front-end
             </Badge>
-            <h3 className='text-2xl font-bold leading-tight text-gray-900 dark:text-white'>
+            <h3 className='text-2xl font-bold leading-tight text-white'>
               <a className='hover:underline'>Analytics tool</a>
             </h3>
-            <p className='text-lg font-normal text-gray-500 dark:text-gray-400'>
+            <p className='text-lg font-normal text-gray-400'>
               Flowbite helps you connect with friends, family and communities of
               people who share your interests.
             </p>
@@ -120,11 +110,6 @@ export function Portfolio() {
           </div>
         </div>
         <div>
-          <img
-            className='mb-6 w-full rounded-lg object-cover shadow-lg dark:hidden'
-            src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/task-management.jpg'
-            alt=''
-          />
           <img
             className='mb-6 hidden w-full rounded-lg object-cover shadow-lg dark:block'
             src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/task-management-dark.jpg'
@@ -147,10 +132,10 @@ export function Portfolio() {
               </svg>
               Back-end
             </Badge>
-            <h3 className='text-2xl font-bold leading-tight text-gray-900 dark:text-white'>
+            <h3 className='text-2xl font-bold leading-tight text-white'>
               <a className='hover:underline'>Task management system</a>
             </h3>
-            <p className='text-lg font-normal text-gray-500 dark:text-gray-400'>
+            <p className='text-lg font-normal text-gray-400'>
               Flowbite helps you connect with friends, family and communities of
               people who share your interests.
             </p>
@@ -172,11 +157,6 @@ export function Portfolio() {
           </div>
         </div>
         <div>
-          <img
-            className='mb-6 w-full rounded-lg object-cover shadow-lg dark:hidden'
-            src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/flowbite-dashboard.jpg'
-            alt=''
-          />
           <img
             className='mb-6 hidden w-full rounded-lg object-cover shadow-lg dark:block'
             src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/flowbite-dashboard-dark.jpg'
@@ -199,10 +179,10 @@ export function Portfolio() {
               </svg>
               Figma design
             </Badge>
-            <h3 className='text-2xl font-bold leading-tight text-gray-900 dark:text-white'>
+            <h3 className='text-2xl font-bold leading-tight text-white'>
               <a className='hover:underline'>Flowbite's dashboard</a>
             </h3>
-            <p className='text-lg font-normal text-gray-500 dark:text-gray-400'>
+            <p className='text-lg font-normal text-gray-400'>
               Flowbite helps you connect with friends, family and communities of
               people who share your interests.
             </p>
@@ -224,11 +204,6 @@ export function Portfolio() {
           </div>
         </div>
         <div>
-          <img
-            className='mb-6 w-full rounded-lg object-cover shadow-lg dark:hidden'
-            src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/landing-page-ngo.jpg'
-            alt=''
-          />
           <img
             className='mb-6 hidden w-full rounded-lg object-cover shadow-lg dark:block'
             src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/landing-page-ngo-dark.jpg'
@@ -251,10 +226,10 @@ export function Portfolio() {
               </svg>
               Figma design
             </Badge>
-            <h3 className='text-2xl font-bold leading-tight text-gray-900 dark:text-white'>
+            <h3 className='text-2xl font-bold leading-tight text-white'>
               <a className='hover:underline'>NGO Landing Page</a>
             </h3>
-            <p className='text-lg font-normal text-gray-500 dark:text-gray-400'>
+            <p className='text-lg font-normal text-gray-400'>
               Flowbite helps you connect with friends, family and communities of
               people who share your interests.
             </p>
@@ -277,11 +252,6 @@ export function Portfolio() {
         </div>
         <div>
           <img
-            className='mb-6 w-full rounded-lg object-cover shadow-lg dark:hidden'
-            src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/mail-management-system.jpg'
-            alt=''
-          />
-          <img
             className='mb-6 hidden w-full rounded-lg object-cover shadow-lg dark:block'
             src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/case-study/mail-management-system-dark.jpg'
             alt=''
@@ -303,10 +273,10 @@ export function Portfolio() {
               </svg>
               Front-end
             </Badge>
-            <h3 className='text-2xl font-bold leading-tight text-gray-900 dark:text-white'>
+            <h3 className='text-2xl font-bold leading-tight text-white'>
               <a className='hover:underline'>Mail management system</a>
             </h3>
-            <p className='text-lg font-normal text-gray-500 dark:text-gray-400'>
+            <p className='text-lg font-normal text-gray-400'>
               Flowbite helps you connect with friends, family and communities of
               people who share your interests.
             </p>
