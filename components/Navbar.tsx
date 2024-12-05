@@ -12,6 +12,7 @@ import {
 import { cn } from '@/lib/utils';
 import { NavLink } from './NavLink';
 import Logo from './Logo';
+import { NavLinks, SecondaryNavLinks } from '@/lib/constants';
 
 const Navbar = () => {
   return (
@@ -23,12 +24,11 @@ const Navbar = () => {
               <Logo />
             </div>
             <div className='flex items-center gap-6'>
-              <NavLink href='/'>Home</NavLink>
-              <NavLink href='/about-us'>About Us</NavLink>
-              <NavLink href='/services'>Services</NavLink>
-              <NavLink href='/portfolio'>Portfolio</NavLink>
-              <NavLink href='/blog'>Blog</NavLink>
-              <NavLink href='/contact-us'>Contact Us</NavLink>
+              {NavLinks.map((link) => (
+                <NavLink key={link.id} href={link.href}>
+                  {link.name}
+                </NavLink>
+              ))}
             </div>
           </div>
         </nav>
@@ -48,93 +48,32 @@ const Navbar = () => {
                   </SheetTitle>
                 </SheetHeader>
                 <div className='my-8 flex flex-col gap-4'>
-                  <NavLink href='/' className='font-semibold'>
-                    Home
-                  </NavLink>
-                  <NavLink href='/about-us' className='font-semibold'>
-                    About Us
-                  </NavLink>
-                  <NavLink href='/services' className='font-semibold'>
-                    Services
-                  </NavLink>
-                  <NavLink href='/portfolio' className='font-semibold'>
-                    Portfolio
-                  </NavLink>
-                  <NavLink href='/blog' className='font-semibold'>
-                    Blog
-                  </NavLink>
-                  <NavLink href='/contact-us' className='font-semibold'>
-                    Contact Us
-                  </NavLink>
+                  {NavLinks.map((link) => (
+                    <NavLink
+                      className='font-semibold'
+                      key={link.id}
+                      href={link.href}
+                    >
+                      {link.name}
+                    </NavLink>
+                  ))}
                 </div>
                 <div className='border-t pt-4'>
                   <div className='grid grid-cols-2 justify-start'>
-                    <a
-                      className={cn(
-                        buttonVariants({
-                          variant: 'ghost',
-                        }),
-                        'justify-start text-muted-foreground'
-                      )}
-                      href='#'
-                    >
-                      Press
-                    </a>
-                    <a
-                      className={cn(
-                        buttonVariants({
-                          variant: 'ghost',
-                        }),
-                        'justify-start text-muted-foreground'
-                      )}
-                      href='#'
-                    >
-                      Contact
-                    </a>
-                    <a
-                      className={cn(
-                        buttonVariants({
-                          variant: 'ghost',
-                        }),
-                        'justify-start text-muted-foreground'
-                      )}
-                      href='#'
-                    >
-                      Imprint
-                    </a>
-                    <a
-                      className={cn(
-                        buttonVariants({
-                          variant: 'ghost',
-                        }),
-                        'justify-start text-muted-foreground'
-                      )}
-                      href='#'
-                    >
-                      Sitemap
-                    </a>
-                    <a
-                      className={cn(
-                        buttonVariants({
-                          variant: 'ghost',
-                        }),
-                        'justify-start text-muted-foreground'
-                      )}
-                      href='#'
-                    >
-                      Legal
-                    </a>
-                    <a
-                      className={cn(
-                        buttonVariants({
-                          variant: 'ghost',
-                        }),
-                        'justify-start text-muted-foreground'
-                      )}
-                      href='#'
-                    >
-                      Cookie Settings
-                    </a>
+                    {SecondaryNavLinks.map((link) => (
+                      <NavLink
+                        className={cn(
+                          buttonVariants({
+                            variant: 'ghost',
+                          }),
+                          'justify-start text-muted-foreground hover:bg-transparent'
+                        )}
+                        key={link.id}
+                        href={link.href}
+                      >
+                        {link.name}
+                      </NavLink>
+                    ))}
                   </div>
                   <div className='mt-2 flex flex-col gap-3'></div>
                 </div>

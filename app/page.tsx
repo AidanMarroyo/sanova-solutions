@@ -1,17 +1,19 @@
-import { CTA } from '@/components/CTA';
-import About from '@/components/About';
-import { Blog } from '@/sections/home/Blog';
+import { HomeAbout } from '@/lib/constants';
 import Hero from '@/sections/home/Hero';
-import { Portfolio } from '@/sections/home/Portfolio';
+import About from '@/components/About';
 import { Services } from '@/sections/home/Services';
+import { Portfolio } from '@/sections/home/Portfolio';
+import { Blog } from '@/sections/home/Blog';
+import { CTA } from '@/components/CTA';
 
 export default function Home() {
   return (
     <div>
       <Hero />
       <About
-        title='Why Choose Sanova Solutions?'
-        description='Our clients choose Sanova Solutions for innovative, reliable, and'
+        title={HomeAbout.title}
+        description={HomeAbout.description}
+        features={HomeAbout.features}
       />
       <Services />
       <Portfolio />

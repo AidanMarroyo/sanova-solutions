@@ -1,7 +1,7 @@
-import { CTA } from './CTA';
 import { ServiceName, services } from '@/lib/constants';
 import Hero from './Hero';
 import { Metadata } from 'next';
+import { CTA } from '@/components/CTA';
 interface ServicePageProps {
   params: Promise<{ serviceId: string }>;
 }
@@ -31,7 +31,11 @@ export default async function Page({ params }: ServicePageProps) {
   return (
     <div>
       <Hero service={service} />
-      <CTA service={service} />
+      <CTA
+        title={service.ctaTitle}
+        description={service.ctaDescription}
+        cta={service.ctaButton}
+      />
     </div>
   );
 }

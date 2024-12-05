@@ -1,3 +1,10 @@
+import { Ri24HoursLine } from 'react-icons/ri';
+import { Results } from './../node_modules/sucrase/node_modules/glob/dist/commonjs/glob.d';
+import {
+  MdDataThresholding,
+  MdOutlineDashboardCustomize,
+  MdOutlineEdit,
+} from 'react-icons/md';
 export const services = {
   'custom-applications': {
     name: 'Custom Applications',
@@ -56,3 +63,57 @@ export const services = {
 };
 
 export type ServiceName = keyof typeof services;
+
+export const NavLinks = [
+  { id: 1, name: 'Home', href: '/' },
+  { id: 2, name: 'About Us', href: '/about-us' },
+  { id: 3, name: 'Services', href: '/services' },
+  { id: 4, name: 'Portfolio', href: '/portfolio' },
+  { id: 5, name: 'Blog', href: '/blog' },
+  { id: 6, name: 'Contact Us', href: '/contact-us' },
+];
+
+export const SecondaryNavLinks = [
+  {
+    id: 1,
+    name: 'Sitemap',
+    href: '/sitemap',
+  },
+  { id: 2, name: 'Legal', href: '/legal' },
+  { id: 3, name: 'Privacy Policy', href: '/privacy-policy' },
+  { id: 4, name: 'Terms', href: '/terms' },
+];
+
+export const HomeAbout = {
+  id: 1,
+  title: 'Why Choose Sanova Solutions?',
+  description:
+    'Our clients choose Sanova Solutions for innovative, reliable, and tailored services.',
+  features: [
+    {
+      id: 1,
+      title: 'Custom-Tailored Solutions',
+      description: 'Unique strategies designed to meet your business needs.',
+      icon: MdOutlineDashboardCustomize,
+    },
+    {
+      id: 2,
+      title: '24-Hour Support, 5 Days a Week',
+      description: 'Fast and reliable assistance when you need it most.',
+      icon: Ri24HoursLine,
+    },
+    {
+      id: 3,
+      title: 'Hosting and Unlimited Edits',
+      description:
+        'Stress-free website management with ongoing updates and maintenance.',
+      icon: MdOutlineEdit,
+    },
+    {
+      id: 4,
+      title: 'Proven Results',
+      description: 'Transparent, data-driven outcomes you can trust.',
+      icon: MdDataThresholding,
+    },
+  ],
+};
