@@ -1,13 +1,37 @@
-import Hero from './Hero';
 import { CTA } from './CTA';
+import { ServiceName, services } from '@/lib/constants';
+import Hero from './Hero';
+import { Metadata } from 'next';
+interface ServicePageProps {
+  params: Promise<{ serviceId: string }>;
+}
+// Static params generation (synchronous)
+export function generateStaticParams() {
+  return Object.keys(services).map((serviceId) => ({
+    params: { serviceId },
+  }));
+}
+export async function generateMetadata({
+  params,
+}: ServicePageProps): Promise<Metadata> {
+  const service = services[(await params).serviceId as ServiceName];
+  return {
+    title: `${service.name} | Sanova Solutions`,
+    description: service.description,
+  };
+}
+// Page Component
+export default async function Page({ params }: ServicePageProps) {
+  // Fetch the service based on the serviceId from the params
+  const service = services[(await params).serviceId as ServiceName];
+  if (!service) {
+    return <div>Service not found</div>;
+  }
 
-function page() {
   return (
     <div>
-      <Hero />
-      <CTA />
+      <Hero service={service} />
+      <CTA service={service} />
     </div>
   );
 }
-
-export default page;

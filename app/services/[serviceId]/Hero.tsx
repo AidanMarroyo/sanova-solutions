@@ -1,27 +1,33 @@
-'use client';
-
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
-import { ServiceName, services } from '@/lib/constants';
-import React from 'react';
-import { useParams } from 'next/navigation';
+interface HeroProps {
+  service: {
+    name: string;
+    title: string;
+    description: string;
+    title2: string;
 
-function Hero() {
-  const params = useParams();
-  const service = services[params.serviceId as ServiceName];
+    list: string[];
+    ctaTitle: string;
+    ctaDescription: string;
+    ctaButton: string;
+  };
+}
+
+function Hero({ service }: HeroProps) {
   return (
     <MaxWidthWrapper>
       <div className='items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16'>
         <div className='text-gray-400 sm:text-lg'>
           <h1 className='mb-4 text-4xl font-extrabold tracking-tight text-white'>
-            {service.name}
+            {service.title}
           </h1>
           <p className='mb-8 lg:text-xl'>{service.description}</p>
           <ul className='my-7 space-y-5 border-t  pt-8 border-gray-700'>
             <h2 className='text-white font-semibold text-2xl tracking-tight'>
               {service.title2}
             </h2>
-            {service.list.map((item) => (
-              <li key={item} className='flex space-x-3'>
+            {service.list.map((item, index) => (
+              <li key={index} className='flex space-x-3'>
                 <svg
                   className='h-5 w-5 shrink-0 text-primary-500'
                   fill='currentColor'
