@@ -37,7 +37,7 @@ export default function Footer() {
                   href='/services/custom-applications'
                   className='hover:underline'
                 >
-                  Custom Applications
+                  Custom Apps
                 </Link>
               </li>
               <li className='mb-4'>
@@ -45,12 +45,12 @@ export default function Footer() {
                   href='/services/website-services'
                   className='hover:underline'
                 >
-                  Website Services
+                  Websites
                 </Link>
               </li>
               <li className='mb-4'>
                 <Link href='/services/ecommerce' className='hover:underline'>
-                  E-Commerce Services
+                  E-Commerce
                 </Link>
               </li>
             </ul>
