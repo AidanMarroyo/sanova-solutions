@@ -1,4 +1,4 @@
-import { Blog } from '@/sections/home/Blog';
+import MaintenancePage from '@/components/MaintenancePage';
 import { Metadata } from 'next';
 import React from 'react';
 
@@ -11,7 +11,8 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <div>
-      <Blog />
+      {/* <Blog /> */}
+      <MaintenancePage />
     </div>
   );
 };

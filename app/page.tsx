@@ -3,8 +3,8 @@ import Hero from '@/sections/home/Hero';
 import Features from '@/components/Features';
 import { Services } from '@/sections/home/Services';
 
-import { Blog } from '@/sections/home/Blog';
 import { CTA } from '@/components/CTA';
+import { Portfolio } from '@/sections/home/Portfolio';
 
 export default function Home() {
   return (
@@ -16,8 +16,8 @@ export default function Home() {
         features={HomeFeatures.features}
       />
       <Services />
-      {/* <Portfolio /> */}
-      <Blog />
+      <Portfolio />
+      {/* <Blog /> */}
       <CTA
         title='Ready to Take Your Business to the Next Level?'
         description=''
