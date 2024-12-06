@@ -71,8 +71,8 @@ export default function Footer() {
                 </a>
               </li>
               <li className='mb-4'>
-                <Link href='/ticket' className='hover:underline'>
-                  Submit Ticket
+                <Link href='/support' className='hover:underline'>
+                  Submit Support Ticket
                 </Link>
               </li>
             </ul>

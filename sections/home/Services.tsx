@@ -1,8 +1,6 @@
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 import { MdOutlineSettingsApplications } from 'react-icons/md';
 import { CgShoppingCart } from 'react-icons/cg';
-import { IoShareSocialOutline } from 'react-icons/io5';
-import { MdOutlineTrendingUp } from 'react-icons/md';
 import Link from 'next/link';
 
 export function Services() {
