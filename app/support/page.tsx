@@ -1,4 +1,5 @@
-import { ContactForm } from '@/sections/contact/ContactForm';
+import MaintenancePage from '@/components/MaintenancePage';
+
 import { Metadata } from 'next';
 import React from 'react';
 
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 function page() {
   return (
     <div>
-      <ContactForm />
+      <MaintenancePage />
     </div>
   );
 }
