@@ -1,9 +1,9 @@
 import { Intro } from '@/sections/about/Intro';
 import { Team } from '@/sections/about/Team';
-import About from '@/components/About';
+import Features from '@/components/Features';
 import { Metadata } from 'next';
-import React from 'react';
 import { CTA } from '@/components/CTA';
+import { AboutusFeatures } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'About Sanova Solutions | Empowering Business Growth',
@@ -16,7 +16,11 @@ function page() {
     <div>
       <Intro />
       <Team />
-      <About title='What Sets Us Apart ?' description='' />
+      <Features
+        title={AboutusFeatures.title}
+        description={AboutusFeatures.description}
+        features={AboutusFeatures.features}
+      />
       <CTA
         title='Let’s Build Your Success Story'
         description=''

@@ -2,6 +2,7 @@ import { ServiceName, services } from '@/lib/constants';
 import Hero from './Hero';
 import { Metadata } from 'next';
 import { CTA } from '@/components/CTA';
+import Features from '@/components/Features';
 interface ServicePageProps {
   params: Promise<{ serviceId: string }>;
 }
@@ -22,7 +23,6 @@ export async function generateMetadata({
 }
 // Page Component
 export default async function Page({ params }: ServicePageProps) {
-  // Fetch the service based on the serviceId from the params
   const service = services[(await params).serviceId as ServiceName];
   if (!service) {
     return <div>Service not found</div>;
@@ -31,6 +31,13 @@ export default async function Page({ params }: ServicePageProps) {
   return (
     <div>
       <Hero service={service} />
+      <Features
+        title={service.title3}
+        features={service.features.map((feature) => ({
+          ...feature,
+          description: '',
+        }))}
+      />
       <CTA
         title={service.ctaTitle}
         description={service.ctaDescription}

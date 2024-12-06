@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className='rounded-none '>
       <div className='mx-auto max-w-screen-xl p-4 py-6 md:p-8 lg:p-10'>
-        <div className='grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-3 justify-items-center'>
+        <div className='grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-4 justify-items-center'>
           <div>
             <h2 className='mb-6 text-sm font-semibold uppercase  text-white'>
               Company
@@ -21,18 +21,36 @@ export default function Footer() {
                 </Link>
               </li>
               <li className='mb-4'>
-                <Link href='/pricing' className='hover:underline'>
-                  Pricing
+                <Link href='/contact-us' className='hover:underline'>
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 className='mb-6 text-sm font-semibold uppercase  text-white'>
+              Services
+            </h2>
+            <ul className=' text-gray-400'>
+              <li className='mb-4'>
+                <Link
+                  href='/services/custom-applications'
+                  className='hover:underline'
+                >
+                  Custom Applications
                 </Link>
               </li>
               <li className='mb-4'>
-                <Link href='/careers' className='hover:underline'>
-                  Careers
+                <Link
+                  href='/services/website-services'
+                  className='hover:underline'
+                >
+                  Website Services
                 </Link>
               </li>
               <li className='mb-4'>
-                <Link href='/sign-in' className='hover:underline'>
-                  Sign-in
+                <Link href='/services/ecommerce' className='hover:underline'>
+                  E-Commerce Services
                 </Link>
               </li>
             </ul>
@@ -53,8 +71,8 @@ export default function Footer() {
                 </a>
               </li>
               <li className='mb-4'>
-                <Link href='/contact-us' className='hover:underline'>
-                  Contact Us
+                <Link href='/ticket' className='hover:underline'>
+                  Submit Ticket
                 </Link>
               </li>
             </ul>
@@ -85,7 +103,7 @@ export default function Footer() {
         <hr className='my-6 border-gray-200 border-gray-700 sm:mx-auto lg:my-8' />
         <div className='text-center'>
           <Link
-            href='#'
+            href='/'
             className='mb-5 flex items-center justify-center text-2xl font-semibold lg:-space-x-32 md:-space-x-20'
           >
             <img

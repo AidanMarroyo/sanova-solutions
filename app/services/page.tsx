@@ -1,5 +1,6 @@
-import About from '@/components/About';
+import Features from '@/components/Features';
 import { CTA } from '@/components/CTA';
+import { HomeFeatures } from '@/lib/constants';
 import { Hero } from '@/sections/services/Hero';
 import { Services } from '@/sections/services/Services';
 import { Metadata } from 'next';
@@ -17,9 +18,10 @@ const page = () => {
     <div>
       <Hero />
       <Services />
-      <About
+      <Features
         title='Why Choose Our Services?'
         description='Our solutions are crafted with care, innovation, and your success in mind. Here’s why businesses choose Sanova Solutions'
+        features={HomeFeatures.features}
       />
       <CTA
         description=''

@@ -1,6 +1,6 @@
-import { HomeAbout } from '@/lib/constants';
+import { HomeFeatures } from '@/lib/constants';
 import Hero from '@/sections/home/Hero';
-import About from '@/components/About';
+import Features from '@/components/Features';
 import { Services } from '@/sections/home/Services';
 import { Portfolio } from '@/sections/home/Portfolio';
 import { Blog } from '@/sections/home/Blog';
@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <About
-        title={HomeAbout.title}
-        description={HomeAbout.description}
-        features={HomeAbout.features}
+      <Features
+        title={HomeFeatures.title}
+        description={HomeFeatures.description}
+        features={HomeFeatures.features}
       />
       <Services />
       <Portfolio />

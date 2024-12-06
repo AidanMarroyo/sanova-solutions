@@ -7,13 +7,17 @@ interface Feature {
   icon: React.ComponentType<{ className?: string }>;
 }
 
-interface AboutProps {
+interface FeatureProps {
   title: string;
-  description: string;
+  description?: string;
   features: Feature[];
 }
 
-const About = ({ title, description, features }: AboutProps): JSX.Element => {
+const Features = ({
+  title,
+  description,
+  features,
+}: FeatureProps): JSX.Element => {
   return (
     <MaxWidthWrapper>
       <div className='mx-auto max-w-3xl text-center'>
@@ -37,7 +41,7 @@ const About = ({ title, description, features }: AboutProps): JSX.Element => {
                   {feature.title}
                 </h3>
                 <p className='mt-2 text-base font-normal sm:text-lg text-gray-400'>
-                  {feature.description}
+                  {feature.description ? feature.description : null}
                 </p>
               </div>
             </div>
@@ -48,4 +52,4 @@ const About = ({ title, description, features }: AboutProps): JSX.Element => {
   );
 };
 
-export default About;
+export default Features;

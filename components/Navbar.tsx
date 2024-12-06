@@ -13,6 +13,7 @@ import { cn } from '@/lib/utils';
 import { NavLink } from './NavLink';
 import Logo from './Logo';
 import { NavLinks, SecondaryNavLinks } from '@/lib/constants';
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
@@ -21,7 +22,9 @@ const Navbar = () => {
         <nav className='hidden justify-between items-center xl:flex '>
           <div className='flex items-center gap-6'>
             <div className='flex items-center gap-2'>
-              <Logo />
+              <Link href='/'>
+                <Logo />
+              </Link>
             </div>
             <div className='flex items-center gap-6'>
               {NavLinks.map((link) => (
@@ -34,7 +37,9 @@ const Navbar = () => {
         </nav>
         <div className='block xl:hidden'>
           <div className='flex items-center justify-between'>
-            <Logo />
+            <Link href='/'>
+              <Logo />
+            </Link>
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant={'outline'} size={'icon'}>
@@ -44,7 +49,9 @@ const Navbar = () => {
               <SheetContent className='overflow-y-auto'>
                 <SheetHeader>
                   <SheetTitle className='flex items-center justify-center'>
-                    <Logo />
+                    <Link href='/'>
+                      <Logo />
+                    </Link>
                   </SheetTitle>
                 </SheetHeader>
                 <div className='my-8 flex flex-col gap-4'>
