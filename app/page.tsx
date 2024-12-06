@@ -2,7 +2,7 @@ import { HomeFeatures } from '@/lib/constants';
 import Hero from '@/sections/home/Hero';
 import Features from '@/components/Features';
 import { Services } from '@/sections/home/Services';
-import { Portfolio } from '@/sections/home/Portfolio';
+
 import { Blog } from '@/sections/home/Blog';
 import { CTA } from '@/components/CTA';
 
@@ -16,7 +16,7 @@ export default function Home() {
         features={HomeFeatures.features}
       />
       <Services />
-      <Portfolio />
+      {/* <Portfolio /> */}
       <Blog />
       <CTA
         title='Ready to Take Your Business to the Next Level?'

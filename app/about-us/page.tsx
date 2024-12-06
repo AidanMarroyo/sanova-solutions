@@ -1,5 +1,5 @@
 import { Intro } from '@/sections/about/Intro';
-import { Team } from '@/sections/about/Team';
+
 import Features from '@/components/Features';
 import { Metadata } from 'next';
 import { CTA } from '@/components/CTA';
@@ -15,7 +15,7 @@ function page() {
   return (
     <div>
       <Intro />
-      <Team />
+      {/* <Team /> */}
       <Features
         title={AboutusFeatures.title}
         description={AboutusFeatures.description}
