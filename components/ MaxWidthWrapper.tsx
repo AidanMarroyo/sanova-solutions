@@ -13,7 +13,7 @@ export const MaxWidthWrapper = ({
   return (
     <section
       className={cn(
-        'mx-auto max-w-screen-xl px-4  lg:px-6 lg:py-16 bg-transparent',
+        'mx-auto max-w-screen-xl px-4 py-8  lg:px-6 lg:py-16 bg-transparent',
         className
       )}
     >
