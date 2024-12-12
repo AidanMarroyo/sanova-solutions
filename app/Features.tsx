@@ -36,7 +36,7 @@ const Features = () => {
               <h3 className='text-xl font-bold sm:text-2xl'>
                 MOBILE FIRST DESIGN
               </h3>
-              <p className='mt-2 text-base font-normal sm:text-lg text-gray-200'>
+              <p className='mt-2 text-base font-normal sm:text-lg text-gray-100'>
                 We design your website with a mobile-first approach, ensuring
                 the code is streamlined and optimized for speed and efficiency.
                 This results in a highly responsive site that performs
@@ -58,7 +58,7 @@ const Features = () => {
               <h3 className='text-xl font-bold sm:text-2xl'>
                 FULLY RESPONSIVE
               </h3>
-              <p className='mt-2 text-base font-normal sm:text-lg text-gray-200'>
+              <p className='mt-2 text-base font-normal sm:text-lg text-gray-100'>
                 Your website will be fully responsive, adapting perfectly to all
                 screen sizes, from smartphones and tablets to desktops. This
                 ensures your visitors enjoy a seamless and visually appealing
@@ -72,7 +72,7 @@ const Features = () => {
             </div>
             <div>
               <h3 className='text-xl font-bold sm:text-2xl'>SEO SERVICES</h3>
-              <p className='mt-2 text-base font-normal sm:text-lg text-gray-200'>
+              <p className='mt-2 text-base font-normal sm:text-lg text-gray-100'>
                 Our in-house SEO expert specializes in local SEO strategies,
                 helping your business stand out in your local market. We ensure
                 your website climbs the ranks and attracts the right audience.
@@ -87,7 +87,7 @@ const Features = () => {
               <h3 className='text-xl font-bold sm:text-2xl'>
                 OPTIMIZED PAGE SPEED
               </h3>
-              <p className='mt-2 text-base font-normal sm:text-lg text-gray-200'>
+              <p className='mt-2 text-base font-normal sm:text-lg text-gray-100'>
                 Did you know that a website taking more than three seconds to
                 load can cause up to 50% of visitors to leave? At Sanova Web
                 Solutions, we design websites that load in one second or less,
@@ -102,7 +102,7 @@ const Features = () => {
             </div>
             <div>
               <h3 className='text-xl font-bold sm:text-2xl'>BASED IN CANADA</h3>
-              <p className='mt-2 text-base font-normal sm:text-lg text-gray-200'>
+              <p className='mt-2 text-base font-normal sm:text-lg text-gray-100'>
                 Sanova Web Solutions is proudly owned and operated in Canada,
                 with an entirely Canadian team. We don’t outsource work to
                 overseas developers. Our team is dedicated and works remotely
@@ -116,7 +116,7 @@ const Features = () => {
             </div>
             <div>
               <h3 className='text-xl font-bold sm:text-2xl'>24/7 Support</h3>
-              <p className='mt-2 text-base font-normal sm:text-lg text-gray-200'>
+              <p className='mt-2 text-base font-normal sm:text-lg text-gray-100'>
                 At Sanova Web Solutions, we’re here for you around the clock.
                 Whether it’s a question, an urgent update, or a technical issue,
                 our team is available 24/7 to provide prompt and reliable

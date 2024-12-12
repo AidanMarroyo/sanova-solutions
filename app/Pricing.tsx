@@ -6,9 +6,7 @@ export default function Pricing() {
   return (
     <MaxWidthWrapper>
       <div className='mx-auto mb-8 max-w-screen-md text-center lg:mb-12'>
-        <p className='mb-5 text-gray-200 sm:text-xl font-semibold'>
-          OUR PRICING
-        </p>
+        <p className='mb-5 text-gray-100 sm:text-xl'>OUR PRICING</p>
         <h2 className='mb-4 text-4xl font-extrabold tracking-tight text-white'>
           Pricing Plans For Every Budget
         </h2>
@@ -18,7 +16,7 @@ export default function Pricing() {
           <h3 className='text-2xl font-semibold'>LUMP SUM</h3>
           <div className='my-6 flex justify-center flex-col items-center'>
             <span className='mr-2 text-5xl font-extrabold'>$2800</span>
-            <span className='text-gray-200'>+25/month for Hosting</span>
+            <span className='text-gray-100'>+25/month for Hosting</span>
           </div>
           <ul className='mb-8 space-y-4 text-left'>
             <li className='flex items-center space-x-3'>
@@ -141,7 +139,7 @@ export default function Pricing() {
           <h3 className='text-2xl font-semibold'>MONTHLY</h3>
           <div className='my-4 flex items-baseline justify-center'>
             <span className='mr-2 text-5xl font-extrabold'>$200</span>
-            <span className='text-gray-200'>/month</span>
+            <span className='text-gray-100'>/month</span>
           </div>
           <ul className='mb-8 space-y-4 text-left'>
             <li className='flex items-center space-x-3'>
@@ -258,7 +256,7 @@ export default function Pricing() {
           <h3 className='text-2xl font-semibold'>ECOMMERCE</h3>
           <div className='my-8 flex items-baseline justify-center'>
             <span className='mr-2 text-5xl font-extrabold'>$7k</span>
-            <span className='text-gray-200'>Starting</span>
+            <span className='text-gray-100'>Starting</span>
           </div>
           <ul className='mb-8 space-y-4 text-left'>
             <li className='flex items-center space-x-3'>

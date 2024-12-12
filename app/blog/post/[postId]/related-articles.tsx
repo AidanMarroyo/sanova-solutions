@@ -35,7 +35,7 @@ export function RelatedArticles() {
                 <h2 className='mb-2 text-xl font-bold leading-tight text-white'>
                   <a href='#'>{article.title}</a>
                 </h2>
-                <p className='mb-4 max-w-sm text-gray-200'>{article.excerpt}</p>
+                <p className='mb-4 max-w-sm text-gray-100'>{article.excerpt}</p>
                 <a
                   href='#'
                   className='inline-flex items-center font-medium  hover:underline text-primary-500'

@@ -9,7 +9,7 @@ export default function Footer() {
             <h2 className='mb-6 text-sm font-semibold uppercase  text-white'>
               Company
             </h2>
-            <ul className=' text-gray-200'>
+            <ul className=' text-gray-100'>
               <li className='mb-4'>
                 <Link href='/about-us' className='hover:underline'>
                   About
@@ -31,7 +31,7 @@ export default function Footer() {
             <h2 className='mb-6 text-sm font-semibold uppercase  text-white'>
               Services
             </h2>
-            <ul className=' text-gray-200'>
+            <ul className=' text-gray-100'>
               <li className='mb-4'>
                 <Link
                   href='/services/custom-applications'
@@ -59,7 +59,7 @@ export default function Footer() {
             <h2 className='mb-6 text-sm font-semibold uppercase  text-white'>
               Help center
             </h2>
-            <ul className=' text-gray-200'>
+            <ul className=' text-gray-100'>
               <li className='mb-4'>
                 <a href='#' className='hover:underline hover:cursor-pointer'>
                   Twitter
@@ -81,7 +81,7 @@ export default function Footer() {
             <h2 className='mb-6 text-sm font-semibold uppercase  text-white'>
               Legal
             </h2>
-            <ul className=' text-gray-200'>
+            <ul className=' text-gray-100'>
               <li className='mb-4'>
                 <Link href='/privacy-policy' className='hover:underline'>
                   Privacy Policy
@@ -117,7 +117,7 @@ export default function Footer() {
               className='w-1/4 -ml-2'
             />
           </Link>
-          <span className='block text-center text-sm  text-gray-200'>
+          <span className='block text-center text-sm  text-gray-100'>
             © 2024&nbsp;
             <Link href='#' className='hover:underline'>
               Sanova Solutions
@@ -126,7 +126,7 @@ export default function Footer() {
           </span>
           <ul className='mt-5 flex justify-center space-x-5'>
             <li>
-              <Link href='#' className='  text-gray-200 hover:text-white'>
+              <Link href='#' className='  text-gray-100 hover:text-white'>
                 <svg
                   className='h-5 w-5'
                   fill='currentColor'
@@ -142,7 +142,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href='#' className='  text-gray-200 hover:text-white'>
+              <Link href='#' className='  text-gray-100 hover:text-white'>
                 <svg
                   className='h-5 w-5'
                   fill='currentColor'
@@ -158,7 +158,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href='#' className='  text-gray-200 hover:text-white'>
+              <Link href='#' className='  text-gray-100 hover:text-white'>
                 <svg
                   className='h-5 w-5'
                   fill='currentColor'
@@ -170,7 +170,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href='#' className='  text-gray-200 hover:text-white'>
+              <Link href='#' className='  text-gray-100 hover:text-white'>
                 <svg
                   className='h-5 w-5'
                   fill='currentColor'

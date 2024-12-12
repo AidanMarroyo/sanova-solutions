@@ -7,7 +7,7 @@ export function Team() {
         <h2 className='text-3xl font-extrabold leading-tight tracking-tight  sm:text-4xl'>
           A Team Dedicated to Your Vision
         </h2>
-        <p className='mt-4 text-base font-normal text-gray-200 sm:text-xl'>
+        <p className='mt-4 text-base font-normal text-gray-100 sm:text-xl'>
           Our diverse team brings expertise in technology, design, and
           marketing. Together, we create solutions that are as unique as your
           business.

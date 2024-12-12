@@ -17,7 +17,7 @@ function Hero({ service }: HeroProps) {
   return (
     <MaxWidthWrapper>
       <div className='items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16'>
-        <div className='text-gray-200 sm:text-lg'>
+        <div className='text-gray-100 sm:text-lg'>
           <h1 className='mb-4 text-4xl font-extrabold tracking-tight text-white'>
             {service.title}
           </h1>
