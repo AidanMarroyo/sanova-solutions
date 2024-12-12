@@ -6,7 +6,7 @@ export default function MaintenancePage() {
       <div className='mx-auto max-w-screen-md px-4 py-8 text-center lg:px-12 lg:py-16'>
         <svg
           aria-hidden
-          className='mx-auto mb-4 h-10 w-10 text-gray-400'
+          className='mx-auto mb-4 h-10 w-10 text-gray-200'
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 512 512'
         >
@@ -18,7 +18,7 @@ export default function MaintenancePage() {
         <h1 className='mb-4 text-4xl font-bold leading-none tracking-tight text-white md:text-5xl lg:mb-6 xl:text-6xl'>
           Under Maintenance
         </h1>
-        <p className='text-gray-400 md:text-lg xl:text-xl'>
+        <p className='text-gray-200 md:text-lg xl:text-xl'>
           This page is currently under maintenance.
         </p>
       </div>

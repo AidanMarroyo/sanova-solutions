@@ -40,7 +40,7 @@ const Features = ({
                 <h3 className='text-xl font-bold sm:text-2xl'>
                   {feature.title}
                 </h3>
-                <p className='mt-2 text-base font-normal sm:text-lg text-gray-400'>
+                <p className='mt-2 text-base font-normal sm:text-lg text-gray-200'>
                   {feature.description ? feature.description : null}
                 </p>
               </div>

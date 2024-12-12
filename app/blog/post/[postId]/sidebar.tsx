@@ -11,7 +11,7 @@ export function Sidebar() {
           <h4 className='mb-2 text-sm font-bold uppercase text-white'>
             Flowbite News morning headlines
           </h4>
-          <p className='mb-4 text-sm text-gray-400'>
+          <p className='mb-4 text-sm text-gray-200'>
             Get all the stories you need-to-know from the most powerful name in
             news delivered first thing every morning to your inbox
           </p>

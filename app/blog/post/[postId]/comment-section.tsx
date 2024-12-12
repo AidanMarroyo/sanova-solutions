@@ -56,7 +56,7 @@ export function CommentSection() {
               </Avatar>
               <p className='mr-3 text-sm text-white'>
                 {comment.author}
-                <time className='mx-3 text-sm font-normal text-gray-400'>
+                <time className='mx-3 text-sm font-normal text-gray-200'>
                   {comment.date}
                 </time>
               </p>
@@ -83,7 +83,7 @@ export function CommentSection() {
               </DropdownMenuContent>
             </DropdownMenu>
           </footer>
-          <p className='text-gray-400'>{comment.content}</p>
+          <p className='text-gray-200'>{comment.content}</p>
           <div className='mt-4 flex items-center space-x-4'>
             <Button variant='ghost' size='sm'>
               <svg

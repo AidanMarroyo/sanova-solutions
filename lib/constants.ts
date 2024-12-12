@@ -59,20 +59,20 @@ export const services = {
   },
   'website-services': {
     name: 'Website Services',
-    title: 'Professional Websites That Make an Impact',
+    title: 'Professional Web Design & Development Services',
     description:
-      'Your website is often the first impression of your business. At Sanova Solutions, we design responsive, user-friendly, and SEO-optimized websites that help you stand out, engage visitors, and convert leads into loyal customers.',
-    title2: 'Why Choose Our Website Services?',
+      'At Sanova Web Solutions, we take a unique approach to web design and development. Instead of relying on WordPress or page builders, we custom code every website from the ground up. This allows us to create tailored designs with zero unnecessary bloat, ensuring your site is fast, secure, and high-performing.',
+    title2: 'Why Choose Our Web Design & Development Services?',
     list: [
       'Fully responsive designs for a seamless user experience on any device',
       'SEO-optimized to improve your search engine visibility',
-      'Hosting and maintenance included for hassle-free management',
+      'Faster websites that lead to better user experiences, higher conversions, and improved ad performance.',
       'Unlimited edits to keep your site fresh and updated',
     ],
     ctaTitle: 'Let’s Build Your Online Presence',
     ctaDescription:
       'Ready to take your business to the next level? Contact us today to create a professional website that drives results.',
-    ctaButton: 'Start Your Website Today',
+    ctaButton: 'START YOUR WEBSITE TODAY',
     title3: "What's included in Our Website Services?",
     features: [
       {

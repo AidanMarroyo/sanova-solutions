@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function Portfolio() {
   return (
@@ -9,7 +10,7 @@ export function Portfolio() {
         <h2 className='text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl'>
           Some of Our Success Stories
         </h2>
-        <p className='mt-4 text-base font-normal text-gray-400 sm:text-xl'>
+        <p className='mt-4 text-base font-normal text-gray-200 sm:text-xl'>
           From websites and custom software to thriving e-commerce stores,
           explore how we’ve helped businesses like yours.
         </p>
@@ -17,7 +18,9 @@ export function Portfolio() {
       <div className='mt-12 space-y-16 sm:mt-16'>
         <div className='flex flex-col gap-y-8 sm:gap-y-12 lg:flex-row lg:items-center lg:gap-x-16 xl:gap-x-24'>
           <div>
-            <img
+            <Image
+              width='819'
+              height='407'
               className='hidden w-full rounded-lg object-cover shadow-lg dark:block'
               src='/images/brandwired.jpg'
               alt=''
@@ -46,14 +49,14 @@ export function Portfolio() {
                   <path d='M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z' />
                 </svg>
               </a>
-              <p className='text-base font-normal text-gray-400 sm:text-lg pb-4'>
+              <p className='text-base font-normal text-gray-200 sm:text-lg pb-4'>
                 Created a custom website with inquiry forms to streamline client
                 submissions, enhancing user engagement and communication.
               </p>
             </div>
             <Link href='/portfolio'>
               <Button>
-                View More
+                VIEW MORE
                 <svg
                   aria-hidden='true'
                   className='-mr-1 ml-2 h-5 w-5'
@@ -73,7 +76,9 @@ export function Portfolio() {
         </div>
         <div className='flex flex-col gap-y-8 sm:gap-y-12 lg:flex-row lg:items-center lg:gap-x-16 xl:gap-x-24'>
           <div className='lg:order-2'>
-            <img
+            <Image
+              width='819'
+              height='407'
               className='hidden w-full rounded-lg object-cover shadow-lg dark:block'
               src='/images/ecozen.jpg'
               alt=''
@@ -102,7 +107,7 @@ export function Portfolio() {
                   <path d='M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z' />
                 </svg>
               </a>
-              <p className='text-base font-normal text-gray-400 sm:text-lg pb-4'>
+              <p className='text-base font-normal text-gray-200 sm:text-lg pb-4'>
                 Developed a custom website with forms for inquiries and an
                 integrated online booking system that dynamically adjusts
                 pricing based on selected cleaning services and extras,
@@ -111,7 +116,7 @@ export function Portfolio() {
             </div>
             <Link href='/portfolio'>
               <Button>
-                View More
+                VIEW MORE
                 <svg
                   aria-hidden='true'
                   className='-mr-1 ml-2 h-5 w-5'
@@ -131,7 +136,9 @@ export function Portfolio() {
         </div>
         <div className='flex flex-col gap-y-8 sm:gap-y-12 lg:flex-row lg:items-center lg:gap-x-16 xl:gap-x-24'>
           <div>
-            <img
+            <Image
+              width='819'
+              height='407'
               className='hidden w-full rounded-lg object-cover shadow-lg dark:block'
               src='/images/battleborn.jpg'
               alt=''
@@ -160,14 +167,14 @@ export function Portfolio() {
                   <path d='M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z' />
                 </svg>
               </a>
-              <p className='text-base font-normal text-gray-400 sm:text-lg pb-4'>
+              <p className='text-base font-normal text-gray-200 sm:text-lg pb-4'>
                 Designed a modern, responsive website to showcase their services
                 and facilitate easy online communication with potential clients.
               </p>
             </div>
             <Link href='/portfolio'>
               <Button>
-                View More
+                VIEW MORE
                 <svg
                   aria-hidden='true'
                   className='-mr-1 ml-2 h-5 w-5'

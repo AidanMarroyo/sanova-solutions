@@ -16,10 +16,10 @@ export default function NotFound() {
           <p className='mb-10 text-3xl font-bold tracking-tight text-white md:text-4xl'>
             Whoops! That page doesn’t exist.
           </p>
-          <p className='mb-4 text-gray-400'>
+          <p className='mb-4 text-gray-200'>
             Here are some helpful links instead:
           </p>
-          <ul className='flex items-center justify-center space-x-4 text-gray-400'>
+          <ul className='flex items-center justify-center space-x-4 text-gray-200'>
             <li>
               <Link href='/' className='underline hover:hover:text-white'>
                 Home

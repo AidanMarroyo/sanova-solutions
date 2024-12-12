@@ -2,7 +2,7 @@ import { ServiceName, services } from '@/lib/constants';
 import Hero from './Hero';
 import { Metadata } from 'next';
 import { CTA } from '@/components/CTA';
-import Features from '@/components/Features';
+
 interface ServicePageProps {
   params: Promise<{ serviceId: string }>;
 }
@@ -31,13 +31,7 @@ export default async function Page({ params }: ServicePageProps) {
   return (
     <div>
       <Hero service={service} />
-      <Features
-        title={service.title3}
-        features={service.features.map((feature) => ({
-          ...feature,
-          description: '',
-        }))}
-      />
+
       <CTA
         title={service.ctaTitle}
         description={service.ctaDescription}

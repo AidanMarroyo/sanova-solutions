@@ -20,7 +20,7 @@ export function CTA({
         <p className='mb-6 md:text-lg'>{description ? description : null}</p>
         <Link href='/contact-us'>
           <Button type='button' color='info' className='w-fit'>
-            {cta}
+            {cta.toUpperCase()}
           </Button>
         </Link>
       </div>

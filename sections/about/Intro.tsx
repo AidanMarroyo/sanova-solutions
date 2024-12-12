@@ -21,7 +21,7 @@ export function Intro() {
         <div>
           <div>
             <h3 className='text-2xl font-extrabold'>Your Partner in Growth</h3>
-            <p className='mt-2 text-lg font-normal text-gray-400'>
+            <p className='mt-2 text-lg font-normal text-gray-200'>
               Sanova Solutions began with a mission: to empower entrepreneurs
               and businesses to achieve their full potential. With a passion for
               innovation and a commitment to excellence, we’ve helped clients
@@ -32,49 +32,49 @@ export function Intro() {
           {/* <ul className='mt-8 grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-2'>
             <li className='flex items-center gap-2.5'>
               <GreenCheckIconSVG />
-              <span className='text-base font-normal text-gray-400'>
+              <span className='text-base font-normal text-gray-200'>
                 A/B Testing
               </span>
             </li>
             <li className='flex items-center gap-2.5'>
               <GreenCheckIconSVG />
-              <span className='text-base font-normal text-gray-400'>
+              <span className='text-base font-normal text-gray-200'>
                 Craft CMS development
               </span>
             </li>
             <li className='flex items-center gap-2.5'>
               <GreenCheckIconSVG />
-              <span className='text-base font-normal text-gray-400'>
+              <span className='text-base font-normal text-gray-200'>
                 UX/UI design
               </span>
             </li>
             <li className='flex items-center gap-2.5'>
               <GreenCheckIconSVG />
-              <span className='text-base font-normal text-gray-400'>
+              <span className='text-base font-normal text-gray-200'>
                 Copywriting
               </span>
             </li>
             <li className='flex items-center gap-2.5'>
               <GreenCheckIconSVG />
-              <span className='text-base font-normal text-gray-400'>
+              <span className='text-base font-normal text-gray-200'>
                 Brand development
               </span>
             </li>
             <li className='flex items-center gap-2.5'>
               <GreenCheckIconSVG />
-              <span className='text-base font-normal text-gray-400'>
+              <span className='text-base font-normal text-gray-200'>
                 Graphic design
               </span>
             </li>
             <li className='flex items-center gap-2.5'>
               <GreenCheckIconSVG />
-              <span className='text-base font-normal text-gray-400'>
+              <span className='text-base font-normal text-gray-200'>
                 Front-end development
               </span>
             </li>
             <li className='flex items-center gap-2.5'>
               <GreenCheckIconSVG />
-              <span className='text-base font-normal text-gray-400'>SEO</span>
+              <span className='text-base font-normal text-gray-200'>SEO</span>
             </li>
           </ul> */}
         </div>
@@ -83,7 +83,7 @@ export function Intro() {
             <h3 className='text-2xl font-extrabold '>
               Driving Innovation, Inspiring Success
             </h3>
-            <p className='mt-2 text-lg font-normal text-gray-400'>
+            <p className='mt-2 text-lg font-normal text-gray-200'>
               <span className='font-bold text-white'> Mission:</span> To deliver
               tailored solutions that help businesses start, scale, and excel.
             </p>
@@ -93,14 +93,14 @@ export function Intro() {
             <ul className='mt-2 grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-2'>
               <li className='flex items-center gap-2.5'>
                 <GreenCheckIconSVG />
-                <p className='text-base text-sm font-normal text-gray-400'>
+                <p className='text-base text-sm font-normal text-gray-200'>
                   <span className='text-white font-semibold'>Innovation:</span>{' '}
                   We craft custom solutions that stand out.
                 </p>
               </li>
               <li className='flex items-center gap-2.5'>
                 <GreenCheckIconSVG />
-                <p className='text-base text-sm font-normal text-gray-400'>
+                <p className='text-base text-sm font-normal text-gray-200'>
                   <span className='text-white font-semibold'>
                     Collaboration:
                   </span>{' '}
@@ -109,7 +109,7 @@ export function Intro() {
               </li>
               <li className='flex items-center gap-2.5'>
                 <GreenCheckIconSVG />
-                <p className='text-base text-sm font-normal text-gray-400'>
+                <p className='text-base text-sm font-normal text-gray-200'>
                   <span className='text-white font-semibold'>Excellence</span>{' '}
                   We strive for quality in every detail.
                 </p>

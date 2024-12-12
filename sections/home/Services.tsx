@@ -26,7 +26,7 @@ export function Services() {
               </div>
               <div>
                 <h3 className='mb-2 text-xl font-bold'>Custom Applications</h3>
-                <p className='mb-2 text-gray-400'>
+                <p className='mb-2 text-gray-200'>
                   Develop software solutions tailored to your business needs.
                 </p>
                 <Link
@@ -66,7 +66,7 @@ export function Services() {
               </div>
               <div>
                 <h3 className='mb-2 text-xl font-bold'>Website Development</h3>
-                <p className='mb-2 text-gray-400'>
+                <p className='mb-2 text-gray-200'>
                   Build professional, responsive, and SEO-optimized websites to
                   make a lasting impact.
                 </p>
@@ -98,7 +98,7 @@ export function Services() {
                 <h3 className='mb-2 text-xl font-bold text-white'>
                   Ecommerce Solutions
                 </h3>
-                <p className='mb-2 text-gray-400'>
+                <p className='mb-2 text-gray-200'>
                   Launch or optimize your online store for seamless sales.
                 </p>
                 <Link
@@ -129,7 +129,7 @@ export function Services() {
                 <h3 className='mb-2 text-xl font-bold'>
                   Social Media Marketing
                 </h3>
-                <p className='mb-2 text-gray-400'>
+                <p className='mb-2 text-gray-200'>
                   Engage and grow your audience with targeted strategies.
                 </p>
                 <a
@@ -171,7 +171,7 @@ export function Services() {
                 <h3 className='mb-2 text-xl font-bold'>
                   SEO Optimization Services
                 </h3>
-                <p className='mb-2 text-gray-400'>
+                <p className='mb-2 text-gray-200'>
                   Climb search engine rankings and drive organic traffic to your
                   site.
                 </p>
@@ -203,7 +203,7 @@ export function Services() {
                 <h3 className='mb-2 text-xl font-bold text-white'>
                   Business Growth Services
                 </h3>
-                <p className='mb-2 text-gray-400'>
+                <p className='mb-2 text-gray-200'>
                   Drive sustainable success with data-driven insights.
                 </p>
                 <a

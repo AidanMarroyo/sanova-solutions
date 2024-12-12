@@ -57,7 +57,7 @@ export default async function BlogPost({ params }: PageProps) {
       <div className='relative z-20 -m-36 mx-4 flex max-w-screen-xl justify-between rounded-xl p-6 backdrop-blur-[16px] backdrop-saturate-180 bg-[rgba(17,25,40,0.75)] xl:-m-32 xl:mx-auto xl:p-9 '>
         <article className='format w-full max-w-none format-invert sm:format-base lg:format-lg xl:w-[828px]'>
           <div className='flex flex-col justify-between lg:flex-row lg:items-center'>
-            <div className='mb-2 flex items-center space-x-3 text-base text-gray-400 lg:mb-0'>
+            <div className='mb-2 flex items-center space-x-3 text-base text-gray-200 lg:mb-0'>
               <span>
                 By{' '}
                 <a
@@ -70,7 +70,7 @@ export default async function BlogPost({ params }: PageProps) {
               <span className='h-2 w-2 rounded-full bg-gray-400'></span>
               <span>
                 <time
-                  className='font-normal text-gray-400'
+                  className='font-normal text-gray-200'
                   dateTime='2022-08-03'
                 >
                   {formatDate(post.createdAt)}
