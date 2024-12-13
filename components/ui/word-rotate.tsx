@@ -1,60 +1,50 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { AnimatePresence, HTMLMotionProps, motion } from 'framer-motion';
+
+import { cn } from '@/lib/utils';
 
 interface WordRotateProps {
   words: string[];
   duration?: number;
+  framerProps?: HTMLMotionProps<'h1'>;
   className?: string;
 }
 
 export default function WordRotate({
   words,
   duration = 2500,
+  framerProps = {
+    initial: { opacity: 0, y: -50 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: 50 },
+    transition: { duration: 0.25, ease: 'easeOut' },
+  },
   className,
 }: WordRotateProps) {
   const [index, setIndex] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [containerHeight, setContainerHeight] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % words.length);
     }, duration);
 
+    // Clean up interval on unmount
     return () => clearInterval(interval);
   }, [words, duration]);
 
-  useEffect(() => {
-    if (containerRef.current) {
-      const maxHeight = Array.from(containerRef.current.children).reduce(
-        (max, child) => Math.max(max, child.clientHeight),
-        0
-      );
-      setContainerHeight(maxHeight);
-    }
-  }, [words]);
-
   return (
-    <div
-      className='relative min-h-[1.2em]'
-      style={{ height: `${containerHeight}px` }}
-      ref={containerRef}
-    >
-      {words.map((word, i) => (
+    <div className='overflow-hidden py-2'>
+      <AnimatePresence mode='wait'>
         <motion.h1
-          key={i}
-          className={`${className} absolute ${
-            i === index ? 'opacity-100' : 'opacity-0'
-          }`}
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: i === index ? 1 : 0, y: 0 }}
-          transition={{ duration: 0.25 }}
+          key={words[index]}
+          className={cn(className)}
+          {...framerProps}
         >
-          {word}
+          {words[index]}
         </motion.h1>
-      ))}
+      </AnimatePresence>
     </div>
   );
 }
