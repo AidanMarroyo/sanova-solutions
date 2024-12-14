@@ -13,8 +13,11 @@ export default function Hero() {
         </p>
         <h1 className='mb-2 max-w-2xl text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl xl:text-6xl'>
           WEB SOLUTIONS EMPOWERING BUSINESSES TO{' '}
-          <WordRotate words={['START', 'SCALE', 'SUCCEED']} />
         </h1>
+        <WordRotate
+          words={['SCALE', 'SUCCEED']}
+          className='max-w-2xl text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl xl:text-6xl'
+        />
         <p className='mb-6 max-w-xl text-white md:text-lg lg:mb-8 lg:text-xl'>
           100% hand-coded websites, web applications, and custom web solutions
           starting at $200/mo. No page builders, No Wordpress, No bloatware.
