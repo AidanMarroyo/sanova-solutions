@@ -14,7 +14,7 @@ import { NavLink } from './NavLink';
 import Logo from './Logo';
 import { NavLinks, SecondaryNavLinks } from '@/lib/constants';
 import Link from 'next/link';
-import { ModeToggle } from './ModeToggle';
+// import { ModeToggle } from './ModeToggle';
 
 const Navbar = () => {
   return (
@@ -34,7 +34,7 @@ const Navbar = () => {
                 </NavLink>
               ))}
             </div>
-            <ModeToggle />
+            {/* <ModeToggle /> */}
           </div>
         </nav>
         <div className='block xl:hidden'>

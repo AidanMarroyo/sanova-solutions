@@ -126,7 +126,7 @@ export default function UniqueSellingProposition() {
           width='560'
           height='560'
           alt=''
-          src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-1.png'
+          src='/images/customsite.webp'
           className='mb-4 hidden w-full rounded-lg lg:mb-0 lg:flex'
         />
       </div>

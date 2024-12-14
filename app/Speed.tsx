@@ -86,7 +86,7 @@ export function Speed() {
           width='584'
           height='508'
           className='mx-auto mb-4 hidden sm:flex'
-          src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/social-proof/table-professor.svg'
+          src='/images/100score.webp'
           alt='table professor illustration'
           loading='lazy'
         />
