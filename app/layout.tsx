@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 import { ThemeProvider } from '../components/theme-provider';
@@ -22,15 +22,35 @@ export const metadata: Metadata = {
     'Sanova Solutions | Custom Apps, Websites & Growth Services for Businesses',
   description:
     'Boost your business with Sanova Solutions. We offer custom applications, websites, e-commerce solutions, social media marketing, and growth strategies tailored for success.',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang='en'>
+      <head>
+        {/* Font Preload */}
+        <link
+          rel='preload'
+          href='/fonts/GeistVF.woff'
+          as='font'
+          type='font/woff'
+          crossOrigin='anonymous'
+        />
+        <link
+          rel='preload'
+          href='/fonts/GeistMonoVF.woff'
+          as='font'
+          type='font/woff'
+          crossOrigin='anonymous'
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

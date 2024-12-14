@@ -11,7 +11,7 @@ export default function Hero() {
         <p className='mb-3 max-w-2xl text-white md:text-lg lg:mb-4 lg:text-xl'>
           CUSTOM WEB SOLUTIONS, CUSTOM CODED
         </p>
-        <h1 className='mb-2 max-w-2xl text-3xl font-extrabold leading-none tracking-tight text-white md:text-5xl xl:text-6xl'>
+        <h1 className='mb-2 max-w-2xl text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl xl:text-6xl'>
           WEB SOLUTIONS EMPOWERING BUSINESSES TO{' '}
           <WordRotate words={['START', 'SCALE', 'SUCCEED']} />
         </h1>
@@ -50,7 +50,6 @@ export default function Hero() {
           height={384}
           src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png'
           alt='mockup'
-          loading='lazy'
         />
       </div>
     </MaxWidthWrapper>
