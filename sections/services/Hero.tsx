@@ -8,7 +8,7 @@ export function Hero() {
         <h1 className='mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl'>
           Solutions Designed to Start, Scale, and Elevate Your Business
         </h1>
-        <p className='mb-8 text-lg font-normal text-gray-100 sm:px-16 lg:text-xl xl:px-48'>
+        <p className='mb-8 text-lg font-normal text-white sm:px-16 lg:text-xl xl:px-48'>
           Sanova Solutions offers a range of services to help businesses unlock
           their full potential. From tailored applications to dynamic marketing
           strategies, we provide the tools you need to thrive in today’s

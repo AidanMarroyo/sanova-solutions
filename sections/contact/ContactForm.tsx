@@ -99,7 +99,7 @@ export function ContactForm() {
           <h2 className='mb-4 text-4xl font-extrabold tracking-tight text-white'>
             Let’s Build Your Business Together
           </h2>
-          <p className='mb-16 text-gray-100 sm:text-xl'>
+          <p className='mb-16 text-white sm:text-xl'>
             Have questions or ready to start your next project? We're here to
             help! Contact Sanova Solutions today to discuss your business goals
             and discover how we can help you achieve them.
@@ -253,7 +253,7 @@ export function ContactForm() {
                 )}
               />
 
-              <p className='mt-4 text-sm text-gray-100'>
+              <p className='mt-4 text-sm text-white'>
                 By submitting this form you agree to our&nbsp;
                 <a href='#' className='hover:underline text-primary-500'>
                   terms and conditions
@@ -291,7 +291,7 @@ export function ContactForm() {
               </svg>
             </div>
             <p className='mb-2 text-xl font-bold text-white'>Email us:</p>
-            <p className='mb-3 text-gray-100'>
+            <p className='mb-3 text-white'>
               Got questions or need more details? Send us an email, and we’ll
               get back to you promptly.
             </p>
@@ -314,7 +314,7 @@ export function ContactForm() {
               </svg>
             </div>
             <p className='mb-2 text-xl font-bold text-white'>Call us:</p>
-            <p className='mb-3 text-gray-100'>
+            <p className='mb-3 text-white'>
               Ready to take the next step? Reach out by phone or through our
               contact form to discuss your project.
             </p>
@@ -338,7 +338,7 @@ export function ContactForm() {
               </svg>
             </div>
             <p className='mb-2 text-xl font-bold text-white'>Support</p>
-            <p className='mb-3 text-gray-100'>
+            <p className='mb-3 text-white'>
               Need assistance? Our dedicated team is available 24 hours a day, 5
               days a week, to provide reliable support.
             </p>

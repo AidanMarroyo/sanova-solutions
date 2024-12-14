@@ -9,7 +9,7 @@ export function Portfolio() {
         <h2 className='text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl'>
           Custom works
         </h2>
-        <p className='mt-4 text-base font-normal text-gray-100 sm:text-xl'>
+        <p className='mt-4 text-base font-normal text-white sm:text-xl'>
           Flowbite helps you connect with friends, family and communities of
           people who share your interests.
         </p>
@@ -41,7 +41,7 @@ export function Portfolio() {
             <h3 className='text-2xl font-bold leading-tight text-white'>
               <a className='hover:underline'>Agency Landing Page</a>
             </h3>
-            <p className='text-lg font-normal text-gray-100'>
+            <p className='text-lg font-normal text-white'>
               Flowbite helps you connect with friends, family and communities of
               people who share your interests.
             </p>
@@ -88,7 +88,7 @@ export function Portfolio() {
             <h3 className='text-2xl font-bold leading-tight text-white'>
               <a className='hover:underline'>Analytics tool</a>
             </h3>
-            <p className='text-lg font-normal text-gray-100'>
+            <p className='text-lg font-normal text-white'>
               Flowbite helps you connect with friends, family and communities of
               people who share your interests.
             </p>
@@ -135,7 +135,7 @@ export function Portfolio() {
             <h3 className='text-2xl font-bold leading-tight text-white'>
               <a className='hover:underline'>Task management system</a>
             </h3>
-            <p className='text-lg font-normal text-gray-100'>
+            <p className='text-lg font-normal text-white'>
               Flowbite helps you connect with friends, family and communities of
               people who share your interests.
             </p>
@@ -182,7 +182,7 @@ export function Portfolio() {
             <h3 className='text-2xl font-bold leading-tight text-white'>
               <a className='hover:underline'>Flowbite's dashboard</a>
             </h3>
-            <p className='text-lg font-normal text-gray-100'>
+            <p className='text-lg font-normal text-white'>
               Flowbite helps you connect with friends, family and communities of
               people who share your interests.
             </p>
@@ -229,7 +229,7 @@ export function Portfolio() {
             <h3 className='text-2xl font-bold leading-tight text-white'>
               <a className='hover:underline'>NGO Landing Page</a>
             </h3>
-            <p className='text-lg font-normal text-gray-100'>
+            <p className='text-lg font-normal text-white'>
               Flowbite helps you connect with friends, family and communities of
               people who share your interests.
             </p>
@@ -276,7 +276,7 @@ export function Portfolio() {
             <h3 className='text-2xl font-bold leading-tight text-white'>
               <a className='hover:underline'>Mail management system</a>
             </h3>
-            <p className='text-lg font-normal text-gray-100'>
+            <p className='text-lg font-normal text-white'>
               Flowbite helps you connect with friends, family and communities of
               people who share your interests.
             </p>

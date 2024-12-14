@@ -167,7 +167,7 @@ export function Blog() {
             <h2 className='mb-2 text-2xl font-bold tracking-tight '>
               <a href='#'>12 SEO Best Practices That Everyone Should Follow</a>
             </h2>
-            <p className='mb-4 text-gray-100'>
+            <p className='mb-4 text-white'>
               Over the past year, Volosoft has undergone many changes! After
               months of preparation and some hard work, we moved to our new
               office.
@@ -195,7 +195,7 @@ export function Blog() {
             <h2 className='mb-2 text-2xl font-bold tracking-tight '>
               <a href='#'>How to schedule your Tweets to send later</a>
             </h2>
-            <p className='mb-4 text-gray-100'>
+            <p className='mb-4 text-white'>
               Over the past year, Volosoft has undergone many changes! After
               months of preparation and some hard work, we moved to our new
               office.

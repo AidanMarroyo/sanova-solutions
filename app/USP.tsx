@@ -6,7 +6,7 @@ export default function UniqueSellingProposition() {
   return (
     <MaxWidthWrapper>
       <div className='items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16'>
-        <div className='text-gray-500 dark:text-gray-400 sm:text-lg'>
+        <div className='text-white sm:text-lg'>
           <p className='mb-4 lg:text-xl text-white '>WHAT WE OFFER</p>
           <h2 className='mb-4 text-3xl font-extrabold tracking-tight text-white'>
             WEBSITES STARTING AT $0 DOWN AND $200/MONTH

@@ -11,12 +11,12 @@ export default function Hero() {
         <p className='mb-3 max-w-2xl text-white md:text-lg lg:mb-4 lg:text-xl'>
           CUSTOM WEB SOLUTIONS, CUSTOM CODED
         </p>
-        <h1 className='max-w-2xl text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl xl:text-6xl'>
+        <h1 className='max-w-2xl text-4xl font-extrabold leading-none tracking-tight text-white md:text-6xl'>
           WEB SOLUTIONS EMPOWERING BUSINESSES TO
         </h1>
         <WordRotate
           words={['SCALE', 'SUCCEED']}
-          className='mb-4 max-w-2xl text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl xl:text-6xl'
+          className='mb-4 max-w-2xl text-4xl font-extrabold leading-none tracking-tight text-white md:text-6xl '
         />
         <p className='mb-6 max-w-xl text-white md:text-lg lg:mb-8 lg:text-xl'>
           100% hand-coded websites, web applications, and custom web solutions

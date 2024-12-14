@@ -20,7 +20,7 @@ export function NewsletterSignup() {
           <h2 className='mb-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl'>
             Sign up for our newsletter
           </h2>
-          <p className='mx-auto mb-8 max-w-2xl text-gray-100 sm:text-xl md:mb-12'>
+          <p className='mx-auto mb-8 max-w-2xl text-white sm:text-xl md:mb-12'>
             Stay up to date with the roadmap progress, announcements and
             exclusive discounts feel free to sign up with your email.
           </p>

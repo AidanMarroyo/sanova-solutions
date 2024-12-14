@@ -10,7 +10,7 @@ export function Portfolio() {
         <h2 className='text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl'>
           Some of Our Success Stories
         </h2>
-        <p className='mt-4 text-base font-normal text-gray-100 sm:text-xl'>
+        <p className='mt-4 text-base font-normal text-white sm:text-xl'>
           From websites and custom software to thriving e-commerce stores,
           explore how we’ve helped businesses like yours.
         </p>
@@ -49,7 +49,7 @@ export function Portfolio() {
                   <path d='M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z' />
                 </svg>
               </a>
-              <p className='text-base font-normal text-gray-100 sm:text-lg pb-4'>
+              <p className='text-base font-normal text-white sm:text-lg pb-4'>
                 Created a custom website with inquiry forms to streamline client
                 submissions, enhancing user engagement and communication.
               </p>
@@ -107,7 +107,7 @@ export function Portfolio() {
                   <path d='M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z' />
                 </svg>
               </a>
-              <p className='text-base font-normal text-gray-100 sm:text-lg pb-4'>
+              <p className='text-base font-normal text-white sm:text-lg pb-4'>
                 Developed a custom website with forms for inquiries and an
                 integrated online booking system that dynamically adjusts
                 pricing based on selected cleaning services and extras,
@@ -167,7 +167,7 @@ export function Portfolio() {
                   <path d='M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z' />
                 </svg>
               </a>
-              <p className='text-base font-normal text-gray-100 sm:text-lg pb-4'>
+              <p className='text-base font-normal text-white sm:text-lg pb-4'>
                 Designed a modern, responsive website to showcase their services
                 and facilitate easy online communication with potential clients.
               </p>

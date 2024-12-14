@@ -5,7 +5,7 @@ export function Services() {
   return (
     <MaxWidthWrapper>
       <div className='items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16'>
-        <div className='text-gray-100 sm:text-lg'>
+        <div className='text-white sm:text-lg'>
           <h2 className='mb-4 text-4xl font-extrabold tracking-tight '>
             Custom Applications
           </h2>
@@ -46,7 +46,7 @@ export function Services() {
           src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-2.png'
           className='mb-4 hidden w-full rounded-lg lg:mb-0 lg:flex'
         />
-        <div className='text-gray-100 sm:text-lg'>
+        <div className='text-white sm:text-lg'>
           <h2 className='mb-4 text-4xl font-extrabold tracking-tight '>
             Professional Websites, Fully Managed and Stress-Free
           </h2>
@@ -76,7 +76,7 @@ export function Services() {
 
           <div className='my-7 space-y-5 border-t border-gray-700'></div>
         </div>
-        <div className='text-gray-100 sm:text-lg'>
+        <div className='text-white sm:text-lg'>
           <h2 className='mb-4 text-4xl font-extrabold tracking-tight '>
             E-Commerce Solutions
           </h2>
@@ -114,7 +114,7 @@ export function Services() {
           src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-2.png'
           className='mb-4 hidden w-full rounded-lg lg:mb-0 lg:flex'
         />
-        <div className='text-gray-100 sm:text-lg'>
+        <div className='text-white sm:text-lg'>
           <h2 className='mb-4 text-4xl font-extrabold tracking-tight '>
             Social Media Marketing
           </h2>
@@ -143,7 +143,7 @@ export function Services() {
 
           <div className='my-7 space-y-5 border-t border-gray-700'></div>
         </div>
-        <div className='text-gray-100 sm:text-lg'>
+        <div className='text-white sm:text-lg'>
           <h2 className='mb-4 text-4xl font-extrabold tracking-tight '>
             Business Growth Services
           </h2>
