@@ -140,6 +140,7 @@ export default function Footer() {
               <a
                 href='https://www.facebook.com/'
                 className='  text-white hover:text-white'
+                title='Facebook'
               >
                 <svg
                   className='h-5 w-5'
@@ -159,6 +160,7 @@ export default function Footer() {
               <a
                 href='https://www.instagram.com'
                 className='  text-white hover:text-white'
+                title='Instagram'
               >
                 <svg
                   className='h-5 w-5'
@@ -178,6 +180,7 @@ export default function Footer() {
               <a
                 href='https://x.com/?lang=en'
                 className='  text-white hover:text-white'
+                title='Twitter'
               >
                 <svg
                   className='h-5 w-5'
@@ -193,6 +196,7 @@ export default function Footer() {
               <a
                 href='https://github.com/'
                 className='  text-white hover:text-white'
+                title='GitHub'
               >
                 <svg
                   className='h-5 w-5'
