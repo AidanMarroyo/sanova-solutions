@@ -44,7 +44,7 @@ const Navbar = () => {
             </Link>
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant={'outline'} size={'icon'}>
+                <Button variant={'outline'} size={'icon'} title='menu-button'>
                   <Menu className='size-4' />
                 </Button>
               </SheetTrigger>

@@ -2,6 +2,7 @@ import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 import { SiSpeedtest } from 'react-icons/si';
 import { FiLoader } from 'react-icons/fi';
 import { GrDocumentPerformance } from 'react-icons/gr';
+import Image from 'next/image';
 
 export function Speed() {
   return (
@@ -81,10 +82,13 @@ export function Speed() {
             </div>
           </div>
         </div>
-        <img
+        <Image
+          width='584'
+          height='508'
           className='mx-auto mb-4 hidden sm:flex'
           src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/social-proof/table-professor.svg'
           alt='table professor illustration'
+          loading='lazy'
         />
       </div>
     </MaxWidthWrapper>

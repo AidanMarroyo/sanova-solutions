@@ -1,5 +1,6 @@
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function UniqueSellingProposition() {
@@ -121,7 +122,9 @@ export default function UniqueSellingProposition() {
             </Button>
           </Link>
         </div>
-        <img
+        <Image
+          width='560'
+          height='560'
           alt=''
           src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-1.png'
           className='mb-4 hidden w-full rounded-lg lg:mb-0 lg:flex'
