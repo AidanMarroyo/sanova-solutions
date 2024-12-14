@@ -132,7 +132,7 @@ export default function Pricing() {
 
         <div className=' flex  flex-col rounded-lg border  p-6 text-center  shadow border-[#D4AF37] backdrop-saturate-180 bg-[rgba(17,25,40,0.75)] text-white xl:p-8'>
           <div className='mb-2'>
-            <span className='rounded bg-[#D4AF37] px-3 py-1 text-sm text-primary-800 font-semibold'>
+            <span className='rounded bg-[#D4AF37] px-3 py-1 text-sm text-white font-semibold'>
               MOST POPULAR
             </span>
           </div>

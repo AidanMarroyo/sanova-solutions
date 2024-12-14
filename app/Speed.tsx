@@ -28,7 +28,7 @@ export function Speed() {
           <h2 className='mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white md:text-4xl'>
             Websites Designed for Speed and Results
           </h2>
-          <p className='mb-8 dark:text-gray-400 lg:text-xl'>
+          <p className='mb-8 text-white lg:text-xl'>
             At Sanova Web Solutions, we build websites that outperform the
             competition with exceptional load times and top-tier Google
             PageSpeed scores. Don’t just take our word for it—test your current
