@@ -22,11 +22,11 @@ export function Intro() {
           <div>
             <h3 className='text-2xl font-extrabold'>Your Partner in Growth</h3>
             <p className='mt-2 text-lg font-normal text-white'>
-              Sanova Solutions began with a mission: to empower entrepreneurs
-              and businesses to achieve their full potential. With a passion for
-              innovation and a commitment to excellence, we’ve helped clients
-              turn ideas into thriving ventures. Based in Dundas, Ontario, we
-              proudly serve businesses locally and globally.
+              Sanova Web Solutions began with a mission: to empower
+              entrepreneurs and businesses to achieve their full potential. With
+              a passion for innovation and a commitment to excellence, we’ve
+              helped clients turn ideas into thriving ventures. Based in Dundas,
+              Ontario, we proudly serve businesses locally and globally.
             </p>
           </div>
           {/* <ul className='mt-8 grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-2'>

@@ -101,8 +101,8 @@ export function ContactForm() {
           </h2>
           <p className='mb-16 text-white sm:text-xl'>
             Have questions or ready to start your next project? We're here to
-            help! Contact Sanova Solutions today to discuss your business goals
-            and discover how we can help you achieve them.
+            help! Contact Sanova Web Solutions today to discuss your business
+            goals and discover how we can help you achieve them.
           </p>
         </div>
       </div>

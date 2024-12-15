@@ -17,7 +17,7 @@ export async function generateMetadata({
 }: ServicePageProps): Promise<Metadata> {
   const service = services[(await params).serviceId as ServiceName];
   return {
-    title: `${service.name} | Sanova Solutions`,
+    title: `${service.name} | Sanova Web Solutions`,
     description: service.description,
   };
 }

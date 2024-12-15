@@ -51,9 +51,9 @@ export function Services() {
             Professional Websites, Fully Managed and Stress-Free
           </h2>
           <p className='mb-8 lg:text-xl'>
-            A website is your business’s digital front door. Sanova Solutions
-            creates responsive, visually stunning, and user-friendly websites
-            that leave lasting impressions.
+            A website is your business’s digital front door. Sanova Web
+            Solutions creates responsive, visually stunning, and user-friendly
+            websites that leave lasting impressions.
           </p>
           <Link
             href='/services/website-services'

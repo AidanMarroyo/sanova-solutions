@@ -115,7 +115,7 @@ export default function Footer() {
           >
             <Image
               src='/images/logo.png'
-              alt='Sanova Solutions Logo'
+              alt='Sanova Web Solutions Logo'
               className='w-1/4 -mr-2'
               width={300}
               height={300}
@@ -124,14 +124,14 @@ export default function Footer() {
               width={300}
               height={300}
               src='/images/name.png'
-              alt='Sanova Solutions Logo'
+              alt='Sanova Web Solutions Logo'
               className='w-1/4 -ml-2'
             />
           </Link>
           <span className='block text-center text-sm  text-white'>
             © 2024&nbsp;
             <Link href='#' className='hover:underline'>
-              Sanova Solutions
+              Sanova Web Solutions
             </Link>
             . All Rights Reserved.
           </span>

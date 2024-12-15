@@ -6,9 +6,9 @@ import { CTA } from '@/components/CTA';
 import { AboutusFeatures } from '@/lib/constants';
 
 export const metadata: Metadata = {
-  title: 'About Sanova Solutions | Empowering Business Growth',
+  title: 'About Sanova Web Solutions | Empowering Business Growth',
   description:
-    'Learn about Sanova Solutions—our mission, values, and the passionate team dedicated to helping businesses start, scale, and thrive globally.',
+    'Learn about Sanova Web Solutions—our mission, values, and the passionate team dedicated to helping businesses start, scale, and thrive globally.',
 };
 
 function page() {

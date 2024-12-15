@@ -7,9 +7,9 @@ import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title:
-    'Sanova Solutions | Custom Apps, Websites & Growth Services for Businesses',
+    'Sanova Web Solutions | Custom Apps, Websites & Growth Services for Businesses',
   description:
-    'Boost your business with Sanova Solutions. We offer custom applications, websites, e-commerce solutions, social media marketing, and growth strategies tailored for success.',
+    'Boost your business with Sanova Web Solutions. We offer custom applications, websites, e-commerce solutions, social media marketing, and growth strategies tailored for success.',
   icons: {
     icon: '/favicon.ico',
   },

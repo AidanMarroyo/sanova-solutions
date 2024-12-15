@@ -3,9 +3,9 @@ import { Terms } from '@/lib/constants';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Sanova Solutions',
+  title: 'Terms of Service | Sanova Web Solutions',
   description:
-    "Review the terms and conditions governing the use of Sanova Solutions' services. Understand your rights and responsibilities when working with us.",
+    "Review the terms and conditions governing the use of Sanova Web Solutions' services. Understand your rights and responsibilities when working with us.",
 };
 export default function TermsPage() {
   return (

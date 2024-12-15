@@ -22,8 +22,8 @@ export const services = {
     name: 'Custom Applications',
     title: 'Custom Applications Designed for Your Unique Business Needs',
     description:
-      'Empower your business with tailor-made software solutions crafted to solve your unique challenges. At Sanova Solutions, we specialize in developing custom applications that optimize workflows, enhance productivity, and drive growth.',
-    title2: 'Why Choose Custom Applications from Sanova Solutions',
+      'Empower your business with tailor-made software solutions crafted to solve your unique challenges. At Sanova Web Solutions, we specialize in developing custom applications that optimize workflows, enhance productivity, and drive growth.',
+    title2: 'Why Choose Custom Applications from Sanova Web Solutions',
     list: [
       'Tailored to your specific business requirements',
       'Scalable solutions that grow with you',
@@ -103,7 +103,7 @@ export const services = {
     name: 'Ecommerce Solutions',
     title: 'Sell Smarter with Seamless Ecommerce Solutions',
     description:
-      "Whether you're launching a new online store or optimizing an existing one, Sanova Solutions has you covered. Our e-commerce services provide scalable, secure, and user-friendly platforms designed to grow your business and simplify online selling.",
+      "Whether you're launching a new online store or optimizing an existing one, Sanova Web Solutions has you covered. Our e-commerce services provide scalable, secure, and user-friendly platforms designed to grow your business and simplify online selling.",
     title2: 'Why Choose Our E-Commerce Solutions?',
     list: [
       'Fully customizable platforms tailored to your brand',
@@ -165,9 +165,9 @@ export const SecondaryNavLinks = [
 
 export const HomeFeatures = {
   id: 1,
-  title: 'Why Choose Sanova Solutions?',
+  title: 'Why Choose Sanova Web Solutions?',
   description:
-    'Our clients choose Sanova Solutions for innovative, reliable, and tailored services.',
+    'Our clients choose Sanova Web Solutions for innovative, reliable, and tailored services.',
   features: [
     {
       id: 1,
@@ -236,61 +236,61 @@ export const Terms = [
     id: 1,
     title: 'Responsibility',
     description:
-      'Sanova Solutions is committed to delivering requested services promptly and in accordance with the agreed-upon standards outlined in the contract.  Projects requiring work outside of normal business hours or exceeding standard turnaround times may incur additional charges. If work is paused after initiation, billing will reflect the completed work up to that point. While Sanova Solutions will work collaboratively with third-party entities engaged by the client, we are not responsible for their performance.',
+      'Sanova Web Solutions is committed to delivering requested services promptly and in accordance with the agreed-upon standards outlined in the contract.  Projects requiring work outside of normal business hours or exceeding standard turnaround times may incur additional charges. If work is paused after initiation, billing will reflect the completed work up to that point. While Sanova Web Solutions will work collaboratively with third-party entities engaged by the client, we are not responsible for their performance.',
   },
   {
     id: 2,
     title: 'Ownership',
     description:
-      'Clients acknowledge that all files, web pages, graphics, and programming work, excluding materials provided by the client, remain the sole property of Sanova Solutions until all applicable fees are fully paid. Upon payment, ownership is transferred to the client. For programming work, such as custom scripts, shopping carts, and database programs, clients agree that they do not hold the rights to replicate, sell, or distribute these programs unless explicitly agreed upon. Programs created by Sanova Solutions are licensed for use exclusively on the client’s specified website unless additional permissions are purchased.',
+      'Clients acknowledge that all files, web pages, graphics, and programming work, excluding materials provided by the client, remain the sole property of Sanova Web Solutions until all applicable fees are fully paid. Upon payment, ownership is transferred to the client. For programming work, such as custom scripts, shopping carts, and database programs, clients agree that they do not hold the rights to replicate, sell, or distribute these programs unless explicitly agreed upon. Programs created by Sanova Web Solutions are licensed for use exclusively on the client’s specified website unless additional permissions are purchased.',
   },
   {
     id: 3,
     title: 'Copyright',
     description:
-      'All work produced by Sanova Solutions is subject to copyright protection. Clients are granted rights solely for the agreed-upon purposes, such as web publication. Unauthorized reproduction in print or other media without explicit permission may constitute copyright infringement. Full copyright ownership can be purchased if required. Clients affirm they have proper authorization or licenses for any materials provided and accept full responsibility for any copyright-related disputes. Sanova Solutions assumes no liability for verifying the legality of client-provided materials.',
+      'All work produced by Sanova Web Solutions is subject to copyright protection. Clients are granted rights solely for the agreed-upon purposes, such as web publication. Unauthorized reproduction in print or other media without explicit permission may constitute copyright infringement. Full copyright ownership can be purchased if required. Clients affirm they have proper authorization or licenses for any materials provided and accept full responsibility for any copyright-related disputes. Sanova Web Solutions assumes no liability for verifying the legality of client-provided materials.',
   },
   {
     id: 4,
     title: 'Proofreading',
     description:
-      "Sanova Solutions' liability for typographical, pricing, or similar errors is limited to correcting them upon timely notification during the proofreading and testing phase. Clients are responsible for reviewing all work to ensure (a) quality, (b) accuracy in size and content, (c) suitability for its intended use, and (d) compliance with copyright and other legal standards before publication.",
+      "Sanova Web Solutions' liability for typographical, pricing, or similar errors is limited to correcting them upon timely notification during the proofreading and testing phase. Clients are responsible for reviewing all work to ensure (a) quality, (b) accuracy in size and content, (c) suitability for its intended use, and (d) compliance with copyright and other legal standards before publication.",
   },
   {
     id: 5,
     title: 'Offensive/Libelous Material',
     description:
-      'Clients agree not to use Sanova Solutions’ services to publish material deemed defamatory, offensive, or libelous. Sanova Solutions disclaims liability for content hosted on or transmitted through our services. Clients bear full responsibility for the content of their websites and indemnify Sanova Solutions against any claims arising from defamatory or unlawful material. Sanova Solutions does not monitor client data for content compliance.',
+      'Clients agree not to use Sanova Web Solutions’ services to publish material deemed defamatory, offensive, or libelous. Sanova Web Solutions disclaims liability for content hosted on or transmitted through our services. Clients bear full responsibility for the content of their websites and indemnify Sanova Web Solutions against any claims arising from defamatory or unlawful material. Sanova Web Solutions does not monitor client data for content compliance.',
   },
   {
     id: 6,
     title: 'Loss of Earnings',
     description:
-      'Sanova Solutions is not liable for any loss of business resulting from service failures, including but not limited to losses in revenue, profits, or indirect damages. If a service fails, compensation will be limited to a pro-rata refund of payments made for the affected service. Sanova Solutions also disclaims liability for fraudulent or improper use of data stored on its systems.',
+      'Sanova Web Solutions is not liable for any loss of business resulting from service failures, including but not limited to losses in revenue, profits, or indirect damages. If a service fails, compensation will be limited to a pro-rata refund of payments made for the affected service. Sanova Web Solutions also disclaims liability for fraudulent or improper use of data stored on its systems.',
   },
   {
     id: 7,
     title: 'Portfolio',
     description:
-      'To maintain portfolio credibility, Sanova Solutions reserves the right to include a small logo on client websites, linking back to our website. We may also feature client projects in our portfolio and marketing materials unless otherwise agreed upon.',
+      'To maintain portfolio credibility, Sanova Web Solutions reserves the right to include a small logo on client websites, linking back to our website. We may also feature client projects in our portfolio and marketing materials unless otherwise agreed upon.',
   },
   {
     id: 8,
     title: 'Hosting Contracts',
     description:
-      'Sanova Solutions invoices domain name and hosting contracts annually. Transfers of domain names or hosting to other providers will be facilitated provided the account is paid in full and an authorized request is submitted. Clients wishing not to renew domain or hosting services must notify us at least 30 days before the renewal date to avoid charges. Domain names are automatically renewed upon expiration unless notified otherwise.',
+      'Sanova Web Solutions invoices domain name and hosting contracts annually. Transfers of domain names or hosting to other providers will be facilitated provided the account is paid in full and an authorized request is submitted. Clients wishing not to renew domain or hosting services must notify us at least 30 days before the renewal date to avoid charges. Domain names are automatically renewed upon expiration unless notified otherwise.',
   },
   {
     id: 9,
     title: 'Payment',
     description:
-      'Sanova Solutions may require an advance deposit of up to 50% of estimated project fees before work begins. Final payment must be made before the website is launched. Payments are due upon receipt of the invoice. Non-payment may result in the removal of website content or suspension of hosting services without notice.',
+      'Sanova Web Solutions may require an advance deposit of up to 50% of estimated project fees before work begins. Final payment must be made before the website is launched. Payments are due upon receipt of the invoice. Non-payment may result in the removal of website content or suspension of hosting services without notice.',
   },
   {
     id: 10,
     title: 'Email Disclosure',
     description:
-      'Emails from Sanova Solutions may contain confidential or privileged information. They are intended solely for the recipient. If you receive an email in error, please notify the sender promptly and delete it. Unauthorized use, disclosure, or reliance on email content is prohibited. The opinions expressed in emails are those of the author and do not necessarily reflect the views of Sanova Solutions.',
+      'Emails from Sanova Web Solutions may contain confidential or privileged information. They are intended solely for the recipient. If you receive an email in error, please notify the sender promptly and delete it. Unauthorized use, disclosure, or reliance on email content is prohibited. The opinions expressed in emails are those of the author and do not necessarily reflect the views of Sanova Web Solutions.',
   },
 ];
 
@@ -377,13 +377,13 @@ export const FAQ = [
     id: 2,
     title: 'Will we need to have a face-to-face meeting to begin the project?',
     description:
-      'While we strive to meet with our clients whenever feasible, it may not always be possible. In such cases, website projects are typically managed through communication via email and telephone. We utilize a secure testing server to showcase suggested website designs for your review and feedback. This approach allows for regular communication, ensuring that you receive the desired outcome from the Sanova Solutions team.',
+      'While we strive to meet with our clients whenever feasible, it may not always be possible. In such cases, website projects are typically managed through communication via email and telephone. We utilize a secure testing server to showcase suggested website designs for your review and feedback. This approach allows for regular communication, ensuring that you receive the desired outcome from the Sanova Web Solutions team.',
   },
   {
     id: 3,
     title: 'Do you provide any additional services?',
     description:
-      'We provide comprehensive support for all websites we design and remain readily available to assist you with any issues or enhancements you may require. Our services include website maintenance, web hosting, SEO, and domain registration. Rest assured, Sanova Solutions has all your needs covered.',
+      'We provide comprehensive support for all websites we design and remain readily available to assist you with any issues or enhancements you may require. Our services include website maintenance, web hosting, SEO, and domain registration. Rest assured, Sanova Web Solutions has all your needs covered.',
   },
   {
     id: 4,
@@ -407,7 +407,7 @@ export const FAQ = [
     id: 7,
     title: 'Does my hosting subscription include 24/7 tech support?',
     description:
-      'As the account administrator, only Sanova Solutions has access to server technical support. In the event of any technical issues, simply contact us via email or phone to report the problem, and we will make every effort to resolve it promptly.',
+      'As the account administrator, only Sanova Web Solutions has access to server technical support. In the event of any technical issues, simply contact us via email or phone to report the problem, and we will make every effort to resolve it promptly.',
   },
   {
     id: 8,
@@ -436,7 +436,7 @@ export const licensingTerms = [
       {
         title: 'Ownership of Code',
         description:
-          'All code, scripts, and related assets developed by Sanova Solutions remain the intellectual property of Sanova Solutions unless explicitly agreed otherwise in a separate purchase agreement.',
+          'All code, scripts, and related assets developed by Sanova Web Solutions remain the intellectual property of Sanova Web Solutions unless explicitly agreed otherwise in a separate purchase agreement.',
       },
       {
         title: 'License to Use',
@@ -476,7 +476,7 @@ export const licensingTerms = [
       {
         title: 'Exclusive Rights',
         description:
-          'Upon payment of the agreed purchase price, Sanova Solutions will transfer exclusive ownership rights to the client, relinquishing all claims to the code.',
+          'Upon payment of the agreed purchase price, Sanova Web Solutions will transfer exclusive ownership rights to the client, relinquishing all claims to the code.',
       },
     ],
   },
@@ -506,7 +506,7 @@ export const licensingTerms = [
       {
         title: 'Distribution Restrictions',
         description:
-          'Licensed code may not be shared, distributed, sold, or sublicensed by the client without prior written consent from Sanova Solutions.',
+          'Licensed code may not be shared, distributed, sold, or sublicensed by the client without prior written consent from Sanova Web Solutions.',
       },
       {
         title: 'Project-Specific Use',
@@ -526,7 +526,7 @@ export const licensingTerms = [
       {
         title: 'Transition Assistance',
         description:
-          'Upon termination, Sanova Solutions will offer assistance to transition services or data, as applicable.',
+          'Upon termination, Sanova Web Solutions will offer assistance to transition services or data, as applicable.',
       },
     ],
   },
@@ -536,7 +536,7 @@ export const licensingTerms = [
       {
         title: 'Authorized Modifications',
         description:
-          'Modifications to licensed code must be performed by or authorized by Sanova Solutions to maintain compatibility and avoid potential issues.',
+          'Modifications to licensed code must be performed by or authorized by Sanova Web Solutions to maintain compatibility and avoid potential issues.',
       },
       {
         title: 'Unauthorized Modifications',
@@ -551,7 +551,7 @@ export const licensingTerms = [
       {
         title: 'Copyright Protection',
         description:
-          'All custom software and services provided by Sanova Solutions are protected under copyright and intellectual property laws.',
+          'All custom software and services provided by Sanova Web Solutions are protected under copyright and intellectual property laws.',
       },
       {
         title: 'Prohibited Actions',

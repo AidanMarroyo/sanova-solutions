@@ -9,10 +9,10 @@ export function Hero() {
           Solutions Designed to Start, Scale, and Elevate Your Business
         </h1>
         <p className='mb-8 text-lg font-normal text-white sm:px-16 lg:text-xl xl:px-48'>
-          Sanova Solutions offers a range of services to help businesses unlock
-          their full potential. From tailored applications to dynamic marketing
-          strategies, we provide the tools you need to thrive in today’s
-          competitive landscape.
+          Sanova Web Solutions offers a range of services to help businesses
+          unlock their full potential. From tailored applications to dynamic
+          marketing strategies, we provide the tools you need to thrive in
+          today’s competitive landscape.
         </p>
         <div className='mb-8 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0 lg:mb-16'>
           <Button color='info' size='lg' className='[&>span]:items-center'>

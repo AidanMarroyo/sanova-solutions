@@ -33,7 +33,7 @@ export async function generateMetadata({
   const post = await getPost((await params).postId);
 
   return {
-    title: `${post.title} | Sanova Solutions`,
+    title: `${post.title} | Sanova Web Solutions`,
     description: post.description,
   };
 }
@@ -64,7 +64,7 @@ export default async function BlogPost({ params }: PageProps) {
                   href='#'
                   className='font-semibold no-underline hover:underline text-white'
                 >
-                  Sanova Solutions Team
+                  Sanova Web Solutions Team
                 </a>
               </span>
               <span className='h-2 w-2 rounded-full bg-gray-400'></span>

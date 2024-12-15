@@ -4,7 +4,7 @@ import React from 'react';
 export const metadata: Metadata = {
   title: 'Industries We Serve | Solutions for Every Business',
   description:
-    'Sanova Solutions offers custom business services for retail, tech, healthcare, and more. Tailored strategies for every industry.',
+    'Sanova Web Solutions offers custom business services for retail, tech, healthcare, and more. Tailored strategies for every industry.',
 };
 
 const page = () => {

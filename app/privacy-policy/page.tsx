@@ -4,9 +4,9 @@ import Link from 'next/link';
 import React from 'react';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Sanova Solutions',
+  title: 'Privacy Policy | Sanova Web Solutions',
   description:
-    'Read about how Sanova Solutions protects your data and respects your privacy when using our services.',
+    'Read about how Sanova Web Solutions protects your data and respects your privacy when using our services.',
 };
 
 const page = () => {

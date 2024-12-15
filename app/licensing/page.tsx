@@ -16,9 +16,9 @@ import { licensingTerms } from '@/lib/constants';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Licensing Information | Sanova Solutions',
+  title: 'Licensing Information | Sanova Web Solutions',
   description:
-    'Explore the licensing details for the software and services provided by Sanova Solutions. Learn about the terms for use, distribution, and intellectual property.',
+    'Explore the licensing details for the software and services provided by Sanova Web Solutions. Learn about the terms for use, distribution, and intellectual property.',
 };
 
 export default function LicensingTerms() {
