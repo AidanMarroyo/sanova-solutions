@@ -21,7 +21,7 @@ export function Portfolio() {
             <Image
               width='819'
               height='407'
-              className='hidden w-full rounded-lg object-cover shadow-lg dark:block'
+              className=' w-full rounded-xl object-cover shadow-lg block'
               src='/images/brandwired.jpg'
               alt=''
             />
@@ -79,7 +79,7 @@ export function Portfolio() {
             <Image
               width='819'
               height='407'
-              className='hidden w-full rounded-lg object-cover shadow-lg dark:block'
+              className='w-full rounded-xl object-cover shadow-lg block'
               src='/images/ecozen.jpg'
               alt=''
             />
@@ -139,7 +139,7 @@ export function Portfolio() {
             <Image
               width='819'
               height='407'
-              className='hidden w-full rounded-lg object-cover shadow-lg dark:block'
+              className='w-full rounded-xl object-cover shadow-lg block'
               src='/images/battleborn.jpg'
               alt=''
             />

@@ -20,7 +20,7 @@ export default function Hero() {
         />
         <p className='mb-6 max-w-xl text-white md:text-lg lg:mb-8 lg:text-xl'>
           100% hand-coded websites, web applications, and custom web solutions
-          starting at $200/mo. No page builders, No Wordpress, No bloatware.
+          starting at $175/mo. No page builders, No Wordpress, No bloatware.
         </p>
         <div className='flex w-fit items-center gap-5'>
           <Link href='/contact-us'>
@@ -49,10 +49,11 @@ export default function Hero() {
       </div>
       <div className='hidden lg:col-span-5 lg:mt-0 lg:flex'>
         <Image
-          width={513}
-          height={384}
-          src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png'
+          width='1680'
+          height='1680'
+          src='/images/hero.webp'
           alt='mockup'
+          className='min-w-full min-h-full'
         />
       </div>
     </MaxWidthWrapper>

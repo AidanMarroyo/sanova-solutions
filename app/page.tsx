@@ -14,6 +14,7 @@ export default function Home() {
       <Features />
       <UniqueSellingProposition />
       <Speed />
+
       <Pricing />
       <Portfolio />
       <CTA

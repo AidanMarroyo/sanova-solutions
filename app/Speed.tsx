@@ -7,7 +7,7 @@ import Image from 'next/image';
 export function Speed() {
   return (
     <MaxWidthWrapper>
-      <dl className='mx-auto mt-8 grid max-w-screen-md grid-cols-2 gap-8 text-gray-900 dark:text-white sm:grid-cols-3 lg:mt-14'>
+      <dl className='mx-auto mt-8 grid max-w-screen-md grid-cols-2 gap-8 text-white sm:grid-cols-3 lg:mt-14'>
         <div className='flex flex-col items-center justify-center'>
           <dt className='mb-2 text-4xl font-extrabold'>100%</dt>
           <dd className='text-xl font-normal text-white'>
@@ -25,8 +25,8 @@ export function Speed() {
       </dl>
 
       <div className='mx-auto max-w-screen-xl items-center gap-8 px-4 py-8 lg:grid lg:grid-cols-2 lg:px-6 lg:py-16 xl:gap-16 '>
-        <div className='text-gray-500 sm:text-lg'>
-          <h2 className='mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white md:text-4xl'>
+        <div className='sm:text-lg'>
+          <h2 className='mb-4 text-3xl font-extrabold tracking-tight text-white md:text-4xl'>
             Websites Designed for Speed and Results
           </h2>
           <p className='mb-8 text-white lg:text-xl'>
@@ -35,13 +35,13 @@ export function Speed() {
             PageSpeed scores. Don’t just take our word for it—test your current
             website using Google PageSpeed Insights and see how it measures up.
           </p>
-          <div className='grid gap-6 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-1'>
+          <div className='grid gap-6 border-gray-700 sm:grid-cols-2 lg:grid-cols-1'>
             <div className='flex'>
               <div className='mr-4 shrink-0'>
-                <FiLoader size={40} />
+                <FiLoader size={30} color='#D4AF37' />
               </div>
               <div>
-                <p className='mb-1 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white'>
+                <p className='mb-1 text-2xl font-extrabold tracking-tight text-white'>
                   Faster Load Times, Better Results
                 </p>
                 <p className='text-white'>
@@ -52,10 +52,10 @@ export function Speed() {
             </div>
             <div className='flex'>
               <div className='mr-4 shrink-0'>
-                <GrDocumentPerformance size={40} />
+                <GrDocumentPerformance size={30} color='#D4AF37' />
               </div>
               <div>
-                <p className='mb-1 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white'>
+                <p className='mb-1 text-2xl font-extrabold tracking-tight text-white'>
                   Enhanced SEO and Ad Performance
                 </p>
                 <p className='text-white'>
@@ -67,10 +67,10 @@ export function Speed() {
             </div>
             <div className='flex'>
               <div className='mr-4 shrink-0'>
-                <SiSpeedtest size={40} />
+                <SiSpeedtest size={30} color='#D4AF37' />
               </div>
               <div>
-                <p className='mb-1 text-2xl font-extrabold tracking-tight text-gray-900 dark:text-white'>
+                <p className='mb-1 text-2xl font-extrabold tracking-tight text-white'>
                   Instant Load Speeds
                 </p>
                 <p className='text-white'>

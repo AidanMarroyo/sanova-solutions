@@ -13,7 +13,7 @@ export function CTA({
 }) {
   return (
     <MaxWidthWrapper>
-      <div className='mx-auto flex max-w-screen-sm flex-col items-center text-center mb-20 lg:mb-16'>
+      <div className='mt-8 mx-auto flex max-w-screen-sm flex-col items-center text-center mb-20 lg:mb-16'>
         <h2 className='mb-4 text-4xl font-extrabold leading-tight tracking-tight'>
           {title}
         </h2>

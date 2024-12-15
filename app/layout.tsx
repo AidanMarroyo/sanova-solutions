@@ -30,7 +30,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar />
-          <main className='relative z-0 mt-60 mx-auto'>{children}</main>
+          <main className='relative z-0 lg:mt-60 mt-52 mx-auto'>
+            {children}
+          </main>
           <Toaster />
           <Footer />
         </ThemeProvider>

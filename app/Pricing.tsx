@@ -15,7 +15,12 @@ export default function Pricing() {
         <div className='flex flex-col rounded-lg border  backdrop-blur-[16px] backdrop-saturate-180 bg-[rgba(17,25,40,0.75)] p-6 text-center  shadow border-gray-600  text-white xl:p-8'>
           <h3 className='text-2xl font-semibold'>LUMP SUM</h3>
           <div className='my-6 flex justify-center flex-col items-center'>
-            <span className='mr-2 text-5xl font-extrabold'>$2800</span>
+            <div className='relative'>
+              <span className='text-5xl font-extrabold text-white'>$2800</span>
+              <span className='absolute top-0 right-0 transform -translate-y-1/2 translate-x-full text-sm line-through text-gray-400'>
+                $3800
+              </span>
+            </div>
             <span className='text-white'>+25/month for Hosting</span>
           </div>
           <ul className='mb-8 space-y-4 text-left'>
@@ -138,7 +143,12 @@ export default function Pricing() {
           </div>
           <h3 className='text-2xl font-semibold'>MONTHLY</h3>
           <div className='my-4 flex items-baseline justify-center'>
-            <span className='mr-2 text-5xl font-extrabold'>$200</span>
+            <div className='relative'>
+              <span className='text-5xl font-extrabold text-white'>$175</span>
+              <span className='absolute top-0 right-0 transform -translate-y-1/2 translate-x-full text-sm line-through text-gray-500'>
+                $200
+              </span>
+            </div>
             <span className='text-white'>/month</span>
           </div>
           <ul className='mb-8 space-y-4 text-left'>
