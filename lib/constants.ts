@@ -59,10 +59,20 @@ export const services = {
   },
   'website-services': {
     name: 'Website Services',
-    title: 'Professional Web Design & Development Services',
+    title: 'Web Design & Development Services | Sanova Web Solutions',
     description:
       'At Sanova Web Solutions, we take a unique approach to web design and development. Instead of relying on WordPress or page builders, we custom code every website from the ground up. This allows us to create tailored designs with zero unnecessary bloat, ensuring your site is fast, secure, and high-performing.',
-    title2: 'Why Choose Our Web Design & Development Services?',
+    header: 'Professional Web Design & Development Services',
+    secondary: 'Expertly Built Websites Without Compromise',
+    content: [
+      {
+        id: 1,
+        heading: 'Expertly Built Websites Without Compromise',
+        subheading: '',
+        text: 'At Sanova Web Solutions, we take a distinct approach to web design. Instead of relying on page builders or platforms like WordPress, we develop every website from scratch. Our handcrafted code ensures each site is lightweight, highly optimized, and free from unnecessary clutter or bloat. The result? Websites that load at lightning speed, achieve top-tier Google PageSpeed Insights scores, and deliver unparalleled performance.',
+        list: [{}],
+      },
+    ],
     list: [
       'Fully responsive designs for a seamless user experience on any device',
       'SEO-optimized to improve your search engine visibility',

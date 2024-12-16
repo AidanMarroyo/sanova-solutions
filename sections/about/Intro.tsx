@@ -4,10 +4,11 @@ export function Intro() {
   return (
     <MaxWidthWrapper>
       <div className='text-center'>
-        <div className='mt-4 flex flex-col items-center justify-center gap-4 sm:mt-5 sm:flex-row sm:gap-8'>
-          <h1 className='text-7xl font-bold'>
-            Building Success, One Business at a Time
-          </h1>
+        <div className='mt-4 flex flex-col items-center justify-center gap-4 sm:mt-5 sm:gap-8'>
+          <p className='my-4 text-base font-normal sm:text-xl text-white'>
+            About Us
+          </p>
+          <h1 className='text-6xl font-bold'>Sanova Web Solutions</h1>
         </div>
       </div>
       <div className='mx-auto mt-8 max-w-5xl lg:mt-16'>
@@ -20,8 +21,11 @@ export function Intro() {
       <div className='mt-8 grid grid-cols-1 gap-8 lg:mt-16 lg:grid-cols-2 lg:gap-16'>
         <div>
           <div>
-            <h3 className='text-2xl font-extrabold'>Your Partner in Growth</h3>
-            <p className='mt-2 text-lg font-normal text-white'>
+            <h3 className='text-2xl font-extrabold'>
+              Websites Designed With Purpose and Integrity
+            </h3>
+
+            <p className='mt-4 text-lg font-normal text-white'>
               Sanova Web Solutions began with a mission: to empower
               entrepreneurs and businesses to achieve their full potential. With
               a passion for innovation and a commitment to excellence, we’ve

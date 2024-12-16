@@ -9,18 +9,22 @@ export function Speed() {
     <MaxWidthWrapper>
       <dl className='mx-auto mt-8 grid max-w-screen-md grid-cols-2 gap-8 text-white sm:grid-cols-3 lg:mt-14'>
         <div className='flex flex-col items-center justify-center'>
-          <dt className='mb-2 text-4xl font-extrabold'>100%</dt>
-          <dd className='text-xl font-normal text-white'>
+          <dt className='mb-2 text-2xl sm:text-4xl font-extrabold'>100%</dt>
+          <dd className='text-md sm:text-xl font-normal text-white'>
             Satisfaction Guaranteed
           </dd>
         </div>
         <div className='flex flex-col items-center justify-center'>
-          <dt className='mb-2 text-4xl font-extrabold'>100%</dt>
-          <dd className='text-xl font-normal text-white'>Page Speed Scores</dd>
+          <dt className='mb-2 text-2xl sm:text-4xl font-extrabold'>100%</dt>
+          <dd className='text-md sm:text-xl font-normal text-white'>
+            Page Speed Scores
+          </dd>
         </div>
         <div className='flex flex-col items-center justify-center'>
-          <dt className='mb-2 text-4xl font-extrabold'>5/5</dt>
-          <dd className='text-xl font-normal text-white'>Google Reviews</dd>
+          <dt className='mb-2 text-2xl sm:text-4xl font-extrabold'>5/5</dt>
+          <dd className='text-md sm:text-xl font-normal text-white'>
+            Google Reviews
+          </dd>
         </div>
       </dl>
 

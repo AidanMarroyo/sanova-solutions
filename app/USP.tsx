@@ -63,8 +63,8 @@ export default function UniqueSellingProposition() {
                   Lightning-Fast Speeds
                 </h3>
                 <p className='text-md text-white'>
-                  All designs are created by our in-house team, giving us the
-                  freedom to bring your unique vision to life.
+                  With clean, efficient code and no unnecessary extras, our
+                  sites achieve near-perfect Google PageSpeed scores of 98-100.
                 </p>
               </div>
             </li>
