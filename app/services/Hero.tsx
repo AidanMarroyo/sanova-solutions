@@ -1,4 +1,6 @@
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 interface HeroProps {
   heading: string;
   subheading: string;
@@ -16,7 +18,13 @@ function Hero({ heading, subheading, description }: HeroProps) {
           </h2>
           <p className='mb-8 text-lg'>{description}</p>
           <ul className='my-7 space-y-5 border-t  pt-8 border-gray-700'></ul>
+          <Link href='/contact-us'>
+            <Button className='[&>span]:items-center p mt-4' size='lg'>
+              SCHEDULE A CALL
+            </Button>
+          </Link>
         </div>
+
         <img
           alt=''
           src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-1.png'
