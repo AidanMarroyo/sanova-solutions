@@ -12,9 +12,14 @@ import {
 import { cn } from '@/lib/utils';
 import { NavLink } from './NavLink';
 import Logo from './Logo';
-import { NavLinks, SecondaryNavLinks } from '@/lib/constants';
+import { SecondaryNavLinks } from '@/lib/constants';
 import Link from 'next/link';
-// import { ModeToggle } from './ModeToggle';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const Navbar = () => {
   return (
@@ -22,19 +27,44 @@ const Navbar = () => {
       <div>
         <nav className='hidden justify-between items-center xl:flex '>
           <div className='flex items-center gap-6'>
-            <div className='flex items-center gap-2'>
-              <Link href='/'>
-                <Logo />
-              </Link>
-            </div>
+            <Link href='/'>
+              <Logo />
+            </Link>
+
             <div className='flex items-center gap-6'>
-              {NavLinks.map((link) => (
-                <NavLink key={link.id} href={link.href}>
-                  {link.name}
-                </NavLink>
-              ))}
+              <NavLink href='/'>Home</NavLink>
+
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <NavLink href=''>About Us ▾</NavLink>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem asChild className='hover:cursor-pointer'>
+                    <NavLink href='/about-us'>About Us</NavLink>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild className='hover:cursor-pointer'>
+                    <NavLink href='/faq'>FAQ</NavLink>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild className='hover:cursor-pointer'>
+                    <NavLink href='/testimonials'>Testimonials</NavLink>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <NavLink href=''>Services ▾</NavLink>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem asChild className='hover:cursor-pointer'>
+                    <NavLink href='/services/web-design'>Web Design</NavLink>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild className='hover:cursor-pointer'>
+                    <NavLink href='/services/seo'>SEO</NavLink>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              <NavLink href='/contact-us'>Contact Us</NavLink>
             </div>
-            {/* <ModeToggle /> */}
           </div>
         </nav>
         <div className='block xl:hidden'>
@@ -57,15 +87,55 @@ const Navbar = () => {
                   </SheetTitle>
                 </SheetHeader>
                 <div className='my-8 flex flex-col gap-4'>
-                  {NavLinks.map((link) => (
-                    <NavLink
-                      className='font-semibold'
-                      key={link.id}
-                      href={link.href}
-                    >
-                      {link.name}
-                    </NavLink>
-                  ))}
+                  <NavLink href='/'>Home</NavLink>
+
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <NavLink href=''>About Us ▾</NavLink>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                      <DropdownMenuItem
+                        asChild
+                        className='hover:cursor-pointer'
+                      >
+                        <NavLink href='/about-us'>About Us</NavLink>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem
+                        asChild
+                        className='hover:cursor-pointer'
+                      >
+                        <NavLink href='/faq'>FAQ</NavLink>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem
+                        asChild
+                        className='hover:cursor-pointer'
+                      >
+                        <NavLink href='/testimonials'>Testimonials</NavLink>
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <NavLink href=''>Services ▾</NavLink>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                      <DropdownMenuItem
+                        asChild
+                        className='hover:cursor-pointer'
+                      >
+                        <NavLink href='/services/web-design'>
+                          Web Design
+                        </NavLink>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem
+                        asChild
+                        className='hover:cursor-pointer'
+                      >
+                        <NavLink href='/services/seo'>SEO</NavLink>
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                  <NavLink href='/contact-us'>Contact Us</NavLink>
                 </div>
                 <div className='border-t pt-4'>
                   <div className='grid grid-cols-2 justify-start'>
