@@ -1,16 +1,23 @@
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import Link from 'next/link';
 interface HeroProps {
   heading: string;
   subheading: string;
   description: string;
+  src: string;
 }
 
-function Hero({ heading, subheading, description }: HeroProps) {
+function Hero({ heading, subheading, description, src }: HeroProps) {
   return (
     <MaxWidthWrapper>
-      <h1 className='text-5xl text-center font-extrabold mb-14'>{heading}</h1>
+      <div className='text-center '>
+        <h2 className='mb-4 font-normal text-base text-white'>
+          SANOVA WEB SOLUTIONS
+        </h2>
+        <h1 className='text-5xl font-extrabold mb-14'>{heading}</h1>
+      </div>
       <div className='items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16'>
         <div className='text-white sm:text-lg'>
           <h2 className='mb-4 text-2xl font-bold tracking-tight text-white'>
@@ -25,9 +32,11 @@ function Hero({ heading, subheading, description }: HeroProps) {
           </Link>
         </div>
 
-        <img
-          alt=''
-          src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-1.png'
+        <Image
+          width='1217'
+          height='1058'
+          alt={heading}
+          src={src}
           className='mb-4 hidden w-full rounded-lg lg:mb-0 lg:flex'
         />
       </div>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function NotFound() {
@@ -5,8 +6,10 @@ export default function NotFound() {
     <section>
       <div className='mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16'>
         <div className='mx-auto max-w-screen-sm text-center'>
-          <img
-            alt=''
+          <Image
+            width='355'
+            height='322'
+            alt='Not Found'
             src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/404/404-computer.svg'
             className='mx-auto mb-4'
           />

@@ -3,7 +3,13 @@ import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 import { Steps } from '../Steps';
 import { CTA } from '@/components/CTA';
 import Features from '@/app/Features';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'Web Design & Development | Sanova Web Solutions',
+  description:
+    'At Sanova Web Solutions, we take a unique approach to web design and development. Instead of relying on WordPress or page builders, we custom code every website from the ground up. This allows us to create tailored designs with zero unnecessary bloat, ensuring your site is fast, secure, and high-performing.',
+};
 export default function page() {
   const content = [
     {
@@ -48,6 +54,7 @@ export default function page() {
         heading='WEB DESIGN'
         subheading='EXPERTLY BUILT WEBSITES WITHOUT COMPROMISE'
         description='At Sanova Web Solutions, we take a distinct approach to web design. Instead of relying on page builders or platforms like WordPress, we develop every website from scratch. Our handcrafted code ensures each site is lightweight, highly optimized, and free from unnecessary clutter or bloat. The result? Websites that load at lightning speed, achieve top-tier Google PageSpeed Insights scores, and deliver unparalleled performance.'
+        src='/images/webdesign.webp'
       />
       <Steps heading='WHY OUR APPROACH MAKES A DIFFERENCE' content={content} />
       <div className='pt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 place-items-start'>

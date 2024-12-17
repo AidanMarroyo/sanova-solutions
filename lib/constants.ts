@@ -1,21 +1,14 @@
-import { Ri24HoursLine } from 'react-icons/ri';
 import { FaStopwatch, FaWpforms } from 'react-icons/fa';
 import {
-  MdBusinessCenter,
   MdDataThresholding,
   MdOutlineContactSupport,
-  MdOutlineDashboardCustomize,
   MdOutlineDeveloperMode,
-  MdOutlineEdit,
-  MdOutlineHighQuality,
   MdOutlinePayment,
   MdOutlineSearch,
 } from 'react-icons/md';
 import { TbApi, TbSeo } from 'react-icons/tb';
 import { CgWebsite } from 'react-icons/cg';
 import { BsShop } from 'react-icons/bs';
-import { GiStoneCrafting } from 'react-icons/gi';
-import { GoGoal } from 'react-icons/go';
 
 export const services = {
   'custom-applications': {
@@ -153,15 +146,6 @@ export const services = {
 
 export type ServiceName = keyof typeof services;
 
-export const NavLinks = [
-  { id: 1, name: 'Home', href: '/' },
-  { id: 2, name: 'About Us', href: '/about-us' },
-  { id: 3, name: 'Services', href: '/services' },
-  { id: 4, name: 'Portfolio', href: '/portfolio' },
-  { id: 5, name: 'Blog', href: '/blog' },
-  { id: 6, name: 'Contact Us', href: '/contact-us' },
-];
-
 export const SecondaryNavLinks = [
   {
     id: 1,
@@ -172,74 +156,6 @@ export const SecondaryNavLinks = [
   { id: 3, name: 'Privacy Policy', href: '/privacy-policy' },
   { id: 4, name: 'Terms', href: '/terms' },
 ];
-
-export const HomeFeatures = {
-  id: 1,
-  title: 'Why Choose Sanova Web Solutions?',
-  description:
-    'Our clients choose Sanova Web Solutions for innovative, reliable, and tailored services.',
-  features: [
-    {
-      id: 1,
-      title: 'Custom-Tailored Solutions',
-      description: 'Unique strategies designed to meet your business needs.',
-      icon: MdOutlineDashboardCustomize,
-    },
-    {
-      id: 2,
-      title: '24-Hour Support, 5 Days a Week',
-      description: 'Fast and reliable assistance when you need it most.',
-      icon: Ri24HoursLine,
-    },
-    {
-      id: 3,
-      title: 'Hosting and Unlimited Edits',
-      description:
-        'Stress-free website management with ongoing updates and maintenance.',
-      icon: MdOutlineEdit,
-    },
-    {
-      id: 4,
-      title: 'Proven Results',
-      description: 'Transparent, data-driven outcomes you can trust.',
-      icon: MdDataThresholding,
-    },
-  ],
-};
-
-export const AboutusFeatures = {
-  id: 1,
-  title: 'Driving Innovation, Inspiring Success',
-  description:
-    'Mission: To deliver tailored solutions that help businesses start, scale and excel',
-  features: [
-    {
-      id: 1,
-      title: 'Innovation',
-      description: 'We craft custom solutions that stand out',
-      icon: GiStoneCrafting,
-    },
-    {
-      id: 2,
-      title: 'Collaboration',
-      description: 'Your goals become our goals',
-      icon: GoGoal,
-    },
-    {
-      id: 3,
-      title: 'Excellence',
-      description: 'We strive for quality in every detail',
-      icon: MdOutlineHighQuality,
-    },
-    {
-      id: 4,
-      title: 'Adaptability',
-      description:
-        'We embrace change, staying agile to meet evolving business needs and emerging opportunities',
-      icon: MdBusinessCenter,
-    },
-  ],
-};
 
 export const Terms = [
   {
@@ -376,69 +292,6 @@ export const privacyContent = {
   termsContent24: '...and we will promptly remove you from ALL correspondence.',
 };
 
-export const FAQ = [
-  {
-    id: 1,
-    title: 'How long will the creation of my website take?',
-    description:
-      'The timeline of a website design project is typically influenced by the client. If you have a specific deadline, we will endeavor to accommodate it. One of the most frequent causes of delay in completing a new website is the wait for content (such as text or images) from the client. Our aim is to typically complete projects within a 4-6 week timeframe.',
-  },
-  {
-    id: 2,
-    title: 'Will we need to have a face-to-face meeting to begin the project?',
-    description:
-      'While we strive to meet with our clients whenever feasible, it may not always be possible. In such cases, website projects are typically managed through communication via email and telephone. We utilize a secure testing server to showcase suggested website designs for your review and feedback. This approach allows for regular communication, ensuring that you receive the desired outcome from the Sanova Web Solutions team.',
-  },
-  {
-    id: 3,
-    title: 'Do you provide any additional services?',
-    description:
-      'We provide comprehensive support for all websites we design and remain readily available to assist you with any issues or enhancements you may require. Our services include website maintenance, web hosting, SEO, and domain registration. Rest assured, Sanova Web Solutions has all your needs covered.',
-  },
-  {
-    id: 4,
-    title: 'Do I need a database for my website?',
-    description:
-      'The necessity for a database in your website design will be determined by the volume of information you intend to display. If you have numerous products or services, incorporating a database may prove beneficial. We will thoroughly discuss this aspect with you, and if a database is recommended, we will provide a detailed explanation of its functionality and associated costs.',
-  },
-  {
-    id: 5,
-    title: 'How do I update my website?',
-    description:
-      'There are various methods available for updating websites, and the choice of method and functionality to be integrated into your website design is entirely at your discretion, taking into account your budget constraints. We are happy to offer guidance on the most suitable method to meet your needs.',
-  },
-  {
-    id: 6,
-    title: 'What is Managed Hosting?',
-    description:
-      'Our team will handle the setup, configuration, and ongoing maintenance of your website, including domain registration/administration, website backups, security enhancements, server monitoring, uptime tracking, and website installation. Our hosting packages are available through subscriptions.',
-  },
-  {
-    id: 7,
-    title: 'Does my hosting subscription include 24/7 tech support?',
-    description:
-      'As the account administrator, only Sanova Web Solutions has access to server technical support. In the event of any technical issues, simply contact us via email or phone to report the problem, and we will make every effort to resolve it promptly.',
-  },
-  {
-    id: 8,
-    title: 'Can you build e-commerce platforms?',
-    description:
-      'Absolutely. We utilize Secure Servers (SSL) equipped with the latest encryption techniques, guaranteeing that your customers can make purchases on your website with confidence, knowing that their information is secure and protected.',
-  },
-  {
-    id: 9,
-    title: 'How much will a website cost?',
-    description:
-      "The pricing for a website can vary based on its complexity and specific requirements. For instance, a 3-page basic website consisting of a homepage, about page, and contact page starts at $1,500+HST. Feel free to reach out to us, and we'll gladly discuss your website design needs with you and provide a customized quotation tailored to your unique requirements.",
-  },
-  {
-    id: 10,
-    title: 'How many pages can I have on my website?',
-    description:
-      'As many as you like. From a search engines point a view – the more the better!',
-  },
-];
-
 export const licensingTerms = [
   {
     section: 'Licensing Model',
@@ -567,6 +420,140 @@ export const licensingTerms = [
         title: 'Prohibited Actions',
         description:
           'Clients are prohibited from reverse-engineering, decompiling, or disassembling the licensed code.',
+      },
+    ],
+  },
+];
+
+export const faq = [
+  {
+    section: 'PRICING & PAYMENTS',
+    details: [
+      {
+        title: 'How long does the subscription last?',
+        description:
+          'Our subscription plan has a 12-month minimum commitment and becomes month-to-month afterward. You can cancel anytime once the 12 months are complete. Please note, if you cancel, you do not keep the website, as this ensures we can continue offering affordable solutions without being taken advantage of.',
+      },
+      {
+        title:
+          'What happens if I cancel after the 12 month minimum and want to come back?',
+        description:
+          'No problem! You’ll simply need to sign a new 12-month contract to resume services.',
+      },
+      {
+        title: 'What happens if I cancel before the 12 months is over?',
+        description:
+          'If you cancel before completing the 12-month term, you’ll owe the remaining balance of the full website cost ($3,800), minus any payments already made. At Sanova Web Solutions, we prioritize long-term partnerships with our clients, and we appreciate clients who share this commitment.',
+      },
+      {
+        title: 'How do you handle late payments?',
+        description:
+          'Each invoice includes a 7-day grace period for payment. If a payment isn’t received within 7 days, a $25 late fee will be applied. If multiple invoices go unpaid for months and there is no communication, we reserve the right to cancel the contract. In such cases, the client will be responsible for paying the full price of the website. We understand that unexpected situations can arise and are always open to discussing flexible solutions. However, if there’s no response or communication, we must take precautions to protect our time and efforts.',
+      },
+      {
+        title: 'What payment methods do you accept?',
+        description:
+          'We send email invoices via Square, where you can securely add your payment information. Subscriptions require a credit card or debit card. For lump sum projects, we accept ACH bank transfers to minimize processing fees. We do not accept checks or money orders.',
+      },
+      {
+        title: 'Is the $100 per additional page fee a one-time charge?',
+        description:
+          'Yes! The $100 per additional page fee is a one-time charge, not monthly. For example, if you need 3 extra pages, it’s $300 total—not $300 per month.',
+      },
+      {
+        title: 'Do you offer refunds?',
+        description:
+          'If we cannot deliver a design you’re 100% happy with and you decide not to move forward, we’ll refund any payments made up to that point. However, once we proceed to the development stage, refunds are not provided. At that point, all refunds will be at our sole discretion..',
+      },
+    ],
+  },
+  {
+    section: 'PLANS',
+    details: [
+      {
+        title:
+          'On subscriptions, once I’m done with the 12-month minimum, do I continue paying?',
+        description:
+          'Yes, subscriptions are indefinite. After the 12-month minimum, you’ll continue paying the monthly fee. It generally takes us 2-3 years to recoup what we would have earned selling a lump-sum site. Ideally, we aim for long-term partnerships—5+ years—where clients see the ongoing value of our services. By then, the website will likely generate far more value than the monthly cost, essentially paying for itself.',
+      },
+      {
+        title: 'Can I buy out of my subscription after the 12-month minimum?',
+        description:
+          'No, we do not offer a buyout option. Subscriptions are structured for long-term value and financial sustainability. If clients were to buy out early, it would disrupt the model, which relies on reliable, recurring income. This allows us to spend more time supporting and improving clients’ websites, while focusing less on constant sales and more on delivering exceptional service. We prioritize quality and consistency in our client relationships, and this model helps us maintain that standard.',
+      },
+      {
+        title: 'Can I add unlimited edits and support to the lump sum package?',
+        description:
+          'Yes! We offer an unlimited edits and support add-on for $50/month with a 12-month minimum commitment. This service cannot be turned on and off month-to-month. If canceled, you’ll need to sign a new 12-month commitment to reinstate it.',
+      },
+      {
+        title: 'Do you offer e-commerce sites under the subscription plan?',
+        description:
+          'No, we do not. E-commerce sites require significantly more work and higher setup costs, which we can’t accommodate under the $175/month subscription plan.',
+      },
+      {
+        title: 'If I cancel a subscription, do I keep my domain?',
+        description: 'Yes! You always own your domain',
+      },
+    ],
+  },
+  {
+    section: 'SEO',
+    details: [
+      {
+        title: 'What are your rates for SEO?',
+        description:
+          'Our SEO services are tailored to the specific scope of work and goals for your business. The more aggressive and competitive the strategy, the higher the cost. Base package starts at $500/month. Pricing increases based on your desired level of work, including content, backlinks, and overall strategy. We’re happy to provide a detailed proposal after learning more about your specific goals and industry competition.',
+      },
+      {
+        title: 'Does SEO actually work?',
+        description:
+          'Yes, it absolutely works! Good SEO is a proven long-term strategy, especially in competitive markets where businesses fight to rank on the first page of Google. SEO is not a quick fix—it’s an investment that requires 6-12 months to see substantial results. In competitive industries, success means consistently outperforming companies with dozens of optimized pages, hundreds of backlinks, and long-term authority. We focus on quality strategies, not gimmicks. When done right, SEO pays for itself through sustainable, organic leads.',
+      },
+      {
+        title: 'Can you get me to the front page in less than a month?',
+        description:
+          'No. While it’s tempting to believe promises from spam emails claiming “#1 rankings in 30 days,” the reality is SEO success takes time, especially in competitive markets. Google’s algorithms prioritize trust and authority, which are built gradually through consistent content and optimization. If your market is less competitive, you may see improvement in a few months. But for most businesses, patience and persistence are key.',
+      },
+      {
+        title: 'What do you do for SEO exactly?',
+        description:
+          'Our SEO expert focuses on high-quality content as the cornerstone of a successful SEO strategy. Our SEO specialist creates content that speaks to your audience, answers their questions, and showcases your authority. Our SEO specialists ensure your content, headings, and structure are optimized for search engines and users. All while Addressing load times, accessibility, meta tags, and other factors that affect rankings. Google’s algorithms increasingly prioritize valuable, well-written content. We focus on delivering quality over SEO “tricks”, helping both search engines and your audience recognize your business as an authority.',
+      },
+      {
+        title: 'How long does SEO take to see results?',
+        description:
+          'SEO is a long-term investment. While immediate results are rare, you can expect to see measurable improvements within 6-12 months. Established competitors may have spent 10+ years building trust with Google. A new or under-optimized site needs time to build authority and prove its value to search engines. Think of SEO as building a reputation. We’re helping you earn Google’s trust so you can steadily climb to the top and stay there. Over time, you’ll see consistent, organic traffic that delivers long-term ROI.',
+      },
+    ],
+  },
+  {
+    section: 'WEBSITES',
+    details: [
+      {
+        title: 'How long does the process take from start to finish?',
+        description:
+          "On average, a website takes 2-4 weeks to complete. This timeline depends on the client's responsiveness to content and image requests, our team’s availability for design and development. In some cases, we can deliver in as little as 2 weeks, but 3-4 weeks is more typical.",
+      },
+      {
+        title: 'Do I keep my website if I cancel the subscription?',
+        description:
+          'No, you do not keep the website itself. If we allowed that, everyone could cancel and we’d go out of business! However, you do keep your domain (ownership is always yours)and any assets, such as logos or images, that you’ve provided or purchased.',
+      },
+      {
+        title: 'Do you own your domain?',
+        description:
+          'Yes! You own your domain outright. If we purchased the domain on your behalf, we will transfer it to you when you cancel the subscription.',
+      },
+      {
+        title: 'Do you use WordPress or website builders?',
+        description:
+          'No. All our websites are created using custom, hand-written code. We don’t use builders or templates like WordPress, Wix, or Squarespace.',
+      },
+      {
+        title: 'How do we request edits for our site?',
+        description:
+          'To request edits, simply: 1. Send an email to sanovasolutionsinc@gmail.com. 2. Your request will enter our ticketing system. 3. Our team will review, complete, and mark it as resolved. We make the process smooth, fast, and easy to keep your website running seamlessly.',
       },
     ],
   },

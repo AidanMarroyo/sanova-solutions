@@ -1,6 +1,6 @@
-import { ContactForm } from '@/sections/contact/ContactForm';
 import { Metadata } from 'next';
 import React from 'react';
+import { ContactForm } from './ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact Sanova Web Solutions | Get Started Today',

@@ -41,11 +41,7 @@ export function ContactForm() {
   });
   const {
     handleSubmit,
-    watch,
-    trigger,
     control,
-    setValue,
-    setFocus,
     formState: { isSubmitting },
   } = form;
 
@@ -97,11 +93,11 @@ export function ContactForm() {
       <div className="bg-gray-700 bg-[url('https://flowbite.s3.amazonaws.com/blocks/marketing-ui/contact/laptop-human.jpg')] bg-cover bg-center bg-no-repeat bg-blend-multiply">
         <div className='mx-auto max-w-screen-sm px-4 pb-72 pt-8 text-center lg:px-6 lg:pb-80 lg:pt-24 '>
           <h2 className='mb-4 text-4xl font-extrabold tracking-tight text-white'>
-            Let’s Build Your Business Together
+            Let&apos;s Build Your Business Together
           </h2>
           <p className='mb-16 text-white sm:text-xl'>
-            Have questions or ready to start your next project? We're here to
-            help! Contact Sanova Web Solutions today to discuss your business
+            Have questions or ready to start your next project? We&apos;re here
+            to help! Contact Sanova Web Solutions today to discuss your business
             goals and discover how we can help you achieve them.
           </p>
         </div>
@@ -292,8 +288,8 @@ export function ContactForm() {
             </div>
             <p className='mb-2 text-xl font-bold text-white'>Email us:</p>
             <p className='mb-3 text-white'>
-              Got questions or need more details? Send us an email, and we’ll
-              get back to you promptly.
+              Got questions or need more details? Send us an email, and
+              we&apos;ll get back to you promptly.
             </p>
             <a
               href='mailto:abc@example.com'

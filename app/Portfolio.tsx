@@ -8,11 +8,11 @@ export function Portfolio() {
     <MaxWidthWrapper>
       <div className='mx-auto max-w-2xl text-center'>
         <h2 className='text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl'>
-          Some of Our Success Stories
+          SOME OF OUR SUCCESS STORIES
         </h2>
         <p className='mt-4 text-base font-normal text-white sm:text-xl'>
-          From websites and custom software to thriving e-commerce stores,
-          explore how we’ve helped businesses like yours.
+          From custom websites to thriving e-commerce stores, explore how we’ve
+          helped businesses like yours.
         </p>
       </div>
       <div className='mt-12 space-y-16 sm:mt-16'>

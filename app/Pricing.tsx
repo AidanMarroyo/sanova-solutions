@@ -8,7 +8,7 @@ export default function Pricing() {
       <div className='mx-auto mb-8 max-w-screen-md text-center lg:mb-12'>
         <p className='mb-5 text-white sm:text-xl'>OUR PRICING</p>
         <h2 className='mb-4 text-4xl font-extrabold tracking-tight text-white'>
-          Pricing Plans For Every Budget
+          PRICING PLANS FOR EVERY BUDGET
         </h2>
       </div>
       <div className='space-y-8 sm:gap-6 lg:grid lg:grid-cols-3 lg:space-y-0 xl:gap-10'>

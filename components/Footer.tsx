@@ -17,8 +17,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li className='mb-4'>
-                <Link href='/blog' className='hover:underline'>
-                  Blog
+                <Link href='/faq' className='hover:underline'>
+                  FAQ
+                </Link>
+              </li>
+              <li className='mb-4'>
+                <Link href='/testimonials' className='hover:underline'>
+                  Testimonials
                 </Link>
               </li>
               <li className='mb-4'>
@@ -34,24 +39,13 @@ export default function Footer() {
             </h2>
             <ul className=' text-white'>
               <li className='mb-4'>
-                <Link
-                  href='/services/custom-applications'
-                  className='hover:underline'
-                >
-                  Custom Apps
-                </Link>
-              </li>
-              <li className='mb-4'>
-                <Link
-                  href='/services/website-services'
-                  className='hover:underline'
-                >
+                <Link href='/services/web-design' className='hover:underline'>
                   Websites
                 </Link>
               </li>
               <li className='mb-4'>
-                <Link href='/services/ecommerce' className='hover:underline'>
-                  E-Commerce
+                <Link href='/services/seo' className='hover:underline'>
+                  SEO
                 </Link>
               </li>
             </ul>

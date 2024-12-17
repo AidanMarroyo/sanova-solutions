@@ -4,6 +4,13 @@ import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 import { CTA } from '@/components/CTA';
 
 import { Steps } from '../Steps';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'SEO Services | Sanova Web Solutions',
+  description:
+    'Sanova Web Solutions delivers high-impact SEO strategies to help your business rank higher on search engines. From on-page optimization and keyword research to technical SEO and content strategy, we ensure your website drives organic traffic, boosts visibility, and generates leads.',
+};
 
 export default function page() {
   const content = [
@@ -34,6 +41,7 @@ export default function page() {
         heading='SEO SERVICES'
         subheading='SEARCH ENGINE OPTIMIZATION THAT DRIVES RESULTS'
         description='SEO has become more competitive than ever. Our tailored strategies are designed to help you dominate local and national search results. Start generating leads and increasing sales with our proven SEO techniques—reach out today to get started.'
+        src='/images/webseo.webp'
       />
       <Steps heading='WHO BENEFITS FROM OUR SEO SERVICES?' content={content} />
       <div className='pt-8 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 place-items-start'>

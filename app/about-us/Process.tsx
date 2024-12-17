@@ -1,4 +1,5 @@
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
+import Image from 'next/image';
 
 export function Process() {
   return (
@@ -8,7 +9,7 @@ export function Process() {
           OUR PROCESS
         </p>
         <h2 className='mb-4 text-4xl font-extrabold tracking-tight text-white lg:text-5xl'>
-          We Handle Everything From Start to Finish
+          WE HANDLE EVERYTHING FROM START TO FINISH
         </h2>
         <a
           href='#'
@@ -34,7 +35,9 @@ export function Process() {
       </div>
       <div className='mt-12 grid gap-6 md:grid-cols-3 lg:mt-14 lg:gap-12'>
         <div className='mb-2 flex md:mb-0 md:flex-col'>
-          <img
+          <Image
+            width='379'
+            height='252'
             alt=''
             src='/images/question.webp'
             className='mr-4 h-36 w-auto rounded-lg md:h-auto md:w-full'
@@ -51,7 +54,9 @@ export function Process() {
           </div>
         </div>
         <div className='mb-2 flex md:mb-0 md:flex-col'>
-          <img
+          <Image
+            width='379'
+            height='252'
             alt=''
             src='/images/design.webp'
             className='mr-4 h-36 w-auto rounded-lg md:h-auto md:w-full'
@@ -68,7 +73,9 @@ export function Process() {
           </div>
         </div>
         <div className='flex md:flex-col'>
-          <img
+          <Image
+            width='379'
+            height='252'
             alt=''
             src='/images/dev.webp'
             className='mr-4 h-36 w-auto rounded-lg md:h-auto md:w-full'

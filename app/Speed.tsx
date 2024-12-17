@@ -31,7 +31,7 @@ export function Speed() {
       <div className='mx-auto max-w-screen-xl items-center gap-8 px-4 py-8 lg:grid lg:grid-cols-2 lg:px-6 lg:py-16 xl:gap-16 '>
         <div className='sm:text-lg'>
           <h2 className='mb-4 text-3xl font-extrabold tracking-tight text-white md:text-4xl'>
-            Websites Designed for Speed and Results
+            WEBSITES DESIGNED FOR SPEED AND RESULTS
           </h2>
           <p className='mb-8 text-white lg:text-xl'>
             At Sanova Web Solutions, we build websites that outperform the
