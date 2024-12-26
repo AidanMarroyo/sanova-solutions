@@ -45,9 +45,9 @@ const Navbar = () => {
                   <DropdownMenuItem asChild className='hover:cursor-pointer'>
                     <NavLink href='/faq'>FAQ</NavLink>
                   </DropdownMenuItem>
-                  <DropdownMenuItem asChild className='hover:cursor-pointer'>
+                  {/* <DropdownMenuItem asChild className='hover:cursor-pointer'>
                     <NavLink href='/testimonials'>Testimonials</NavLink>
-                  </DropdownMenuItem>
+                  </DropdownMenuItem> */}
                 </DropdownMenuContent>
               </DropdownMenu>
               <DropdownMenu>
@@ -106,12 +106,12 @@ const Navbar = () => {
                       >
                         <NavLink href='/faq'>FAQ</NavLink>
                       </DropdownMenuItem>
-                      <DropdownMenuItem
+                      {/* <DropdownMenuItem
                         asChild
                         className='hover:cursor-pointer'
                       >
                         <NavLink href='/testimonials'>Testimonials</NavLink>
-                      </DropdownMenuItem>
+                      </DropdownMenuItem> */}
                     </DropdownMenuContent>
                   </DropdownMenu>
                   <DropdownMenu>

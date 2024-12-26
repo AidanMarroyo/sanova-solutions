@@ -2,7 +2,7 @@ import { Intro } from '@/app/about-us/Intro';
 import { Metadata } from 'next';
 import { CTA } from '@/components/CTA';
 import { Process } from './Process';
-import { Team } from './Team';
+// import { Team } from './Team';
 import Features from '../Features';
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ function page() {
       <Intro />
       <Process />
       <Features />
-      <Team />
+      {/* <Team /> */}
       <CTA
         title='Let’s Build Your Success Story'
         description=''

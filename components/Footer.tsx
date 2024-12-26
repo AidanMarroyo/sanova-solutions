@@ -21,11 +21,11 @@ export default function Footer() {
                   FAQ
                 </Link>
               </li>
-              <li className='mb-4'>
+              {/* <li className='mb-4'>
                 <Link href='/testimonials' className='hover:underline'>
                   Testimonials
                 </Link>
-              </li>
+              </li> */}
               <li className='mb-4'>
                 <Link href='/contact-us' className='hover:underline'>
                   Contact Us
