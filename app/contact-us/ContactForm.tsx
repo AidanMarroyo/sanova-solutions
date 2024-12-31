@@ -11,13 +11,13 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select';
+// import {
+//   Select,
+//   SelectContent,
+//   SelectItem,
+//   SelectTrigger,
+//   SelectValue,
+// } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { ContactFormSchema, ContactFormValues } from '@/lib/validation';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -36,7 +36,7 @@ export function ContactForm() {
       phone: '',
       message: '',
       answer: '',
-      budget: '',
+      // budget: '',
     },
   });
   const {
@@ -84,6 +84,17 @@ export function ContactForm() {
             message: (value as string[])[0],
           });
         });
+      }
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
       }
     }
   }
@@ -185,7 +196,7 @@ export function ContactForm() {
                 name='answer'
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Security Question: What is 7 x 19?</FormLabel>
+                    <FormLabel>Security Question: What is 9 + 10?</FormLabel>
                     <FormControl>
                       <Input placeholder='Your answer' {...field} />
                     </FormControl>
@@ -194,7 +205,7 @@ export function ContactForm() {
                 )}
               />
             </div>
-            <div className='grid grid-cols-1 gap-2'>
+            {/* <div className='grid grid-cols-1 gap-2'>
               <FormField
                 control={control}
                 name='budget'
@@ -233,7 +244,7 @@ export function ContactForm() {
                   </FormItem>
                 )}
               />
-            </div>
+            </div> */}
             <div className='grid grid-cols-1 gap-2 sm:col-span-2'>
               <FormField
                 control={control}

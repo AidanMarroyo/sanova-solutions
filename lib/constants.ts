@@ -150,9 +150,9 @@ export const SecondaryNavLinks = [
   {
     id: 1,
     name: 'Sitemap',
-    href: '/sitemap',
+    href: '/sitemap.xml',
   },
-  { id: 2, name: 'Legal', href: '/legal' },
+  { id: 2, name: 'Licensing', href: '/licensing' },
   { id: 3, name: 'Privacy Policy', href: '/privacy-policy' },
   { id: 4, name: 'Terms', href: '/terms' },
 ];

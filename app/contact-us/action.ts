@@ -1,5 +1,4 @@
 'use server';
-
 import { z } from 'zod';
 
 const requiredString = z.string().min(1, 'This field is required');
@@ -11,15 +10,15 @@ const ContactFormSchema = z.object({
   phone: z.string().min(10, 'Phone number must be at least 10 characters'),
   message: requiredString,
   answer: requiredString,
-  budget: z.enum([
-    '',
-    'Less than $5,000',
-    '$5,000 - $10,000',
-    '$10,000 - $20,000',
-    '$20,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000+',
-  ]),
+  // budget: z.enum([
+  //   '',
+  //   'Less than $5,000',
+  //   '$5,000 - $10,000',
+  //   '$10,000 - $20,000',
+  //   '$20,000 - $50,000',
+  //   '$50,000 - $100,000',
+  //   '$100,000+',
+  // ]),
 });
 
 export async function submitContactForm(formData: FormData) {
@@ -30,7 +29,7 @@ export async function submitContactForm(formData: FormData) {
     phone: formData.get('phone'),
     message: formData.get('message'),
     answer: formData.get('answer'),
-    budget: formData.get('budget'),
+    // budget: formData.get('budget'),
   });
 
   if (!validatedFields.success) {
@@ -41,7 +40,7 @@ export async function submitContactForm(formData: FormData) {
   }
 
   // Check if the answer to the question is correct
-  if (validatedFields.data.answer !== '133') {
+  if (validatedFields.data.answer !== '19') {
     return {
       success: false,
       errors: { answer: ['Incorrect answer. Please try again.'] },
