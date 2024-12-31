@@ -553,7 +553,7 @@ export const faq = [
       {
         title: 'How do we request edits for our site?',
         description:
-          'To request edits, simply: 1. Send an email to sanovasolutionsinc@gmail.com. 2. Your request will enter our ticketing system. 3. Our team will review, complete, and mark it as resolved. We make the process smooth, fast, and easy to keep your website running seamlessly.',
+          'To request edits, simply: 1. Send an email to sanovasoftwareinc@gmail.com. 2. Your request will enter our ticketing system. 3. Our team will review, complete, and mark it as resolved. We make the process smooth, fast, and easy to keep your website running seamlessly.',
       },
     ],
   },
