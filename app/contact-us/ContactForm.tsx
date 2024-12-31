@@ -57,7 +57,6 @@ export function ContactForm() {
       6
     )}-${phoneNumber.slice(6, 10)}`;
   };
-
   async function onSubmit(data: z.infer<typeof ContactFormSchema>) {
     const formData = new FormData();
     Object.entries(data).forEach(([key, value]) => formData.append(key, value));
@@ -85,17 +84,18 @@ export function ContactForm() {
           });
         });
       }
-      const response = await fetch('/api/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
+    }
 
-      if (!response.ok) {
-        throw new Error('Failed to submit form');
-      }
+    const response = await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to submit form');
     }
   }
 
