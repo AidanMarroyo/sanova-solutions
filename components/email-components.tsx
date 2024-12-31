@@ -1,22 +1,24 @@
 import * as React from 'react';
 
 interface EmailTemplateProps {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
   phone: string;
-  details: string;
+  message: string;
 }
 
 export const EmailTemplate = ({
-  name,
+  firstName,
+  lastName,
   email,
   phone,
-  details,
+  message,
 }: EmailTemplateProps) => (
   <div>
     <h3>
-      {name}, is working on {details}. They can be contacted at {email} and{' '}
-      {phone}
+      {firstName} {lastName}, is working on {message}. They can be contacted at{' '}
+      {email} and {phone}
     </h3>
   </div>
 );

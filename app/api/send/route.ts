@@ -1,30 +1,25 @@
-import { NextRequest, NextResponse } from 'next/server';
 import { EmailTemplate } from '@/components/email-components';
+import { ContactFormSchema } from '@/lib/validation';
+import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY!);
 
-interface RequestBody {
-  name: string;
-  email: string;
-  phone: string;
-  details: string;
-}
-
-export async function POST(request: NextRequest) {
-  const body = (await request.json()) as RequestBody;
-
+export async function POST(req: NextRequest) {
+  const { firstName, lastName, email, phone, message } = await req
+    .json()
+    .then((body) => ContactFormSchema.parse(body));
   try {
-    const { name, email, phone, details } = body;
     const { error } = await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
       to: ['sanovasoftwareinc@gmail.com'],
       subject: 'Project Inquiry',
       react: EmailTemplate({
-        name,
+        firstName,
+        lastName,
         email,
         phone,
-        details,
+        message,
       }),
     });
 
