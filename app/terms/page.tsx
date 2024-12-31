@@ -27,7 +27,7 @@ export default function TermsPage() {
             </p>
 
             <p className='my-4'>
-              We operate the website https://sanovasolutions.com (the “Site”)
+              We operate the website https://sanovawebsolutions.com (the “Site”)
               along with related services, applications, and products that link
               to or reference these terms (“Legal Terms”) (collectively, the
               “Services”).

@@ -306,7 +306,7 @@ export function ContactForm() {
               href='mailto:abc@example.com'
               className='font-semibold hover:underline text-primary-500'
             >
-              sanovasolutionsinc@gmail.com
+              sanovasoftwareinc@gmail.com
             </a>
           </div>
           <div>
