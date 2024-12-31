@@ -11,14 +11,13 @@ interface RequestBody {
   details: string;
 }
 
-export const POST = async (req: NextRequest) => {
+export async function POST(request: NextRequest) {
+  const body = (await request.json()) as RequestBody;
+
   try {
-    const body = (await req.json()) as RequestBody;
-
     const { name, email, phone, details } = body;
-
     const { error } = await resend.emails.send({
-      from: 'aidanmarroyo@gmail.com',
+      from: 'Acme <onboarding@resend.dev>',
       to: ['sanovasoftwareinc@gmail.com'],
       subject: 'Project Inquiry',
       react: EmailTemplate({
@@ -30,27 +29,58 @@ export const POST = async (req: NextRequest) => {
     });
 
     if (error) {
-      return NextResponse.json(
-        { message: 'Failed to send email', details: error },
-        { status: 400 }
-      );
+      return NextResponse.json({ error }, { status: 500 });
     }
 
     return NextResponse.json(
       { message: 'Email sent successfully' },
       { status: 200 }
     );
-  } catch (error: unknown) {
-    if (error instanceof Error) {
-      return NextResponse.json(
-        { error: 'Internal Server Error', details: error.message },
-        { status: 500 }
-      );
-    }
-
-    return NextResponse.json(
-      { error: 'Unknown error occurred' },
-      { status: 500 }
-    );
+  } catch (error) {
+    return NextResponse.json({ error }, { status: 500 });
   }
-};
+}
+
+// export const POST = async (req: NextRequest) => {
+//   try {
+//     const body = (await req.json()) as RequestBody;
+
+//     const { name, email, phone, details } = body;
+
+//     const { error } = await resend.emails.send({
+//       from: 'aidanmarroyo@gmail.com',
+//       to: ['sanovasoftwareinc@gmail.com'],
+//       subject: 'Project Inquiry',
+//       react: EmailTemplate({
+//         name,
+//         email,
+//         phone,
+//         details,
+//       }),
+//     });
+
+//     if (error) {
+//       return NextResponse.json(
+//         { message: 'Failed to send email', details: error },
+//         { status: 400 }
+//       );
+//     }
+
+//     return NextResponse.json(
+//       { message: 'Email sent successfully' },
+//       { status: 200 }
+//     );
+//   } catch (error: unknown) {
+//     if (error instanceof Error) {
+//       return NextResponse.json(
+//         { error: 'Internal Server Error', details: error.message },
+//         { status: 500 }
+//       );
+//     }
+
+//     return NextResponse.json(
+//       { error: 'Unknown error occurred' },
+//       { status: 500 }
+//     );
+//   }
+// };
