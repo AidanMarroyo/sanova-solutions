@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     'Boost your business with Sanova Web Solutions. We offer custom websites, e-commerce solutions, and seo strategies tailored for success.',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/favicon.png',
   },
 };
 
