@@ -10,16 +10,22 @@ export default function UniqueSellingProposition() {
         <div className='text-white sm:text-lg'>
           <p className='mb-4 lg:text-xl text-white '>WHAT WE OFFER</p>
           <h2 className='mb-4 text-3xl font-extrabold tracking-tight text-white'>
-            WEBSITES STARTING AT $0 DOWN AND $175/MONTH
+            AFFORDABLE, PROFESSIONAL WEBSITES WITH ZERO UPFRONT COSTS
           </h2>
           <p className='mb-4 lg:text-xl text-white'>
-            Get your business online with a professional 5-page website for $0
-            down and just $175 per month. Need more than five pages? We’ll
-            provide custom pricing based on your specific requirements,
-            including the scope, additional pages, and complexity. With a{' '}
-            <span className='font-bold italic'>12-month minimum contract</span>,
-            our package includes design, development, hosting, unlimited edits,
-            24/7 support, and lifetime updates.
+            Our goal is to make high-quality web design accessible to small
+            businesses. That’s why we offer websites starting at{' '}
+            <span className='font-bold italic'>$0 down</span> with a manageable{' '}
+            <span className='font-bold italic'>$175/month</span> subscription.
+            This plan includes everything you need to succeed online, from
+            hosting and unlimited edits to lifetime updates and 24/7 support.
+          </p>
+          <p className='my-4 lg:text-xl text-white'>
+            <span className='font-bold italic'>
+              Need more than five pages?{' '}
+            </span>
+            Custom pricing is available for larger or more complex projects.
+            We’ll create a solution tailored to your unique needs.
           </p>
           <ul className='my-7 space-y-5 border-t  pt-8 border-gray-700'>
             <li className='flex space-x-3'>

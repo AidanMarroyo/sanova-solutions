@@ -54,7 +54,7 @@ export function Portfolio() {
                 submissions, enhancing user engagement and communication.
               </p>
             </div>
-            <Link href='/portfolio'>
+            {/* <Link href='/portfolio'>
               <Button>
                 VIEW MORE
                 <svg
@@ -71,7 +71,7 @@ export function Portfolio() {
                   />
                 </svg>
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
         <div className='flex flex-col gap-y-8 sm:gap-y-12 lg:flex-row lg:items-center lg:gap-x-16 xl:gap-x-24'>
@@ -114,7 +114,7 @@ export function Portfolio() {
                 streamlining the booking process for a seamless user experience.
               </p>
             </div>
-            <Link href='/portfolio'>
+            {/* <Link href='/portfolio'>
               <Button>
                 VIEW MORE
                 <svg
@@ -131,7 +131,7 @@ export function Portfolio() {
                   />
                 </svg>
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
         <div className='flex flex-col gap-y-8 sm:gap-y-12 lg:flex-row lg:items-center lg:gap-x-16 xl:gap-x-24'>
@@ -172,7 +172,7 @@ export function Portfolio() {
                 and facilitate easy online communication with potential clients.
               </p>
             </div>
-            <Link href='/portfolio'>
+            {/* <Link href='/portfolio'>
               <Button>
                 VIEW MORE
                 <svg
@@ -189,7 +189,7 @@ export function Portfolio() {
                   />
                 </svg>
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
