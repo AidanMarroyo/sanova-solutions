@@ -51,7 +51,7 @@ export function Intro() {
               This disconnect inspired me to reshape the way I approach web
               development. I created a model designed to make professional
               websites affordable, accessible, and impactful:{' '}
-              <span className='font-extrabold'>$0 Down + $175/month</span>
+              <span className='font-extrabold'>$0 Down + $200/month</span>
             </p>
             <p className='mt-4 text-lg font-normal text-white'>
               Throughout my experience working with businesses of all sizes, I

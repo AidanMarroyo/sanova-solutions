@@ -40,7 +40,7 @@ export default function Footer() {
             <ul className=' text-white'>
               <li className='mb-4'>
                 <Link href='/services/web-design' className='hover:underline'>
-                  Websites
+                  Website Services
                 </Link>
               </li>
               <li className='mb-4'>
@@ -57,24 +57,30 @@ export default function Footer() {
             <ul className=' text-white'>
               <li className='mb-4'>
                 <a
-                  href='https://x.com/?lang=en'
+                  href='https://x.com/sanovaweb'
                   className='hover:underline hover:cursor-pointer'
+                  target='_blank'
                 >
                   X
                 </a>
               </li>
               <li className='mb-4'>
                 <a
-                  href='https://www.facebook.com/'
+                  href='https://www.facebook.com/people/Sanova-Web-Solutions/61571478268730/'
                   className='hover:underline hover:cursor-pointer'
+                  target='_blank'
                 >
                   Facebook
                 </a>
               </li>
               <li className='mb-4'>
-                <Link href='/support' className='hover:underline'>
-                  Submit Support Ticket
-                </Link>
+                <a
+                  href='https://www.instagram.com/sanovawebsolutions'
+                  className='hover:underline'
+                  target='_blank'
+                >
+                  Instagram
+                </a>
               </li>
             </ul>
           </div>
@@ -132,9 +138,10 @@ export default function Footer() {
           <ul className='mt-5 flex justify-center space-x-5'>
             <li>
               <a
-                href='https://www.facebook.com/'
+                href='https://www.facebook.com/people/Sanova-Web-Solutions/61571478268730/'
                 className='  text-white hover:text-white'
                 title='Facebook'
+                target='_blank'
               >
                 <svg
                   className='h-5 w-5'
@@ -152,9 +159,10 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href='https://www.instagram.com'
+                href='https://www.instagram.com/sanovawebsolutions/'
                 className='  text-white hover:text-white'
                 title='Instagram'
+                target='_blank'
               >
                 <svg
                   className='h-5 w-5'
@@ -171,9 +179,10 @@ export default function Footer() {
               </a>
             </li>
             <a
-              href='https://x.com/?lang=en'
+              href='https://x.com/sanovaweb'
               className='text-white hover:text-white'
               title='X'
+              target='_blank'
             >
               <svg
                 className='h-5 w-5'
@@ -186,9 +195,10 @@ export default function Footer() {
             </a>
             <li>
               <a
-                href='https://github.com/'
+                href='https://github.com/sanova-solutions'
                 className='  text-white hover:text-white'
                 title='GitHub'
+                target='_blank'
               >
                 <svg
                   className='h-5 w-5'

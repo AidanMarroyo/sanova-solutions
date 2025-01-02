@@ -91,7 +91,7 @@ export function Portfolio() {
               </h3>
               <a
                 target='_blank'
-                href='https://ecozen.vercel.app'
+                href='https://ecozen.ca'
                 title=''
                 className='inline-flex items-center text-lg font-medium  hover:underline text-primary-500'
               >

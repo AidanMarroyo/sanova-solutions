@@ -282,7 +282,7 @@ export default function Pricing() {
                   clipRule='evenodd'
                 />
               </svg>
-              <span>Custom Wix Studio Store</span>
+              <span>Custom E-commerce Store</span>
             </li>
             <li className='flex items-center space-x-3'>
               <svg
@@ -327,7 +327,7 @@ export default function Pricing() {
                   clipRule='evenodd'
                 />
               </svg>
-              <span>Wix Studio Tutorial Walkthrough</span>
+              <span>Wix CMS Tutorial Walkthrough</span>
             </li>
             <li className='flex items-center space-x-3'>
               <svg
@@ -342,7 +342,7 @@ export default function Pricing() {
                   clipRule='evenodd'
                 />
               </svg>
-              <span>Fully Editable in Wix Studio CMS</span>
+              <span>Fully Editable through Wix CMS</span>
             </li>
             <li className='flex items-center space-x-3'>
               <svg

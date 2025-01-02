@@ -56,7 +56,9 @@ const Navbar = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <DropdownMenuItem asChild className='hover:cursor-pointer'>
-                    <NavLink href='/services/web-design'>Web Design</NavLink>
+                    <NavLink href='/services/web-design'>
+                      Website Services
+                    </NavLink>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild className='hover:cursor-pointer'>
                     <NavLink href='/services/seo'>SEO</NavLink>
@@ -124,7 +126,7 @@ const Navbar = () => {
                         className='hover:cursor-pointer'
                       >
                         <NavLink href='/services/web-design'>
-                          Web Design
+                          Website Services
                         </NavLink>
                       </DropdownMenuItem>
                       <DropdownMenuItem

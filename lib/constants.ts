@@ -489,7 +489,7 @@ export const faq = [
       {
         title: 'Do you offer e-commerce sites under the subscription plan?',
         description:
-          'No, we do not. E-commerce sites require significantly more work and higher setup costs, which we can’t accommodate under the $175/month subscription plan.',
+          'No, we do not. E-commerce sites require significantly more work and higher setup costs, which we can’t accommodate under the $200/month subscription plan.',
       },
       {
         title: 'If I cancel a subscription, do I keep my domain?',
