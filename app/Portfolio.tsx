@@ -1,6 +1,4 @@
-import { Button } from '@/components/ui/button';
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
-import Link from 'next/link';
 import Image from 'next/image';
 
 export function Portfolio() {
