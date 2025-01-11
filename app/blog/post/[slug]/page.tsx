@@ -54,7 +54,15 @@ export default async function BlogPost({ params }: PageProps) {
   }
   return (
     <main className='lg:pb-24 mb-32'>
-      <header className="relative h-[460px] w-full bg-[url('https://flowbite.s3.amazonaws.com/blocks/marketing-ui/articles/background.png')] bg-cover bg-center bg-no-repeat bg-blend-darken xl:h-[537px]">
+      <header
+        className={`relative h-[460px] w-full bg-cover bg-center bg-no-repeat bg-blend-darken xl:h-[537px]`}
+        style={{
+          backgroundImage: `url('${
+            post.data.photo ||
+            'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/articles/background.png'
+          }')`,
+        }}
+      >
         <div className='absolute left-0 top-0 h-full w-full bg-black bg-opacity-50'></div>
         <div className='absolute left-1/2 top-20 mx-auto w-full max-w-screen-xl -translate-x-1/2 px-4 xl:top-1/2 xl:-translate-y-1/2 xl:px-0'>
           <h1 className='mb-4 max-w-4xl text-2xl font-extrabold leading-none text-white sm:text-3xl lg:text-4xl'>
