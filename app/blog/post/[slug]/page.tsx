@@ -7,6 +7,7 @@ import { formatDate } from '@/lib/utils';
 import { doc, getDoc } from 'firebase/firestore';
 import { firestore } from '@/lib/firebase';
 import ReactMarkdown from 'react-markdown';
+import { CTA } from '@/components/CTA';
 
 interface PageProps {
   params: { slug: string };
@@ -96,8 +97,13 @@ export default async function BlogPost({ params }: PageProps) {
           </div>
 
           {/* Article content */}
-          <div className='w-full grow space-y-5 min-h-[320px] py-6 prose prose-invert'>
+          <div className='w-full grow space-y-5 min-h-[320px] pt-6 prose prose-invert max-w-none text-white'>
             <ReactMarkdown>{post.data.content}</ReactMarkdown>
+            <CTA
+              cta='CONTACT US TODAY'
+              description=''
+              title='Ready to take your online presence to the next level?'
+            />
           </div>
 
           {/* <CommentSection /> */}

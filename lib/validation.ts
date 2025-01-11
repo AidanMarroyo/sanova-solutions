@@ -34,6 +34,7 @@ export const BlogPostSchema = z.object({
     'Content must be less than 10,000 characters'
   ),
   createdAt: z.string().transform((val) => new Date(val).toISOString()),
+  photo: requiredString.url('Invalid URL'),
 });
 
 export type BlogPostValues = z.infer<typeof BlogPostSchema>;

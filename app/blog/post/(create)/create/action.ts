@@ -4,13 +4,15 @@ import { doc, setDoc } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 import { BlogPostSchema } from '@/lib/validation';
 import { firestore } from '@/lib/firebase';
+import { toSlug } from '@/lib/utils';
 
 export async function submitBlogPost(formData: FormData) {
   //   const user = getAuth().currentUser;
   //   if (!user) {
   //     throw new Error('User is not authenticated');
   //   }
-  const slug = formData.get('title') as string;
+  const title = formData.get('title') as string;
+  const slug = toSlug(title);
   const ref = doc(firestore, 'posts', slug);
   const validatedFields = BlogPostSchema.safeParse({
     title: formData.get('title'),
@@ -18,6 +20,7 @@ export async function submitBlogPost(formData: FormData) {
     description: formData.get('description'),
     content: formData.get('content'),
     createdAt: formData.get('createdAt'),
+    photo: formData.get('photo'),
     slug,
   });
 

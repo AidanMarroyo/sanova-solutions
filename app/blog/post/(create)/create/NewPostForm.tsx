@@ -18,10 +18,14 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { storage } from '@/lib/firebase';
+import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
+import { updateDoc } from 'firebase/firestore';
 
 export default function NewPostForm() {
   const [content, setContent] = useState<string>('');
   const [title, setTitle] = useState<string>('');
+  const [uploadedFile, setUploadedFile] = useState<string | null>(null);
   const form = useForm<BlogPostValues>({
     resolver: zodResolver(BlogPostSchema),
     defaultValues: {
@@ -40,6 +44,10 @@ export default function NewPostForm() {
   } = form;
 
   async function onSubmit(data: z.infer<typeof BlogPostSchema>) {
+    if (uploadedFile) {
+      data.photo = uploadedFile;
+    }
+
     const formData = new FormData();
     Object.entries(data).forEach(([key, value]) => formData.append(key, value));
 
@@ -48,6 +56,18 @@ export default function NewPostForm() {
       form.reset();
     }
   }
+
+  const handleFileUpload = async (file: File | null) => {
+    if (!file) return;
+
+    const storageRef = ref(storage, `pictures/${title}-${file.name}`);
+    const snapshot = await uploadBytes(storageRef, file);
+    const downloadURL = await getDownloadURL(snapshot.ref);
+
+    setUploadedFile(downloadURL);
+
+    console.log('Picture uploaded!');
+  };
 
   return (
     <div>
@@ -113,6 +133,31 @@ export default function NewPostForm() {
                     <Textarea
                       placeholder='description'
                       {...field} // Connect react-hook-form
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+
+          <div className='grid grid-cols-1 gap-2'>
+            <FormField
+              control={control}
+              name='photo'
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Cover Image</FormLabel>
+                  <FormControl>
+                    <Input
+                      type='file'
+                      {...field}
+                      onChange={(e) => {
+                        field.onChange(e); // Sync with react-hook-form
+                        handleFileUpload(
+                          e.target.files ? e.target.files[0] : null
+                        );
+                      }}
                     />
                   </FormControl>
                   <FormMessage />
