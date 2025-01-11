@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { RelatedArticles } from './related-articles';
 
 export function Sidebar() {
   return (
@@ -21,7 +22,7 @@ export function Sidebar() {
           <h4 className='mb-4 text-sm font-bold uppercase text-white'>
             Latest news
           </h4>
-          {/* Add latest news items here */}
+          <RelatedArticles />
         </div>
         <div>{/* Add advertisement placeholder here */}</div>
       </div>

@@ -8,6 +8,7 @@ import { doc, getDoc } from 'firebase/firestore';
 import { firestore } from '@/lib/firebase';
 import ReactMarkdown from 'react-markdown';
 import { CTA } from '@/components/CTA';
+import { RelatedArticles } from './related-articles';
 
 interface PageProps {
   params: { slug: string };
@@ -120,8 +121,8 @@ export default async function BlogPost({ params }: PageProps) {
         <Sidebar />
       </div>
 
-      {/* <RelatedArticles />
-      <NewsletterSignup /> */}
+      <RelatedArticles />
+      {/* <NewsletterSignup /> */}
     </main>
   );
 }

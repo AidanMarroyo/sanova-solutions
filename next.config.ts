@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
       {
         hostname: 'flowbite.s3.amazonaws.com',
       },
+      {
+        hostname: 'firebasestorage.googleapis.com',
+      },
     ],
   },
 };
