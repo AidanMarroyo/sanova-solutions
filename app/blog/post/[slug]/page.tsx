@@ -1,52 +1,63 @@
 import { cache } from 'react';
 import { Sidebar } from './sidebar';
-import prisma from '@/lib/prisma';
+// import prisma from '@/lib/prisma';
 import { notFound } from 'next/navigation';
-import Markdown from '@/components/Markdown';
 import { Metadata } from 'next';
 import { formatDate } from '@/lib/utils';
+import { doc, getDoc } from 'firebase/firestore';
+import { firestore } from '@/lib/firebase';
+import ReactMarkdown from 'react-markdown';
 
 interface PageProps {
-  params: Promise<{ postId: string }>;
+  params: { slug: string };
 }
 
-const getPost = cache(async (postId: string) => {
-  const post = await prisma.post.findUnique({
-    where: { slug: postId },
-  });
-
-  if (!post) notFound();
-
-  return post;
+const getPost = cache(async ({ slug }: { slug: string }) => {
+  console.log(`Fetching post with slug: ${slug}`);
+  const postRef = doc(firestore, 'posts', slug);
+  const postSnap = await getDoc(postRef);
+  if (!postSnap.exists()) {
+    console.error(`Post not found for slug: ${slug}`);
+    notFound();
+  }
+  console.log(`Fetched post:`, postSnap.data());
+  return postSnap.data();
 });
 
-export async function generateStaticParams() {
-  const posts = await prisma.post.findMany();
-  return posts
-    .filter((post: { slug?: string }) => post.slug) // Ensure valid slugs
-    .map((post: { slug: string }) => ({ params: { postId: post.slug } }));
-}
+// export async function generateStaticParams() {
+//   const posts = await prisma.post.findMany();
+//   return posts
+//     .filter((post: { slug?: string }) => post.slug) // Ensure valid slugs
+//     .map((post: { slug: string }) => ({ params: { postId: post.slug } }));
+// }
 
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const post = await getPost((await params).postId);
+  const post = await getPost({ slug: params.slug });
+
+  if (!post) {
+    notFound();
+  }
 
   return {
-    title: `${post.title} | Sanova Web Solutions`,
-    description: post.description,
+    title: `${post.data.title} | Sanova Web Solutions`,
+    description: post.data.description,
   };
 }
 
 export default async function BlogPost({ params }: PageProps) {
-  const post = await getPost((await params).postId);
+  const post = await getPost({ slug: params.slug });
+  if (!post) {
+    notFound();
+  }
   return (
     <main className='lg:pb-24 mb-32'>
       <header className="relative h-[460px] w-full bg-[url('https://flowbite.s3.amazonaws.com/blocks/marketing-ui/articles/background.png')] bg-cover bg-center bg-no-repeat bg-blend-darken xl:h-[537px]">
         <div className='absolute left-0 top-0 h-full w-full bg-black bg-opacity-50'></div>
         <div className='absolute left-1/2 top-20 mx-auto w-full max-w-screen-xl -translate-x-1/2 px-4 xl:top-1/2 xl:-translate-y-1/2 xl:px-0'>
           <h1 className='mb-4 max-w-4xl text-2xl font-extrabold leading-none text-white sm:text-3xl lg:text-4xl'>
-            {post.title}
+            {post.data.title}
           </h1>
           <p className='text-lg font-normal text-gray-300'>
             {post.title2 ? post.title2 : null}
@@ -69,12 +80,8 @@ export default async function BlogPost({ params }: PageProps) {
               </span>
               <span className='h-2 w-2 rounded-full bg-gray-400'></span>
               <span>
-                <time
-                  className='font-normal text-white'
-                  dateTime='2022-08-03'
-                >
-                  {formatDate(post.createdAt)}
-                  {/* August 3, 2022, 2:20am EDT */}
+                <time className='font-normal text-white' dateTime='2022-08-03'>
+                  {formatDate(post.data.createdAt)}
                 </time>
               </span>
             </div>
@@ -89,8 +96,8 @@ export default async function BlogPost({ params }: PageProps) {
           </div>
 
           {/* Article content */}
-          <div className='w-full grow space-y-5 min-h-[320px] py-6'>
-            <Markdown>{post.content}</Markdown>
+          <div className='w-full grow space-y-5 min-h-[320px] py-6 prose prose-invert'>
+            <ReactMarkdown>{post.data.content}</ReactMarkdown>
           </div>
 
           {/* <CommentSection /> */}

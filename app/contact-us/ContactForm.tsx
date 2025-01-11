@@ -1,5 +1,4 @@
 'use client';
-
 import { Button } from '@/components/ui/button';
 import {
   Form,
@@ -57,6 +56,7 @@ export function ContactForm() {
       6
     )}-${phoneNumber.slice(6, 10)}`;
   };
+
   async function onSubmit(data: z.infer<typeof ContactFormSchema>) {
     const formData = new FormData();
     Object.entries(data).forEach(([key, value]) => formData.append(key, value));

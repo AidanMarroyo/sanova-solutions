@@ -33,6 +33,7 @@ export const BlogPostSchema = z.object({
     10000,
     'Content must be less than 10,000 characters'
   ),
+  createdAt: z.string().transform((val) => new Date(val).toISOString()),
 });
 
 export type BlogPostValues = z.infer<typeof BlogPostSchema>;
