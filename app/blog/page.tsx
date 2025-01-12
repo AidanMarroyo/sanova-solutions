@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default async function BlogPage() {
   const ref = collection(firestore, 'posts');
-  const postsQuery = query(ref, limit(1));
+  const postsQuery = query(ref, limit(6));
 
   const querySnapshot = await getDocs(postsQuery);
   const post = querySnapshot.docs.map((doc) => doc.data().data);
