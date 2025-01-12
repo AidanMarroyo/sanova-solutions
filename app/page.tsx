@@ -6,6 +6,7 @@ import { Portfolio } from './Portfolio';
 import UniqueSellingProposition from './USP';
 import Pricing from './Pricing';
 import { Speed } from './Speed';
+import Blog from './Blog';
 
 export default function Home() {
   return (
@@ -14,7 +15,6 @@ export default function Home() {
       <Features />
       <UniqueSellingProposition />
       <Speed />
-
       <Pricing />
       <Portfolio />
       <CTA
@@ -22,6 +22,7 @@ export default function Home() {
         description=''
         cta='Contact Us Today'
       />
+      <Blog />
     </div>
   );
 }

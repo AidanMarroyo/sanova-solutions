@@ -1,5 +1,6 @@
 'use client';
 import { Timestamp } from 'firebase/firestore';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -31,9 +32,11 @@ export default function Blog({ post }: BlogProps) {
             insights to empower your business journey.
           </p>
         </div>
-        <div className='mb-16 grid gap-8 lg:grid-cols-3 lg:divide-x lg:divide-gray-200 dark:lg:divide-gray-700'>
+        <div className='mb-16 grid gap-8 lg:grid-cols-3 lg:divide-x lg:divide-gray-700'>
           <article>
-            <img
+            <Image
+              width={389}
+              height={389}
               alt={posts[0].title}
               src={posts[0].photo}
               className='mb-5 rounded-lg'
