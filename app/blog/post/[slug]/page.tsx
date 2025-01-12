@@ -114,14 +114,11 @@ export default async function BlogPost({ params }: PageProps) {
               title='Ready to take your online presence to the next level?'
             />
           </div>
-
-          {/* <CommentSection /> */}
         </article>
 
         <Sidebar />
       </div>
 
-      <RelatedArticles />
       {/* <NewsletterSignup /> */}
     </main>
   );

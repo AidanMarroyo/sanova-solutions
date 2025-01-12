@@ -35,6 +35,7 @@ export const BlogPostSchema = z.object({
   ),
   createdAt: z.string().transform((val) => new Date(val).toISOString()),
   photo: requiredString.url('Invalid URL'),
+  slug: z.string().optional(),
 });
 
 export type BlogPostValues = z.infer<typeof BlogPostSchema>;

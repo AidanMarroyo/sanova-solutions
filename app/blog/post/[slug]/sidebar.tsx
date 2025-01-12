@@ -8,7 +8,7 @@ export function Sidebar() {
         <h3 id='sidebar-label' className='sr-only'>
           Sidebar
         </h3>
-        <div className='mb-8'>
+        <div>
           <h4 className='mb-2 text-sm font-bold uppercase text-white'>
             Flowbite News morning headlines
           </h4>
@@ -18,10 +18,7 @@ export function Sidebar() {
           </p>
           <Button className='w-full'>Subscribe</Button>
         </div>
-        <div className='mb-12'>
-          <h4 className='mb-4 text-sm font-bold uppercase text-white'>
-            Latest news
-          </h4>
+        <div>
           <RelatedArticles />
         </div>
         <div>{/* Add advertisement placeholder here */}</div>

@@ -1,5 +1,4 @@
 'use client';
-
 import { BlogPostSchema, BlogPostValues } from '@/lib/validation';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
@@ -20,7 +19,6 @@ import { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { storage } from '@/lib/firebase';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
-import { updateDoc } from 'firebase/firestore';
 
 export default function NewPostForm() {
   const [content, setContent] = useState<string>('');

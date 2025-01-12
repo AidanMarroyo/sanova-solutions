@@ -7,10 +7,10 @@ import { firestore } from '@/lib/firebase';
 import { toSlug } from '@/lib/utils';
 
 export async function submitBlogPost(formData: FormData) {
-  //   const user = getAuth().currentUser;
-  //   if (!user) {
-  //     throw new Error('User is not authenticated');
-  //   }
+  const user = getAuth().currentUser;
+  if (!user) {
+    throw new Error('User is not authenticated');
+  }
   const title = formData.get('title') as string;
   const slug = toSlug(title);
   const ref = doc(firestore, 'posts', slug);

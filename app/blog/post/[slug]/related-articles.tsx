@@ -1,13 +1,8 @@
 import { firestore } from '@/lib/firebase';
-import {
-  collection,
-  collectionGroup,
-  getDocs,
-  limit,
-  orderBy,
-  query,
-} from 'firebase/firestore';
+import { toSlug } from '@/lib/utils';
+import { collection, getDocs, limit, query } from 'firebase/firestore';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export async function RelatedArticles() {
   const ref = collection(firestore, 'posts');
@@ -29,25 +24,28 @@ export async function RelatedArticles() {
       </aside>
     );
   }
-  console.log('Fetched posts:', posts);
+
   return (
-    <aside aria-label='Related articles' className=' lg:py-24'>
+    <aside aria-label='Related articles' className=' lg:py-12'>
       <div className='mx-auto max-w-screen-xl px-4'>
         <h2 className='mb-6 text-2xl font-bold text-white lg:mb-8'>
           Latest articles
         </h2>
-        <div className='grid gap-6 md:grid-cols-2 lg:gap-12'>
+        <div className='flex  flex-col gap-6 lg:gap-12'>
           {posts.map((article) => (
-            <article key={article.title} className='flex flex-col xl:flex-row'>
-              <a href='#' className='mb-2 xl:mb-0'>
+            <article key={article.title} className='flex flex-col'>
+              <Link
+                href={`/blog/post/${toSlug(article.title)}`}
+                className='mb-2 xl:mb-0'
+              >
                 <Image
                   src={article.photo}
                   alt=''
-                  width={384}
-                  height={240}
+                  width={184}
+                  height={140}
                   className='mr-5 max-w-sm'
                 />
-              </a>
+              </Link>
               <div className='flex flex-col justify-center'>
                 <h2 className='mb-2 text-xl font-bold leading-tight text-white'>
                   <a href='#'>{article.title}</a>
@@ -55,12 +53,6 @@ export async function RelatedArticles() {
                 <p className='mb-4 max-w-sm text-white'>
                   {article.description}
                 </p>
-                <a
-                  href='#'
-                  className='inline-flex items-center font-medium hover:underline text-primary-500'
-                >
-                  {/* Read in {article.readTime} */}
-                </a>
               </div>
             </article>
           ))}
