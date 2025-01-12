@@ -52,6 +52,7 @@ export default function NewPostForm() {
     const result = await submitBlogPost(formData);
     if (result && result.success) {
       form.reset();
+      console.log('Post submitted!');
     }
   }
 
