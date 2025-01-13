@@ -5,8 +5,9 @@ import { firestore } from '@/lib/firebase';
 import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 import { CTA } from '@/components/CTA';
-import Sidebar from '@/components/Sidebar';
+
 import { formatDate } from '@/lib/utils';
+import { Sidebar } from './sidebar';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
