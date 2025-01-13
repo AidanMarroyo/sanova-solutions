@@ -1,15 +1,15 @@
-import { cache } from 'react';
-import { Sidebar } from './sidebar';
-import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
-import { formatDate } from '@/lib/utils';
+import { cache } from 'react';
 import { doc, getDoc } from 'firebase/firestore';
 import { firestore } from '@/lib/firebase';
+import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 import { CTA } from '@/components/CTA';
+import Sidebar from '@/components/Sidebar';
+import { formatDate } from '@/lib/utils';
 
 interface PageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 const getPost = cache(async ({ slug }: { slug: string }) => {
@@ -27,30 +27,34 @@ const getPost = cache(async ({ slug }: { slug: string }) => {
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const post = await getPost({ slug: params.slug });
+  const { slug } = await params;
+  const post = await getPost({ slug });
 
   if (!post) {
     notFound();
   }
 
   return {
-    title: `${post.data.title} | Sanova Web Solutions`,
-    description: post.data.description,
+    title: `${post.title} | Sanova Web Solutions`,
+    description: post.description,
   };
 }
 
 export default async function BlogPost({ params }: PageProps) {
-  const post = await getPost({ slug: params.slug });
+  const { slug } = await params;
+  const post = await getPost({ slug });
+
   if (!post) {
     notFound();
   }
+
   return (
     <main className='lg:pb-24 mb-32'>
       <header
         className={`relative h-[460px] w-full bg-cover bg-center bg-no-repeat bg-blend-darken xl:h-[537px]`}
         style={{
           backgroundImage: `url('${
-            post.data.photo ||
+            post.photo ||
             'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/articles/background.png'
           }')`,
         }}
@@ -58,10 +62,10 @@ export default async function BlogPost({ params }: PageProps) {
         <div className='absolute left-0 top-0 h-full w-full bg-black bg-opacity-50'></div>
         <div className='absolute left-1/2 top-20 mx-auto w-full max-w-screen-xl -translate-x-1/2 px-4 xl:top-1/2 xl:-translate-y-1/2 xl:px-0'>
           <h1 className='mb-4 max-w-4xl text-2xl font-extrabold leading-none text-white sm:text-3xl lg:text-4xl'>
-            {post.data.title}
+            {post.title}
           </h1>
           <p className='text-lg font-normal text-gray-300'>
-            {post.title2 ? post.title2 : null}
+            {post.title2 ?? null}
           </p>
         </div>
       </header>
@@ -81,8 +85,11 @@ export default async function BlogPost({ params }: PageProps) {
               </span>
               <span className='h-2 w-2 rounded-full bg-gray-400'></span>
               <span>
-                <time className='font-normal text-white' dateTime='2022-08-03'>
-                  {formatDate(post.data.createdAt)}
+                <time
+                  className='font-normal text-white'
+                  dateTime={post.createdAt?.toDate().toISOString()}
+                >
+                  {formatDate(post.createdAt)}
                 </time>
               </span>
             </div>
@@ -98,7 +105,7 @@ export default async function BlogPost({ params }: PageProps) {
 
           {/* Article content */}
           <div className='w-full grow space-y-5 min-h-[320px] pt-6 prose prose-invert max-w-none text-white'>
-            <ReactMarkdown>{post.data.content}</ReactMarkdown>
+            <ReactMarkdown>{post.content}</ReactMarkdown>
             <CTA
               cta='CONTACT US TODAY'
               description=''
