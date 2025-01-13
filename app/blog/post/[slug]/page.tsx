@@ -1,6 +1,5 @@
 import { cache } from 'react';
 import { Sidebar } from './sidebar';
-// import prisma from '@/lib/prisma';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import { formatDate } from '@/lib/utils';
@@ -8,7 +7,6 @@ import { doc, getDoc } from 'firebase/firestore';
 import { firestore } from '@/lib/firebase';
 import ReactMarkdown from 'react-markdown';
 import { CTA } from '@/components/CTA';
-import { RelatedArticles } from './related-articles';
 
 interface PageProps {
   params: { slug: string };
@@ -25,13 +23,6 @@ const getPost = cache(async ({ slug }: { slug: string }) => {
   console.log(`Fetched post:`, postSnap.data());
   return postSnap.data();
 });
-
-// export async function generateStaticParams() {
-//   const posts = await prisma.post.findMany();
-//   return posts
-//     .filter((post: { slug?: string }) => post.slug) // Ensure valid slugs
-//     .map((post: { slug: string }) => ({ params: { postId: post.slug } }));
-// }
 
 export async function generateMetadata({
   params,
