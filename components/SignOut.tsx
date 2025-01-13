@@ -5,7 +5,8 @@ import { useContext } from 'react';
 import { Button } from './ui/button';
 
 const SignOut = () => {
-  const { user } = useContext(AuthContext);
+  const authContext = useContext(AuthContext);
+  const user = authContext ? authContext.user : null;
 
   const handleSignOut = async () => {
     try {

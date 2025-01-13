@@ -38,8 +38,8 @@ export default function NewPostForm() {
     },
   });
 
-  const { user } = useContext(AuthContext);
-  if (!user) {
+  const authContext = useContext(AuthContext);
+  if (!authContext || !authContext.user) {
     return <div>Sign in to create a post</div>;
   }
   const {
