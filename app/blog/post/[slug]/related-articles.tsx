@@ -26,7 +26,7 @@ export async function RelatedArticles() {
   }
 
   return (
-    <aside aria-label='Related articles' className=' lg:py-12'>
+    <aside aria-label='Related articles'>
       <div className='mx-auto max-w-screen-xl px-4'>
         <h2 className='mb-6 text-2xl font-bold text-white lg:mb-8'>
           Latest articles

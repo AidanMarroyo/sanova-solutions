@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+// import { Button } from '@/components/ui/button';
 import { RelatedArticles } from './related-articles';
 
 export function Sidebar() {
@@ -8,7 +8,7 @@ export function Sidebar() {
         <h3 id='sidebar-label' className='sr-only'>
           Sidebar
         </h3>
-        <div>
+        {/* <div>
           <h4 className='mb-2 text-sm font-bold uppercase text-white'>
             Flowbite News morning headlines
           </h4>
@@ -17,7 +17,7 @@ export function Sidebar() {
             news delivered first thing every morning to your inbox
           </p>
           <Button className='w-full'>Subscribe</Button>
-        </div>
+        </div> */}
         <div>
           <RelatedArticles />
         </div>
