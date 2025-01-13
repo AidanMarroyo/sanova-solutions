@@ -1,4 +1,5 @@
 import { firestore } from '@/lib/firebase';
+import { toSlug } from '@/lib/utils';
 import { collection, getDocs, query } from 'firebase/firestore';
 import { MetadataRoute } from 'next';
 
@@ -9,12 +10,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const querySnapshot = await getDocs(postsQuery);
   const posts = querySnapshot.docs.map((doc) => doc.data().data);
 
-  const postEntries: MetadataRoute.Sitemap = posts.map(({ title }) => ({
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/posts/${title}`,
-    lastModified: new Date(),
-    // changeFrequency:,
-    // priority:
-  }));
+  const postEntries: MetadataRoute.Sitemap = posts.map(({ title }) => {
+    const slug = toSlug(title);
+    return {
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/posts/${slug}`,
+      lastModified: new Date(),
+      // changeFrequency:,
+      // priority:
+    };
+  });
 
   return [
     {

@@ -1,6 +1,15 @@
-import NewPostForm from './NewPostForm';
+'use client';
 
-export default function createPostPage() {
+import { useContext } from 'react';
+import NewPostForm from './NewPostForm';
+import { AuthContext } from '@/lib/context';
+import { redirect } from 'next/navigation';
+
+export default function CreatePostPage() {
+  const authContext = useContext(AuthContext);
+  if (!authContext?.user) {
+    return redirect('/blog/post/sign-in');
+  }
   return (
     <div>
       <NewPostForm />

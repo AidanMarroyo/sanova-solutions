@@ -15,10 +15,13 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { storage } from '@/lib/firebase';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
+import { AuthContext } from '@/lib/context';
+import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
+import SignOut from '@/components/SignOut';
 
 export default function NewPostForm() {
   const [content, setContent] = useState<string>('');
@@ -35,6 +38,10 @@ export default function NewPostForm() {
     },
   });
 
+  const { user } = useContext(AuthContext);
+  if (!user) {
+    return <div>Sign in to create a post</div>;
+  }
   const {
     handleSubmit,
     control,
@@ -64,13 +71,11 @@ export default function NewPostForm() {
     const downloadURL = await getDownloadURL(snapshot.ref);
 
     setUploadedFile(downloadURL);
-
-    console.log('Picture uploaded!');
   };
 
   return (
-    <div>
-      <h1>New Post</h1>
+    <MaxWidthWrapper>
+      <SignOut />
       <Form {...form}>
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -186,6 +191,6 @@ export default function NewPostForm() {
           </ReactMarkdown>
         </div>
       </div>
-    </div>
+    </MaxWidthWrapper>
   );
 }
