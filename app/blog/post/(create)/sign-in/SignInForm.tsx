@@ -17,7 +17,7 @@ import { useState } from 'react';
 export default function SignInForm() {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
-  const [loginError, setloginError] = useState(null);
+  const [loginError, setloginError] = useState<string | null>(null);
   const router = useRouter();
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -27,7 +27,11 @@ export default function SignInForm() {
       router.push('/blog/post/create'); // Navigate to the home page
     } catch (error) {
       console.error('Error logging in:', error);
-      setloginError(error.message);
+      if (error instanceof Error) {
+        setloginError(error.message); // Access the message safely
+      } else {
+        setloginError('An unknown error occurred'); // Handle unexpected types
+      }
     }
   };
   return (
@@ -59,7 +63,7 @@ export default function SignInForm() {
                 Login
               </Button>
               {loginError && (
-                <p className='text-red-500 text-sm'>{loginError.message}</p>
+                <p className='text-red-500 text-sm'>{loginError}</p>
               )}
             </form>
           </CardContent>

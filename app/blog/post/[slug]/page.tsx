@@ -38,6 +38,13 @@ export async function generateMetadata({
   return {
     title: `${post.title} | Sanova Web Solutions`,
     description: post.description,
+    openGraph: {
+      images: [
+        {
+          url: post.photo,
+        },
+      ],
+    },
   };
 }
 
