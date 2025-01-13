@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { firestore } from '@/lib/firebase';
+import { formatDate } from '@/lib/utils';
 import { collection, getDocs, limit, query } from 'firebase/firestore';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -56,7 +57,7 @@ export default async function Blog() {
                   <div className='font-medium text-white'>
                     <div>Sanova Web Soutions Team</div>
                     <div className='text-sm font-normal text-white'>
-                      {post.createdAt}
+                      {formatDate(post.createdAt)}
                     </div>
                   </div>
                 </CardFooter>

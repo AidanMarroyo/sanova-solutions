@@ -115,7 +115,7 @@ const Features = () => {
               <Ri24HoursLine size={40} />
             </div>
             <div>
-              <h3 className='text-xl font-bold sm:text-2xl'>24/7 Support</h3>
+              <h3 className='text-xl font-bold sm:text-2xl'>24/7 SUPPORT</h3>
               <p className='mt-2 text-base font-normal sm:text-lg text-white'>
                 At Sanova Web Solutions, we’re here for you around the clock.
                 Whether it’s a question, an urgent update, or a technical issue,

@@ -36,12 +36,12 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${post.title} | Sanova Web Solutions`,
-    description: post.description,
+    title: `${post.data.title} | Sanova Web Solutions`,
+    description: post.data.description,
     openGraph: {
       images: [
         {
-          url: post.photo,
+          url: post.data.photo,
         },
       ],
     },
@@ -62,7 +62,7 @@ export default async function BlogPost({ params }: PageProps) {
         className={`relative h-[460px] w-full bg-cover bg-center bg-no-repeat bg-blend-darken xl:h-[537px]`}
         style={{
           backgroundImage: `url('${
-            post.photo ||
+            post.data.photo ||
             'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/articles/background.png'
           }')`,
         }}
@@ -70,10 +70,10 @@ export default async function BlogPost({ params }: PageProps) {
         <div className='absolute left-0 top-0 h-full w-full bg-black bg-opacity-50'></div>
         <div className='absolute left-1/2 top-20 mx-auto w-full max-w-screen-xl -translate-x-1/2 px-4 xl:top-1/2 xl:-translate-y-1/2 xl:px-0'>
           <h1 className='mb-4 max-w-4xl text-2xl font-extrabold leading-none text-white sm:text-3xl lg:text-4xl'>
-            {post.title}
+            {post.data.title}
           </h1>
           <p className='text-lg font-normal text-gray-300'>
-            {post.title2 ?? null}
+            {post.data.title2 ?? null}
           </p>
         </div>
       </header>
@@ -97,7 +97,7 @@ export default async function BlogPost({ params }: PageProps) {
                   className='font-normal text-white'
                   dateTime={post.createdAt?.toDate().toISOString()}
                 >
-                  {formatDate(post.createdAt)}
+                  {formatDate(post.data.createdAt)}
                 </time>
               </span>
             </div>
@@ -113,7 +113,7 @@ export default async function BlogPost({ params }: PageProps) {
 
           {/* Article content */}
           <div className='w-full grow space-y-5 min-h-[320px] pt-6 prose prose-invert max-w-none text-white'>
-            <ReactMarkdown>{post.content}</ReactMarkdown>
+            <ReactMarkdown>{post.data.content}</ReactMarkdown>
             <CTA
               cta='CONTACT US TODAY'
               description=''
