@@ -1,3 +1,4 @@
+import MaintenancePage from '@/components/MaintenancePage';
 import { Metadata } from 'next';
 import React from 'react';
 
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const page = () => {
-  return <div>page</div>;
+  return <MaintenancePage />;
 };
 
 export default page;

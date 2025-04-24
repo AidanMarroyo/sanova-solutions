@@ -3,6 +3,7 @@ import React from 'react';
 import Blog from './Blog';
 import { collection, getDocs, limit, query } from 'firebase/firestore';
 import { firestore } from '@/lib/firebase';
+export const dynamic = 'force-dynamic'; // always fetch new data
 
 export const metadata: Metadata = {
   title: 'Business Tips & Insights | Sanova Web Solutions Blog',

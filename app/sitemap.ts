@@ -13,7 +13,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const postEntries: MetadataRoute.Sitemap = posts.map(({ title }) => {
     const slug = toSlug(title);
     return {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/posts/${slug}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/blog/post/${slug}`,
       lastModified: new Date(),
       // changeFrequency:,
       // priority:
@@ -22,7 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
       lastModified: new Date(),
     },
     {
@@ -54,11 +54,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/privacy-policy`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/support`,
       lastModified: new Date(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/services`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/terms`,
       lastModified: new Date(),
     },
     {
@@ -66,7 +66,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
     },
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}/servicesc/web-design`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/services/web-design`,
       lastModified: new Date(),
     },
     ...postEntries,
