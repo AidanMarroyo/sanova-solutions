@@ -1,22 +1,19 @@
 import Features from './Features';
-import Hero from './Hero';
 
 import { CTA } from '@/components/CTA';
-import { Portfolio } from './Portfolio';
 import UniqueSellingProposition from './USP';
-import Pricing from './Pricing';
 import { Speed } from './Speed';
 import Blog from './Blog';
+import TestHero from './TestHero';
 
 export default function Home() {
   return (
     <div>
-      <Hero />
+      <TestHero />
       <Features />
       <UniqueSellingProposition />
       <Speed />
-      <Pricing />
-      <Portfolio />
+      {/* <Portfolio /> */}
       <CTA
         title='Ready to Take Your Business to the Next Level?'
         description=''
