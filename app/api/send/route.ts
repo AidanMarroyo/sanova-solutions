@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
     .then((body) => ContactFormSchema.parse(body));
   try {
     const { error } = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',
+      from: 'Aidan <bestfriend@sanovawebsolutions.com>',
       to: ['aidanarroyostudent@gmail.com'],
       subject: 'Project Inquiry',
       react: EmailTemplate({
