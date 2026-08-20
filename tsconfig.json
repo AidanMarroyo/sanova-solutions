@@ -15,7 +15,11 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
+<<<<<<< HEAD
     "jsx": "preserve",
+=======
+    "jsx": "react-jsx",
+>>>>>>> main
     "incremental": true,
     "plugins": [
       {
@@ -32,7 +36,12 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+<<<<<<< HEAD
     ".next/types/**/*.ts"
+=======
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+>>>>>>> main
   ],
   "exclude": [
     "node_modules"

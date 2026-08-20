@@ -5,6 +5,10 @@ import UniqueSellingProposition from './USP';
 import { Speed } from './Speed';
 import Blog from './Blog';
 import TestHero from './TestHero';
+<<<<<<< HEAD
+=======
+import Hero from './Hero';
+>>>>>>> main
 
 export default function Home() {
   return (
