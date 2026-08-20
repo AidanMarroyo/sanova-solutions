@@ -223,7 +223,7 @@ export default function LocationsPage() {
               <div className='relative overflow-hidden rounded-[2rem] border border-white/[0.09] bg-white/[0.025] p-2 shadow-[0_40px_120px_rgba(0,0,0,0.45)] sm:p-3'>
                 <div className='relative aspect-[4/3] overflow-hidden rounded-[1.5rem]'>
                   <Image
-                    src='/images/ontario.webp'
+                    src='/images/ontario.jpg'
                     alt='Ontario, Canada'
                     fill
                     priority
