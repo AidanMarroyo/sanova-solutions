@@ -1,4 +1,4 @@
-import { EmailTemplate } from '@/components/email-components';
+import { ContactEmail } from '@/components/contact-email';
 import { ContactFormSchema } from '@/lib/validation';
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
       from: 'Project Inquiry <INQUIRY@sanovawebsolutions.com>',
       to: ['aidanmarroyo@gmail.com'],
       subject: 'Project Inquiry',
-      react: EmailTemplate({
+      react: ContactEmail({
         firstName,
         lastName,
         email,

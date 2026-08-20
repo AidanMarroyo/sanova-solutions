@@ -8,7 +8,7 @@ interface EmailTemplateProps {
   message: string;
 }
 
-export function EmailTemplate({
+export function ContactEmail({
   firstName,
   lastName,
   email,
