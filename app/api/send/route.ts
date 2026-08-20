@@ -21,6 +21,11 @@ export async function POST(req: NextRequest) {
         phone,
         message,
       }),
+      headers: {
+  'X-Priority': '1',
+  'X-MSMail-Priority': 'High',
+  Importance: 'high',
+},
     });
 
     if (error) {
