@@ -11,10 +11,103 @@ import { HelpCircle, MessageCircleQuestion } from 'lucide-react';
 import Link from 'next/link';
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 
+
+
 export const metadata: Metadata = {
-  title: 'FAQs | Sanova Web Solutions – Your Questions Answered',
+  title: {
+    absolute:
+      'Web Design, SEO & Ecommerce FAQs | Sanova Web Solutions',
+  },
+
   description:
-    'Find answers to common questions about Sanova Web Solutions, custom websites, SEO, ecommerce, pricing, support, and our development process.',
+    'Get answers to frequently asked questions about Sanova Web Solutions, website design, SEO, ecommerce development, pricing, project timelines, support, hosting, and our development process.',
+
+  keywords: [
+    'Sanova Web Solutions FAQ',
+    'web design FAQ',
+    'website development FAQ',
+    'SEO FAQ',
+    'ecommerce FAQ',
+    'web design pricing',
+    'website development cost',
+    'how much does a website cost',
+    'how long does it take to build a website',
+    'SEO services questions',
+    'ecommerce development questions',
+    'website hosting questions',
+    'website maintenance questions',
+    'small business website FAQ',
+    'web design process',
+    'custom website development process',
+    'website support services',
+    'Ontario web design FAQ',
+  ],
+
+  authors: [
+    {
+      name: 'Sanova Web Solutions',
+    },
+  ],
+
+  creator: 'Sanova Web Solutions',
+
+  publisher: 'Sanova Web Solutions',
+
+  category: 'Web Design, SEO & Ecommerce',
+
+  alternates: {
+    canonical: '/faq',
+  },
+
+  openGraph: {
+    title:
+      'Web Design, SEO & Ecommerce FAQs | Sanova Web Solutions',
+
+    description:
+      'Find answers about website pricing, development timelines, SEO, ecommerce, hosting, support, and working with Sanova Web Solutions.',
+
+    url: '/faq',
+
+    siteName: 'Sanova Web Solutions',
+
+    type: 'website',
+
+    locale: 'en_CA',
+
+    images: [
+      {
+        url: '/images/og/sanova-web-solutions-faq.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Sanova Web Solutions Web Design, SEO and Ecommerce FAQs',
+      },
+    ],
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+
+    title:
+      'Web Design, SEO & Ecommerce FAQs | Sanova Web Solutions',
+
+    description:
+      'Answers to common questions about web design, SEO, ecommerce, pricing, timelines, hosting, support, and our development process.',
+
+    images: ['/images/og/sanova-web-solutions-faq.jpg'],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
 };
 
 export default function FAQPage() {

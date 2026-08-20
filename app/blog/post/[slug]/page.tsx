@@ -46,41 +46,108 @@ export async function generateMetadata({
     notFound();
   }
 
-  const title = post.data.title;
-  const description = post.data.description;
-  const image = post.data.photo;
+  const {
+    title,
+    description,
+    photo,
+    createdAt,
+    updatedAt,
+    category,
+    author,
+  } = post.data;
+
+  const canonicalUrl = `/blog/post/${slug}`;
 
   return {
-    title,
+    title: {
+      absolute: `${title} | Sanova Web Solutions`,
+    },
 
     description,
 
+    authors: [
+      {
+        name: author?.name || 'Sanova Web Solutions',
+      },
+    ],
+
+    creator: author?.name || 'Sanova Web Solutions',
+
+    publisher: 'Sanova Web Solutions',
+
+    category: category || 'Web Design, SEO & Digital Marketing',
+
     alternates: {
-      canonical: `/blog/post/${slug}`,
+      canonical: canonicalUrl,
     },
 
     openGraph: {
       type: 'article',
-      title,
+
+      title: `${title} | Sanova Web Solutions`,
+
       description,
-      url: `/blog/post/${slug}`,
-      images: image
+
+      url: canonicalUrl,
+
+      siteName: 'Sanova Web Solutions',
+
+      locale: 'en_CA',
+
+      publishedTime: createdAt
+        ? new Date(createdAt).toISOString()
+        : undefined,
+
+      modifiedTime: updatedAt
+        ? new Date(updatedAt).toISOString()
+        : undefined,
+
+      authors: [author?.name || 'Sanova Web Solutions'],
+
+      section: category || 'Web Design, SEO & Digital Marketing',
+
+      images: photo
         ? [
             {
-              url: image,
+              url: photo,
               width: 1200,
               height: 630,
-              alt: title,
+              alt: `${title} | Sanova Web Solutions`,
             },
           ]
-        : undefined,
+        : [
+            {
+              url: '/images/og/sanova-web-solutions-blog.jpg',
+              width: 1200,
+              height: 630,
+              alt: 'Sanova Web Solutions Blog',
+            },
+          ],
     },
 
     twitter: {
       card: 'summary_large_image',
-      title,
+
+      title: `${title} | Sanova Web Solutions`,
+
       description,
-      images: image ? [image] : undefined,
+
+      images: [
+        photo || '/images/og/sanova-web-solutions-blog.jpg',
+      ],
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+        'max-video-preview': -1,
+      },
     },
   };
 }

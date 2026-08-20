@@ -14,13 +14,83 @@ import {
 } from 'lucide-react';
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 
+
+
 export const metadata: Metadata = {
-  title: 'Licensing Information',
+  title: {
+    absolute: 'Licensing Information | Sanova Web Solutions',
+  },
+
   description:
-    'Review licensing terms for software, websites, services, use rights, distribution, and intellectual property provided by Sanova Web Solutions.',
+    'Review Sanova Web Solutions licensing terms covering websites, software, digital services, intellectual property, usage rights, ownership, distribution, and permitted use.',
+
+  keywords: [
+    'Sanova Web Solutions licensing',
+    'website licensing terms',
+    'software licensing terms',
+    'digital services licensing',
+    'website ownership rights',
+    'software usage rights',
+    'website usage rights',
+    'intellectual property terms',
+    'digital product licensing',
+    'website development licensing',
+    'software distribution rights',
+    'website ownership agreement',
+    'Sanova Web Solutions terms',
+  ],
+
+  authors: [
+    {
+      name: 'Sanova Web Solutions',
+    },
+  ],
+
+  creator: 'Sanova Web Solutions',
+
+  publisher: 'Sanova Web Solutions',
+
+  category: 'Legal Information',
 
   alternates: {
     canonical: '/licensing',
+  },
+
+  openGraph: {
+    title: 'Licensing Information | Sanova Web Solutions',
+
+    description:
+      'Review licensing, ownership, intellectual property, usage rights, and distribution terms for websites, software, and digital services provided by Sanova Web Solutions.',
+
+    url: '/licensing',
+
+    siteName: 'Sanova Web Solutions',
+
+    type: 'website',
+
+    locale: 'en_CA',
+  },
+
+  twitter: {
+    card: 'summary',
+
+    title: 'Licensing Information | Sanova Web Solutions',
+
+    description:
+      'Licensing, ownership, intellectual property, usage rights, and distribution information for Sanova Web Solutions websites, software, and digital services.',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
 };
 

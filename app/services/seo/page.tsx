@@ -16,21 +16,104 @@ import { CTA } from '@/components/CTA';
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 
 
+
+
 export const metadata: Metadata = {
-  title: 'SEO Services',
+  title: {
+    absolute:
+      'SEO Services | Local, Technical & Organic Search Growth | Sanova Web Solutions',
+  },
+
   description:
-    'SEO services from Sanova Web Solutions focused on technical SEO, local search, content strategy, keyword research, and sustainable organic growth.',
+    'Grow your visibility with SEO services from Sanova Web Solutions, including technical SEO, local SEO, keyword research, content strategy, on-page optimization, and sustainable organic search growth.',
+
+  keywords: [
+    'SEO services',
+    'SEO company',
+    'SEO agency',
+    'local SEO services',
+    'technical SEO services',
+    'organic SEO services',
+    'keyword research services',
+    'SEO content strategy',
+    'on-page SEO',
+    'website SEO optimization',
+    'small business SEO',
+    'local business SEO',
+    'SEO consultant Ontario',
+    'SEO services Ontario',
+    'SEO company Ontario',
+    'local SEO Ontario',
+    'Google search optimization',
+    'organic search growth',
+    'website ranking services',
+    'Sanova Web Solutions SEO',
+  ],
+
+  authors: [
+    {
+      name: 'Sanova Web Solutions',
+    },
+  ],
+
+  creator: 'Sanova Web Solutions',
+
+  publisher: 'Sanova Web Solutions',
+
+  category: 'SEO Services',
 
   alternates: {
     canonical: '/services/seo',
   },
 
   openGraph: {
-    title: 'SEO Services | Sanova Web Solutions',
+    title:
+      'SEO Services | Local, Technical & Organic Search Growth | Sanova Web Solutions',
+
     description:
-      'Technical SEO, local search, content strategy, and organic growth strategies built around your business.',
+      'Technical SEO, local search optimization, keyword research, content strategy, and on-page SEO designed to improve visibility and build sustainable organic growth.',
+
     url: '/services/seo',
+
+    siteName: 'Sanova Web Solutions',
+
     type: 'website',
+
+    locale: 'en_CA',
+
+    images: [
+      {
+        url: '/images/og/sanova-web-solutions-seo.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'SEO Services by Sanova Web Solutions',
+      },
+    ],
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+
+    title:
+      'SEO Services | Local, Technical & Organic SEO | Sanova Web Solutions',
+
+    description:
+      'Improve your search visibility with technical SEO, local SEO, keyword research, content strategy, and sustainable organic growth.',
+
+    images: ['/images/og/sanova-web-solutions-seo.jpg'],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
 };
 

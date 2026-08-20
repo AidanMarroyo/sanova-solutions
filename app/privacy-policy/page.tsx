@@ -9,18 +9,67 @@ import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 
 
 
+
+
 export const metadata: Metadata = {
-  title: 'Privacy Policy',
+  title: {
+    absolute: 'Privacy Policy | Sanova Web Solutions',
+  },
+
   description:
-    'Learn how Sanova Web Solutions collects, uses, stores, and protects personal information when you use our website and services.',
+    'Read the Sanova Web Solutions Privacy Policy to learn how we collect, use, store, disclose, and protect personal information when you visit our website or use our services.',
+
+  authors: [
+    {
+      name: 'Sanova Web Solutions',
+    },
+  ],
+
+  creator: 'Sanova Web Solutions',
+
+  publisher: 'Sanova Web Solutions',
+
+  category: 'Legal Information',
 
   alternates: {
     canonical: '/privacy-policy',
   },
 
+  openGraph: {
+    title: 'Privacy Policy | Sanova Web Solutions',
+
+    description:
+      'Learn how Sanova Web Solutions collects, uses, stores, discloses, and protects personal information across our website and services.',
+
+    url: '/privacy-policy',
+
+    siteName: 'Sanova Web Solutions',
+
+    type: 'website',
+
+    locale: 'en_CA',
+  },
+
+  twitter: {
+    card: 'summary',
+
+    title: 'Privacy Policy | Sanova Web Solutions',
+
+    description:
+      'Review how Sanova Web Solutions handles, stores, uses, and protects personal information.',
+  },
+
   robots: {
     index: true,
     follow: true,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
 };
 

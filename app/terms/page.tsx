@@ -9,13 +9,67 @@ import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 
 
 
+
+
 export const metadata: Metadata = {
-  title: 'Terms of Service',
+  title: {
+    absolute: 'Terms of Service | Sanova Web Solutions',
+  },
+
   description:
-    'Review the terms governing use of Sanova Web Solutions websites, services, software, intellectual property, and related offerings.',
+    'Review the Sanova Web Solutions Terms of Service governing website use, digital services, software, payments, intellectual property, client responsibilities, limitations, and related terms.',
+
+  authors: [
+    {
+      name: 'Sanova Web Solutions',
+    },
+  ],
+
+  creator: 'Sanova Web Solutions',
+
+  publisher: 'Sanova Web Solutions',
+
+  category: 'Legal Information',
 
   alternates: {
     canonical: '/terms',
+  },
+
+  openGraph: {
+    title: 'Terms of Service | Sanova Web Solutions',
+
+    description:
+      'Review the terms governing Sanova Web Solutions websites, services, software, intellectual property, payments, responsibilities, and related offerings.',
+
+    url: '/terms',
+
+    siteName: 'Sanova Web Solutions',
+
+    type: 'website',
+
+    locale: 'en_CA',
+  },
+
+  twitter: {
+    card: 'summary',
+
+    title: 'Terms of Service | Sanova Web Solutions',
+
+    description:
+      'Review the terms governing the use of Sanova Web Solutions websites, software, services, and related offerings.',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
 };
 

@@ -14,19 +14,104 @@ import { CTA } from '@/components/CTA';
 import Features from '@/app/Features';
 import { MaxWidthWrapper } from '@/components/ MaxWidthWrapper';
 
+
+
 export const metadata: Metadata = {
-  title: 'Custom Web Design & Development',
+  title: {
+    absolute:
+      'Custom Web Design & Development | Fast, SEO-Ready Websites | Sanova Web Solutions',
+  },
+
   description:
-    'Custom-coded web design and development from Sanova Web Solutions. Fast, responsive, SEO-ready websites built without WordPress, page builders, or unnecessary bloat.',
+    'Custom web design and development from Sanova Web Solutions. We build fast, responsive, SEO-ready websites without WordPress, page builders, or unnecessary bloat.',
+
+  keywords: [
+    'custom web design',
+    'custom website development',
+    'web design services',
+    'web development services',
+    'custom coded websites',
+    'professional web design',
+    'responsive web design',
+    'SEO friendly web design',
+    'SEO ready websites',
+    'fast website development',
+    'business website development',
+    'small business web design',
+    'custom business websites',
+    'Next.js web development',
+    'React web development',
+    'modern web development',
+    'website design Ontario',
+    'web development Ontario',
+    'web design company Ontario',
+    'Sanova Web Solutions web design',
+  ],
+
+  authors: [
+    {
+      name: 'Sanova Web Solutions',
+    },
+  ],
+
+  creator: 'Sanova Web Solutions',
+
+  publisher: 'Sanova Web Solutions',
+
+  category: 'Web Design & Development Services',
+
   alternates: {
     canonical: '/services/web-design',
   },
+
   openGraph: {
-    title: 'Custom Web Design & Development | Sanova Web Solutions',
+    title:
+      'Custom Web Design & Development | Sanova Web Solutions',
+
     description:
-      'Fast, responsive, custom-coded websites designed to help businesses stand out and grow online.',
+      'Fast, responsive, custom-coded websites built for performance, search visibility, usability, and long-term business growth.',
+
     url: '/services/web-design',
+
+    siteName: 'Sanova Web Solutions',
+
     type: 'website',
+
+    locale: 'en_CA',
+
+    images: [
+      {
+        url: '/images/og/sanova-web-solutions-web-design.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Custom Web Design and Development by Sanova Web Solutions',
+      },
+    ],
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+
+    title:
+      'Custom Web Design & Development | Sanova Web Solutions',
+
+    description:
+      'Custom-coded, responsive, SEO-ready websites built for speed, usability, and business growth.',
+
+    images: ['/images/og/sanova-web-solutions-web-design.jpg'],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
 };
 
