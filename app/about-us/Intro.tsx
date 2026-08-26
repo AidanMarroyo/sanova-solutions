@@ -47,8 +47,9 @@ export function Intro() {
 
           <p className='mx-auto mt-7 max-w-2xl text-base leading-8 text-white/45 sm:text-lg'>
             Sanova was created to make professional, custom-built websites more
-            accessible to businesses that want something better than templates,
-            bloated platforms, and impersonal service.
+            accessible to businesses that want something better than generic
+            templates, bloated platforms, expensive retainers, and websites
+            they never truly own.
           </p>
         </div>
 
@@ -63,7 +64,7 @@ export function Intro() {
             <div className='relative aspect-[16/7] overflow-hidden rounded-[1.5rem]'>
               <Image
                 fill
-                         src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/computer-dark.png'
+                src='https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/computer-dark.png'
                 alt='Sanova Web Solutions'
                 className='object-cover'
                 sizes='(max-width: 1200px) 100vw, 1200px'
@@ -114,8 +115,8 @@ export function Intro() {
                 I got into web development because I enjoy solving problems
                 through technology, design, and creativity. Over time, that
                 turned into a larger goal: helping businesses build a stronger
-                online presence without making the process complicated or
-                inaccessible.
+                online presence without making the process complicated,
+                overpriced, or inaccessible.
               </p>
 
               <p className='mt-5 text-base leading-8 text-white/45 sm:text-lg'>
@@ -136,38 +137,54 @@ export function Intro() {
               title='Good websites became unnecessarily complicated.'
             >
               <p>
-                Too many small businesses are stuck choosing between expensive
-                agency projects, generic website builders, or outdated websites
-                that no longer represent the quality of their business.
+                Too many businesses are stuck choosing between expensive agency
+                projects, generic website builders, or outdated websites that
+                no longer represent the quality of their business.
+              </p>
+
+              <p>
+                Others find themselves locked into monthly website plans just
+                to keep using something they have already paid to build.
               </p>
 
               <p>
                 We wanted to create another option: modern, professionally
-                developed websites without unnecessary complexity.
+                developed websites with straightforward pricing and clear
+                ownership.
               </p>
             </StoryCard>
 
             <StoryCard
               icon={HeartHandshake}
               eyebrow='Our approach'
-              title='Professional websites should be more accessible.'
+              title='Your website should actually belong to you.'
             >
               <p>
-                Sanova was built around a simpler model: custom development,
-                straightforward pricing, ongoing support, and a team that stays
-                involved after launch.
+                Sanova builds custom websites through straightforward,
+                project-based pricing. There is no required monthly website
+                subscription, care plan, or long-term contract simply to keep
+                your website.
               </p>
 
-              <div className='mt-6 flex items-center gap-4 rounded-2xl border border-violet-400/15 bg-violet-400/[0.05] p-4'>
-                <div>
-                  <p className='text-xs font-semibold uppercase tracking-[0.14em] text-violet-300'>
-                    Website plans
-                  </p>
+              <p>
+                Once your project is complete and the final balance has been
+                paid, the completed website is yours. You can continue working
+                with Sanova, manage it yourself, move it to another provider,
+                or hire another developer in the future.
+              </p>
 
-                  <p className='mt-1 text-2xl font-semibold tracking-[-0.03em] text-white'>
-                    Starting from $200/month
-                  </p>
-                </div>
+              <div className='mt-6 rounded-2xl border border-violet-400/15 bg-violet-400/[0.05] p-5'>
+                <p className='text-xs font-semibold uppercase tracking-[0.14em] text-violet-300'>
+                  Custom websites
+                </p>
+
+                <p className='mt-1 text-2xl font-semibold tracking-[-0.03em] text-white'>
+                  Starting from $1,995
+                </p>
+
+                <p className='mt-2 text-sm leading-6 text-white/40'>
+                  One-time project pricing. No required monthly website fee.
+                </p>
               </div>
             </StoryCard>
 
@@ -202,8 +219,9 @@ export function Intro() {
             </h2>
 
             <p className='mt-4 text-sm leading-7 text-white/40 sm:text-base'>
-              Better design, better technology, better support, and a more
-              straightforward experience from the first conversation onward.
+              Better design, better technology, clear ownership, straightforward
+              pricing, and a smoother experience from the first conversation
+              through launch and handoff.
             </p>
           </div>
 

@@ -26,25 +26,25 @@ const features = [
     icon: Search,
     title: 'SEO built in',
     description:
-      'We build with search visibility in mind from the beginning, combining technical SEO foundations with strategies that help the right customers find you.',
+      'We build with search visibility in mind from the beginning, including strong technical foundations, clean structure, metadata, performance, and other on-page SEO essentials.',
   },
   {
     icon: Gauge,
     title: 'Built for speed',
     description:
-      'Lean code, optimized assets, and modern development practices help keep pages fast, responsive, and free from unnecessary bloat.',
+      'Lean code, optimized assets, and modern development practices help keep pages fast, responsive, and free from unnecessary platform bloat.',
   },
   {
     icon: BadgeCheck,
-    title: 'Proudly Canadian',
+    title: 'Built for you to own',
     description:
-      'Sanova is owned and operated in Canada. We focus on direct communication, dependable service, and long-term relationships with our clients.',
+      'Once your project is completed and paid in full, the finished website belongs to you. There is no required monthly website plan or long-term contract just to keep using it.',
   },
   {
     icon: Headphones,
-    title: 'Ongoing support',
+    title: 'Support after launch',
     description:
-      'We stay involved after launch with updates, technical help, and ongoing guidance so you are never left managing everything alone.',
+      'Every website includes 30 days of post-launch support for bugs related to the delivered project. Need changes later? You can hire Sanova for updates, improvements, or new features whenever you need them.',
   },
 ];
 
@@ -85,8 +85,8 @@ const Features = () => {
 
           <p className='mx-auto mt-6 max-w-2xl text-base leading-8 text-white/45 sm:text-lg'>
             We build custom websites for businesses that want better
-            performance, stronger visibility, and a team they can rely on long
-            after launch.
+            performance, stronger visibility, straightforward pricing, and
+            complete ownership of what we build.
           </p>
         </div>
 
@@ -100,7 +100,7 @@ const Features = () => {
                 key={feature.title}
                 className='group relative overflow-hidden rounded-[1.75rem] border border-white/[0.08] bg-white/[0.025] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/[0.14] hover:bg-white/[0.04] sm:p-8'
               >
-                {/* hover glow */}
+                {/* Hover glow */}
                 <div
                   aria-hidden='true'
                   className='pointer-events-none absolute -right-20 -top-20 size-48 rounded-full bg-violet-500/[0.06] blur-[70px] opacity-0 transition-opacity duration-300 group-hover:opacity-100'
@@ -134,15 +134,17 @@ const Features = () => {
         <div className='mt-12 flex flex-col items-center justify-between gap-6 rounded-[1.75rem] border border-white/[0.08] bg-white/[0.02] px-6 py-7 text-center sm:px-8 md:flex-row md:text-left lg:mt-16'>
           <div>
             <p className='text-sm font-medium text-white'>
-              No page builders. No bloated templates.
+              No page builders. No bloated templates. No required monthly
+              website plan.
             </p>
 
             <p className='mt-1 text-sm text-white/35'>
-              Just clean, custom development built around your business.
+              Just clean, custom development built around your business — and
+              yours once the project is complete.
             </p>
           </div>
 
-          <div className='rounded-full border border-violet-400/15 bg-violet-400/[0.07] px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-violet-300'>
+          <div className='shrink-0 rounded-full border border-violet-400/15 bg-violet-400/[0.07] px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-violet-300'>
             Built differently
           </div>
         </div>

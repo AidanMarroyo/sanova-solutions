@@ -198,9 +198,16 @@ export default function FAQPage() {
                             {detail.title}
                           </h3>
 
-                          <p className='mt-2 max-w-3xl text-sm leading-7 text-white/40 sm:text-base'>
-                            {detail.description}
-                          </p>
+                          <div className='mt-2 max-w-3xl space-y-4'>
+                            {detail.description.map((paragraph, paragraphIndex) => (
+                              <p
+                                key={paragraphIndex}
+                                className='text-sm leading-7 text-white/40 sm:text-base'
+                              >
+                                {paragraph}
+                              </p>
+                            ))}
+                          </div>
                         </div>
                       ))}
                     </div>
